@@ -1,0 +1,91 @@
+﻿
+@model Strasbourg.Domain.ViewModels.SMSSettingsViewModel
+@{
+    ViewBag.Title = "Panel | Ditib Strasbourg";
+    Layout = "~/Areas/Login/Views/Shared/panel_layout.cshtml";
+}
+
+<br />
+<!-- end page title -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card-box">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    @using (Html.BeginForm("SMSSettingsSave", "SMS", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+                    {
+
+                        <h3>SMS Ayarları</h3>
+
+                        <div class="row">
+                            <div class="form-group">
+                                @Html.HiddenFor(x => x.Id)
+                            </div>
+
+                            <div class="col col-lg-12">
+                                <div class="input-group mt-3">
+                                    <span class="input-group-append">
+                                        <button type="button"
+                                                class="btn waves-effect waves-light btn-primary" style="width: 130px !important;">
+                                            Service Name
+                                        </button>
+                                    </span>
+                                    @Html.TextBoxFor(x => x.ServiceName, new { @class = "form-control", id = "username", @required = "required" })
+
+                                </div>
+                            </div>
+                            <div class="col col-lg-12">
+                                <div class="input-group mt-3">
+                                    <span class="input-group-append">
+                                        <button type="button"
+                                                class="btn waves-effect waves-light btn-primary" style="width: 130px !important;">
+                                            App Key
+                                        </button>
+                                    </span>
+                                    @Html.TextBoxFor(x => x.AppKey, new { @class = "form-control", id = "username", @required = "required" })
+
+                                </div>
+                            </div>
+                            <div class="col col-lg-12">
+                                <div class="input-group mt-3">
+                                    <span class="input-group-append">
+                                        <button type="button"
+                                                class="btn waves-effect waves-light btn-primary" style="width: 130px !important;">
+                                            App Secret
+                                        </button>
+                                    </span>
+                                    @Html.TextBoxFor(x => x.Secret, new { @class = "form-control", id = "password", @required = "required" })
+
+
+                                </div>
+                            </div>
+                            <div class="col col-lg-12">
+                                <div class="input-group mt-3">
+                                    <span class="input-group-append">
+                                        <button type="button"
+                                                class="btn waves-effect waves-light btn-primary" style="width: 130px !important;">
+                                            Consumer Key
+                                        </button>
+                                    </span>
+                                    @Html.TextBoxFor(x => x.ConsumerKey, new { @class = "form-control", id = "password", @required = "required" })
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <br />
+
+                        <button type="submit" class="btn btn-success waves-effect width-md waves-light">Kaydet</button>
+                    }
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>

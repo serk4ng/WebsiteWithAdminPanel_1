@@ -1,0 +1,123 @@
+﻿@using Strasbourg.Domain.Enums
+@model Strasbourg.Domain.ViewModels.UsersViewModel
+@{
+    ViewBag.Title = "Panel | Ditib Strasbourg";
+    Layout = "~/Areas/Login/Views/Shared/panel_layout.cshtml";
+}
+
+<br />
+<!-- end page title -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card-box">
+            <div class="row">
+                <div class="col-lg-12">
+                    @using (Html.BeginForm("Save", "User", FormMethod.Post, new { @class = "form-horizontal" }))
+                    {
+
+                        <h3>Kullanıcı Detayı</h3>
+
+                        <div class="row">
+                            <div class="form-group">
+                                @Html.HiddenFor(x => x.Id)
+                            </div>
+                            <div class="col col-lg-12">
+                                <div class="input-group mt-3">
+                                    <span class="input-group-append">
+                                        <button type="button"
+                                                class="btn waves-effect waves-light btn-primary" style="width: 150px !important;">
+                                            Ad Soyad
+                                        </button>
+                                    </span>
+                                    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" ,id = "NameSurname",@required="required"})
+
+                                </div>
+                            </div>
+
+                            <div class="col col-lg-12">
+                                <div class="input-group mt-3">
+                                    <span class="input-group-append">
+                                        <button type="button"
+                                                class="btn waves-effect waves-light btn-primary" style="width: 150px !important;">
+                                            Email
+                                        </button>
+                                    </span>
+                                    @Html.TextBoxFor(x => x.Email, new { @class = "form-control", id = "Email", @required = "required" })
+
+                                </div>
+                            </div>
+                            <div class="col col-lg-12">
+                                <div class="input-group mt-3">
+                                    <span class="input-group-append">
+                                        <button type="button"
+                                                class="btn waves-effect waves-light btn-primary" style="width: 150px !important;">
+                                            Şifre
+                                        </button>
+                                    </span>
+                                    @Html.TextBoxFor(x => x.Password, new { @class = "form-control", id = "Password", @required = "required" })
+
+                                </div>
+                            </div>
+
+                            <div class="col col-lg-12">
+                                <div class="input-group mt-3">
+                                    <span class="input-group-append">
+                                        <button type="button"
+                                                class="btn waves-effect waves-light btn-primary" style="width: 150px !important;">
+                                            Unvan
+                                        </button>
+                                    </span>
+                                    @Html.TextBoxFor(x => x.Degree, new { @class = "form-control", id = "Degree", @required = "required" })
+
+                                </div>
+                            </div>
+
+                            <div class="col col-lg-12">
+                                <div class="input-group mt-3">
+                                    <span class="input-group-append">
+                                        <button type="button"
+                                                class="btn waves-effect waves-light btn-primary" style="width: 150px !important;">
+                                            Kullanıcı Tipi
+                                        </button>
+                                    </span>
+                                    @Html.DropDownListFor(o => o.UserType,
+new SelectList(Enum.GetValues(typeof(UserType))),
+"Kullanıcı Türü Seçiniz", new { @class = "form-control" ,id="UserType", @required = "required" })
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+
+                        if (@ViewBag.incele == null)
+                        {
+                            <button type="submit" class="btn btn-success waves-effect width-md waves-light">Kaydet</button>
+                        }
+                        else
+                        {
+                            <script>
+                                document.getElementById("NameSurname").readOnly = true;
+                                document.getElementById("Email").readOnly = true;
+                                document.getElementById("Password").readOnly = true;
+                                document.getElementById("Degree").readOnly = true;
+                                document.getElementById("UserType").disabled = true;
+                        
+                            </script>
+                        }
+
+
+
+                    }
+                </div>
+
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+</div>

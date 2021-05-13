@@ -1,0 +1,381 @@
+﻿@using Strasbourg.Domain.ViewModels
+
+@model Tuple<IQueryable<NewsViewModel>, IQueryable<SermonViewModel>, IQueryable<VideoViewModel>, BaseViewModel>
+ 
+    @{
+        Layout = "~/Views/Shared/strasbourg_layout.cshtml";
+        ViewBag.Title = "Ditib Strasbourg";
+        ViewBag.Active = ViewContext.RouteData.Values["action"];
+    }
+
+
+    <!-- Hero Slider -->
+    <section class="hero-slider-1">
+        <div id="flickity-hero" class="carousel-main">
+
+            <div class="carousel-cell hero-slider-1__item">
+                <article class="hero-slider-1__entry entry">
+                    <div class="hero-slider-1__thumb-img-holder" style="background-image: url(@ViewBag.siteSettings.Slider1)">
+                        <div class="bottom-gradient"></div>
+                    </div>
+                    <div class="hero-slider-1__thumb-text-holder">
+                        <div class="container">
+                            <h2 class="hero-slider-1__entry-title">
+                                <a href="index.html">Ditib Strasbourg</a>
+                            </h2>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="carousel-cell hero-slider-1__item">
+                <article class="hero-slider-1__entry entry">
+                    <div class="hero-slider-1__thumb-img-holder" style="background-image: url(@ViewBag.siteSettings.Slider2)">
+                        <div class="bottom-gradient"></div>
+                    </div>
+                    <div class="hero-slider-1__thumb-text-holder">
+                        <div class="container">
+                            <h2 class="hero-slider-1__entry-title">
+                                <a href="index.html">Ditib Strasbourg</a>
+                            </h2>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="carousel-cell hero-slider-1__item">
+                <article class="hero-slider-1__entry entry">
+                    <div class="hero-slider-1__thumb-img-holder" style="background-image: url(@ViewBag.siteSettings.Slider3)">
+                        <div class="bottom-gradient"></div>
+                    </div>
+                    <div class="hero-slider-1__thumb-text-holder">
+                        <div class="container">
+                            <h2 class="hero-slider-1__entry-title">
+                                <a href="index.html">Ditib Strasbourg</a>
+                            </h2>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="carousel-cell hero-slider-1__item">
+                <article class="hero-slider-1__entry entry">
+                    <div class="hero-slider-1__thumb-img-holder" style="background-image: url(@ViewBag.siteSettings.Slider4)">
+                        <div class="bottom-gradient"></div>
+                    </div>
+                    <div class="hero-slider-1__thumb-text-holder">
+                        <div class="container">
+                            <h2 class="hero-slider-1__entry-title">
+                                <a href="index.html">Ditib Strasbourg</a>
+                            </h2>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div> <!-- end flickity -->
+        <!-- Slider thumbs -->
+        <div class="carousel-thumbs-holder">
+            <div class="container">
+                <div id="flickity-thumbs" class="carousel-thumbs">
+                    <div class="carousel-cell">
+                        <div class="carousel-thumbs__item">
+                            <div class="carousel-thumbs__img-holder">
+                                <img src="@ViewBag.siteSettings.Slider1" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="carousel-thumbs__item">
+                            <div class="carousel-thumbs__img-holder">
+                                <img src="@ViewBag.siteSettings.Slider2" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="carousel-thumbs__item">
+                            <div class="carousel-thumbs__img-holder">
+                                <img src="@ViewBag.siteSettings.Slider3" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="carousel-thumbs__item">
+                            <div class="carousel-thumbs__img-holder">
+                                <img src="@ViewBag.siteSettings.Slider4" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- end hero slider -->
+
+    <div class="main-container container content-box content-box--pt-108" id="main-container">
+
+        <div class="row">
+            <div class="col col-lg-3">
+                <div class="imghover">
+                    <img src="~/Assets/strasbourgpanel/strasbourg/img/hacc.jpg" alt="Avatar" class="imgs"
+                         style="width:100%"><br />
+                    <h3 style="text-align: center;"><a href="#.">Hac</a></h3>
+                    <div class="middle">
+                        <div class="text"> Hac Hizmetleri ve kayıtlar ile ilgili tüm detaylar</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-3">
+                <div class="imghover">
+                    <img src="~/Assets/strasbourgpanel/strasbourg/img/umre.jpg" alt="Avatar" class="imgs"
+                         style="width:100%"><br />
+                    <h3 style="text-align: center;"><a href="#.">Umre</a></h3>
+                    <div class="middle">
+                        <div class="text"> Umre Hizmetleri ve kayıtlar ile ilgili tüm detaylar</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-3">
+                <div class="imghover">
+                    <img src="~/Assets/strasbourgpanel/strasbourg/img/cnz.jpg" alt="Avatar" class="imgs"
+                         style="width:100%"><br />
+                    <h3 style="text-align: center;"><a href="cfnedir.html">Cenaze Fonu</a></h3>
+                    <div class="middle">
+                        <div class="text"> Cenaze Fonu Hizmetleri ve kayıtlar ile ilgili tüm detaylar</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-3">
+                <div class="imghover">
+                    <img src="~/Assets/strasbourgpanel/strasbourg/img/aile.jpg" alt="Avatar" class="imgs"
+                         style="width:100%"><br />
+                    <h3 style="text-align: center;"><a href="#.">Aile Danışma Hattı</a></h3>
+                    <div class="middle">
+                        <div class="text"> Aile Danışma Hizmetleri ile ilgili tüm detaylar</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br /><br />
+        <div class="row">
+            <div class="col col-lg-3">
+                <div class="imghover">
+                    <img src="~/Assets/strasbourgpanel/strasbourg/img/kurban.jpg" alt="Avatar" class="imgs"
+                         style="width:100%"><br />
+                    <h3 style="text-align: center;"><a href="bkurban.html">Kurban</a></h3>
+                    <div class="middle">
+                        <div class="text"> Vekaletle Kurban Hizmetleri ve başvuru ile ilgili tüm detaylar</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-3">
+                <div class="imghover">
+                    <img src="~/Assets/strasbourgpanel/strasbourg/img/egitim-1.jpg" alt="Avatar" class="imgs"
+                         style="width:100%"><br />
+                    <h3 style="text-align: center;"><a href="#.">Eğitim Hizmetleri</a></h3>
+                    <div class="middle">
+                        <div class="text"> Eğitim Hizmetleri ve başvurular ile ilgili tüm detaylar</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-3">
+                <div class="imghover">
+                    <img src="~/Assets/strasbourgpanel/strasbourg/img/burs.jpg" alt="Avatar" class="imgs"
+                         style="width:100%"><br />
+                    <h3 style="text-align: center;"><a href="#.">Burs Hizmetleri</a></h3>
+                    <div class="middle">
+                        <div class="text"> Burs Hizmetleri ve başvurular ile ilgili tüm detaylar</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-3">
+                <div class="imghover">
+                    <img src="~/Assets/strasbourgpanel/strasbourg/img/gezi.jpg" alt="Avatar" class="imgs"
+                         style="width:100%"><br />
+                    <h3 style="text-align: center;"><a href="#.">Gezi Hizmetleri</a></h3>
+                    <div class="middle">
+                        <div class="text"> Gezi Hizmetleri ile ilgili tüm geziler, başvuru ve detaylar</div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <br /><br /><br /><br />
+        <!-- Most Popular -->
+                          <section class="section mb-24">
+                              <h3 class="section-title">Hakkımızda</h3><br /><br />
+                              <div class="title-wrap title-wrap--line">
+
+                              </div>
+    
+                              <div class="display-field">
+ 
+                                  <pre style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;font-size:17px !important;">@ViewBag.siteSettings.AboutUs </pre>
+                              </div>
+
+                              <!--
+        <div class="row row-20">
+            @foreach (var item in Model.Item1)
+            {
+                <div class="col-md-3">
+                    <article class="entry">
+                        <div class="entry__img-holder">
+                            <a href="#.">
+                                <div class="thumb-container thumb-65">
+                                    <img data-src="@item.Image" src="@item.Image" class="entry__img lazyload" alt="">
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="entry__body">
+                            <div class="entry__header">
+                                <h2 class="entry__title">
+                                    <a href="/Strasbourg/newsdetail?id=@item.Id">@item.Title</a>
+                                </h2>
+                                <ul class="entry__meta">
+
+                                    <li class="entry__meta-date">
+                                        @item.CreationDate
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="entry__excerpt">
+                                <p style=" text-overflow: ellipsis; overflow: hidden;  white-space: nowrap;">
+                                    @item.Content
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            }
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <a href="#." style="font-weight:bold;">TÜM HABERLER</a>
+            </div>
+        </div>
+
+
+        -->
+                          </section> <!-- end most popular -->
+
+
+        <br />
+        <!-- Newest Videos -->
+        <section class="pb-32">
+            <h2 class="section-title">VİDEOLAR</h2> <br /><br />
+            <div class="title-wrap title-wrap--line">
+
+            </div>
+            <div class="video-playlist">
+
+                <div class="video-playlist__content thumb-container">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="@ViewBag.LastVideo.Url" class="video-playlist__content-video">
+                        </iframe>
+                    </div>
+                </div>
+
+
+                <div class="video-playlist__list">
+                    @foreach (var item in Model.Item3)
+                    {
+                        <a href="@item.Url"
+                           class="video-playlist__list-item video-playlist__list-item--active">
+                            <div class="video-playlist__list-item-thumb">
+                                <img  src="@item.Thumbnail" class="video-playlist__list-item-img lazyload" alt="">
+                            </div>
+                            <div class="video-playlist__list-item-description">
+                                <h4 class="video-playlist__list-item-title">@item.Title</h4>
+                            </div>
+                        </a>
+                    }
+
+                </div>
+
+            </div>
+        </section> <!-- end newest videos -->
+
+        <br />
+        <!-- Featured Albums -->
+        <section class="section mb-0">
+            <h3 class="section-title">Hutbeler</h3><br /><br />
+            <div class="title-wrap title-wrap--line title-wrap--pr">
+
+            </div>
+
+            <!-- Slider -->
+            <div id="owl-posts" class="owl-carousel owl-theme owl-carousel--arrows-outside">
+                @foreach (var item in Model.Item2)
+                {
+                    <article class="entry thumb thumb--size-1">
+                        <div class="entry__img-holder thumb__img-holder" style="background-image: url('@item.Image');">
+                            <div class="bottom-gradient"></div>
+                            <div class="thumb-text-holder">
+                                <h2 class="thumb-entry-title">
+                                    <a href="#.">@item.Title </a>
+                                </h2>
+                            </div>
+                            <a href="#." class="thumb-url"></a>
+                        </div>
+                    </article>
+                }
+                <!--
+        <article class="entry thumb thumb--size-1">
+            <div class="entry__img-holder thumb__img-holder" style="background-image: url('/Assets/strasbourgpanel/strasbourg/img/hutbe2.jpg');">
+                <div class="bottom-gradient"></div>
+                <div class="thumb-text-holder">
+                    <h2 class="thumb-entry-title">
+                        <a href="#.">Hayâ Hayatı Güzelleştirir</a>
+                    </h2>
+                </div>
+                <a href="#." class="thumb-url"></a>
+            </div>
+        </article>
+        <article class="entry thumb thumb--size-1">
+            <div class="entry__img-holder thumb__img-holder" style="background-image: url('/Assets/strasbourgpanel/strasbourg/img/hutbe3.jpg');">
+                <div class="bottom-gradient"></div>
+                <div class="thumb-text-holder">
+                    <h2 class="thumb-entry-title">
+                        <a href="#.">İman ve Salih Amel</a>
+                    </h2>
+                </div>
+                <a href="#." class="thumb-url"></a>
+            </div>
+        </article>
+        <article class="entry thumb thumb--size-1">
+            <div class="entry__img-holder thumb__img-holder" style="background-image: url('/Assets/strasbourgpanel/strasbourg/img/hutbe4.jpg');">
+                <div class="bottom-gradient"></div>
+                <div class="thumb-text-holder">
+                    <h2 class="thumb-entry-title">
+                        <a href="#.">HUTBE / TEKNOLOJİ BAĞIMLILIĞI VE SOSYAL MEDYA AHLAKI </a>
+                    </h2>
+                </div>
+                <a href="#." class="thumb-url"></a>
+            </div>
+        </article>
+        <article class="entry thumb thumb--size-1">
+            <div class="entry__img-holder thumb__img-holder" style="background-image: url('/Assets/strasbourgpanel/strasbourg/img/hutbe5.jpg');">
+                <div class="bottom-gradient"></div>
+                <div class="thumb-text-holder">
+                    <h2 class="thumb-entry-title">
+                        <a href="#.">İYİLİĞE DESTEK, KÖTÜLÜĞE ENGEL OLMAK</a>
+                    </h2>
+                </div>
+                <a href="#." class="thumb-url"></a>
+            </div>
+        </article> -->
+            </div> <!-- end slider -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <a href="#." style="font-weight:bold;">TÜM HUTBELER</a>
+                </div>
+            </div>
+        </section> <!-- end featured albums -->
+
+    </div> <!-- end main container -->
+
+
+
+

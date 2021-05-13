@@ -1,0 +1,512 @@
+﻿@using Strasbourg.Domain.Enums
+
+@using Strasbourg.Domain.Helpers;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Rubik:400,600,700%7CRoboto:400,700' rel='stylesheet'>
+
+    <!-- Css -->
+
+    <link rel="stylesheet" href="~/Assets/strasbourgpanel/strasbourg/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Assets/strasbourgpanel/strasbourg/css/font-icons.css" />
+    <link rel="stylesheet" href="~/Assets/strasbourgpanel/strasbourg/css/style.css" />
+    <link rel="stylesheet" href="~/Assets/strasbourgpanel/strasbourg/css/colors/cyan.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/v4-shims.css">
+    <!-- Favicons -->
+    <link rel="stylesheet" href="~/Assets/strasbourgpanel/strasbourg/img/logo_default.png" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Lazyload (must be placed in head in order to work) -->
+
+    <script src="~/Assets/strasbourgpanel/strasbourg/js/lazysizes.min.js"></script>
+
+</head>
+<body onload="setLang()">
+    <!-- Preloader -->
+    <div class="loader-mask">
+        <div class="loader">
+            <div></div>
+        </div>
+    </div>
+
+    <!-- Bg Overlay -->
+    <div class="content-overlay"></div>
+    <header class="sidenav" id="sidenav">
+
+        <!-- close -->
+        <div class="sidenav__close">
+            <button class="sidenav__close-button" id="sidenav__close-button" aria-label="close sidenav">
+                <i class="ui-close sidenav__close-icon"></i>
+            </button>
+        </div>
+
+        <!-- Nav -->
+        <nav class="sidenav__menu-container">
+            <ul class="sidenav__menu" role="menubar">
+                <li>
+                    <a href="/Strasbourg/index" class="sidenav__menu-url">Anasayfa</a>
+                </li>
+                <li>
+                    <a href="#" class="sidenav__menu-url">Cenaze Fonu</a>
+                    <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown">
+                        <i class="ui-arrow-down"></i>
+                    </button>
+                    <ul class="sidenav__menu-dropdown">
+
+                        <li><a href="/Strasbourg/whatisff" class="sidenav__menu-url">Cenaze Fonu Nedir ?</a></li>
+                        <li><a href="/Strasbourg/login" class="sidenav__menu-url">Online İşlemler</a></li>
+                        <li><a href="/Strasbourg/register" class="sidenav__menu-url">Kayıt Ol</a></li>
+                        <li><a href="/Strasbourg/needtoknowff" class="sidenav__menu-url">Bilinmesi Gereken Hususlar</a></li>
+                        <li><a href="/Strasbourg/purposeff" class="sidenav__menu-url">Gaye</a></li>
+                        <li><a href="/Strasbourg/servicesff" class="sidenav__menu-url">Hizmetler</a></li>
+                        <li><a href="/Strasbourg/membershipdirectiveff" class="sidenav__menu-url">Üyelik Yönergesi</a></li>
+                        <li><a href="/Strasbourg/incaseofdeathff" class="sidenav__menu-url">Vefat Halinde İlk Yapılması <br>Gerekenler</a></li>
+
+
+
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#." class="sidenav__menu-url"> <span class="particletext confetti">Bağış Yap</span></a>
+                    <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown">
+                        <i class="ui-arrow-down"></i>
+                    </button>
+                    <ul class="sidenav__menu-dropdown">
+                        <li><a href="@Url.Action("SacrificeDonation", "Donate") /Donate/SacrificeDonation" class="sidenav__menu-url">Kurban</a></li>
+                        <li><a href="@Url.Action("AlmsDonation", "Donate")" class="sidenav__menu-url">Zekat</a></li>
+                        <li><a href="@Url.Action("FitreDonation", "Donate")" class="sidenav__menu-url">Fitre</a></li>
+                        <li><a href="@Url.Action("RansomDonation", "Donate")" class="sidenav__menu-url">Fidye</a></li>
+                        <li><a href="@Url.Action("GeneralDonation", "Donate")" class="sidenav__menu-url">Genel Bağış</a></li>
+                        <li><a href="@Url.Action("AidToMosques", "Donate")" class="sidenav__menu-url">Camilere Yardım</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="hakkimizda.html" class="sidenav__menu-url">Kurumsal</a>
+                    <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown">
+                        <i class="ui-arrow-down"></i>
+                    </button>
+                    <ul class="sidenav__menu-dropdown">
+
+                        <li><a href="/Corporate/aboutus" class="sidenav__menu-url">Hakkımızda</a></li>
+                        <li><a href="/Corporate/ourgoals" class="sidenav__menu-url">Hedeflerimiz</a></li>
+                        <li><a href="/Corporate/ourprinciples" class="sidenav__menu-url">İlkelerimiz</a></li>
+                        <li><a href="/Corporate/orgstructure" class="sidenav__menu-url">Kuruluş ve Teşkilat Yapısı</a></li>
+                        <li><a href="/Corporate/boardofdirectors" class="sidenav__menu-url">Yönetim Kurulu</a></li>
+                        <li><a href="/Corporate/boardofauditors" class="sidenav__menu-url">Denetleme Kurulu</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="iletisim.html" class="sidenav__menu-url">İletişim</a>
+                    <button class="sidenav__menu-toggle" aria-haspopup="true" aria-label="Open dropdown">
+                        <i class="ui-arrow-down"></i>
+                    </button>
+                    <ul class="sidenav__menu-dropdown">
+                        <li><a href="/Contact/contact" class="sidenav__menu-url">Ditib'le İletişim</a></li>
+                        <li><a href="/Contact/ourassociations" class="sidenav__menu-url">Derneklerimiz</a></li>
+                        <li><a href="/Contact/sisterorganizations" class="sidenav__menu-url">Kardeş Kuruluşlar</a></li>
+                        <li><a href="/Contact/relatedorganizations" class="sidenav__menu-url">Bağlantılı Kuruluşlar</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="/Strasbourg/login" class="sidenav__menu-url"> <i class="fa fa-user"></i> Online İşlemler </a></li>
+                <li><a href="/Strasbourg/register" class="sidenav__menu-url"><i class="fa fa-user-plus"></i> Kayıt Ol</a></li>
+
+
+
+            </ul>
+        </nav>
+
+        <div class="socials sidenav__socials">
+            <a href="@ViewBag.siteSettings.Facebook" class="social social-facebook" aria-label="facebook" target="_blank"><i class="ui-facebook"></i></a>
+            <a href="@ViewBag.siteSettings.Twitter" class="social social-twitter" aria-label="twitter" target="_blank"><i class="ui-twitter"></i></a>
+            <a href="@ViewBag.siteSettings.Instagram" class="social social-youtube" aria-label="youtube" target="_blank"><i class="fa fa-youtube"></i></a>
+            <a href="@ViewBag.siteSettings.Youtube" class="social social-instagram" aria-label="instagram" target="_blank"><i class="ui-instagram"></i></a>
+        </div>
+    </header> <!-- end sidenav -->
+    <main class="main oh" id="main">
+        <header class="nav">
+
+            <div class="nav__holder nav--sticky" style="min-height: 100px;">
+                <div class="container relative">
+                    <div class="flex-parent" id="frmenu">
+
+                        <!-- Side Menu Button -->
+                        <button class="nav-icon-toggle" id="nav-icon-toggle" aria-label="Open side menu"
+                                style="margin-top: 5px !important;">
+                            <span class="nav-icon-toggle__box" id="mobilemenuicon" style="display: none;">
+                                <span class="nav-icon-toggle__inner"></span>
+                            </span>
+                        </button>
+
+                        <!-- Logo -->
+                        <a href="/Strasbourg/index " class="logo" style="margin-top: 14px !important;">
+                            <img class="logo__img" src="@ViewBag.siteSettings.Logo" srcset="@ViewBag.siteSettings.Logo" alt="logo"
+                                 style="max-width: 70%;min-width: 10%;text-align: center !important;">
+                        </a>
+
+                        <!-- Nav-wrap -->
+                        <nav class="flex-child nav__wrap d-none d-lg-block" id="menu">
+                            <ul class="nav__menu">
+
+                                <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "index" ? "active" : "") ">
+
+
+
+
+                                    @if (Session["selectedlang"].ToString() == "1")
+                                    {
+                                        <a href="/Strasbourg/index">Anasayfa</a>
+                                    }
+                                    else
+                                    {
+                                        <a href="/Strasbourg/index">Page d'accueil</a>
+                                    }
+
+
+                                </li>
+
+
+                                <li class="nav__dropdown @(
+ViewContext.RouteData.Values["Action"].ToString() == "whatisff"
+|| ViewContext.RouteData.Values["Action"].ToString() == "needtoknowff"
+|| ViewContext.RouteData.Values["Action"].ToString() == "purposeff"
+|| ViewContext.RouteData.Values["Action"].ToString() == "servicesff"
+|| ViewContext.RouteData.Values["Action"].ToString() == "membershipdirectiveff"
+|| ViewContext.RouteData.Values["Action"].ToString() == "incaseofdeathff"
+? "active" : "") ">
+
+
+                                    @if (Session["selectedlang"].ToString() == "1")
+                                    {
+                                        <a href="#.">Cenaze Fonu</a>
+                                    }
+                                    else
+                                    {
+                                        <a href="#.">Fonds funéraire</a>
+                                    }
+
+
+                                    <ul class="nav__dropdown-menu @(
+ViewContext.RouteData.Values["Action"].ToString() == "whatisff"
+|| ViewContext.RouteData.Values["Action"].ToString() == "needtoknowff"
+|| ViewContext.RouteData.Values["Action"].ToString() == "purposeff"
+|| ViewContext.RouteData.Values["Action"].ToString() == "servicesff"
+|| ViewContext.RouteData.Values["Action"].ToString() == "membershipdirectiveff"
+|| ViewContext.RouteData.Values["Action"].ToString() == "incaseofdeathff"
+? "active" : "") ">
+
+
+                                        <li><a href="/Strasbourg/whatisff">Cenaze Fonu Nedir ?</a></li>
+                                        <li><a href="/Strasbourg/login">Online İşlemler</a></li>
+                                        <li><a href="/Strasbourg/register">Kayıt Ol</a></li>
+                                        <li><a href="/Strasbourg/needtoknowff">Bilinmesi Gereken Hususlar</a></li>
+                                        <li><a href="/Strasbourg/purposeff">Gaye</a></li>
+                                        <li><a href="/Strasbourg/servicesff">Hizmetler</a></li>
+                                        <li><a href="/Strasbourg/membershipdirectiveff">Üyelik Yönergesi</a></li>
+                                        <li><a href="/Strasbourg/incaseofdeathff">Vefat Halinde İlk Yapılması <br>Gerekenler</a></li>
+
+
+
+
+                                    </ul>
+                                </li>
+
+                                <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "news" ? "active" : "") ">
+
+
+
+
+                                    @if (Session["selectedlang"].ToString() == "1")
+                                    {
+                                        <a href="https://haberler.ditibstrasbourg.fr">Haberler</a>
+                                    }
+                                    else
+                                    {
+                                <a href="https://haberler.ditibstrasbourg.fr">Nouvelles</a>
+                                    }
+
+
+                                </li>
+
+                                <li class="nav__dropdown  @(
+ViewContext.RouteData.Values["Action"].ToString() == "SacrificeDonation"
+|| ViewContext.RouteData.Values["Action"].ToString() == "AlmsDonation"
+|| ViewContext.RouteData.Values["Action"].ToString() == "FitreDonation"
+|| ViewContext.RouteData.Values["Action"].ToString() == "RansomDonation"
+|| ViewContext.RouteData.Values["Action"].ToString() == "GeneralDonation"
+|| ViewContext.RouteData.Values["Action"].ToString() == "AidToMosques"
+? "active" : "")">
+
+
+                                    @if (Session["selectedlang"].ToString() == "1")
+                                    {
+                                        <a href="#.">
+                                            <span class="particletext confetti ">Bağış Yap</span>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a href="#.">
+                                            <span class="particletext confetti ">Faİre un don</span>
+                                        </a>
+                                    }
+
+
+
+
+
+                                    <ul class="nav__dropdown-menu">
+                                        <li><a href="@Url.Action("SacrificeDonation", "Donate")">Kurban</a></li>
+                                        <li><a href="@Url.Action("AlmsDonation", "Donate")">Zekat</a></li>
+                                        <li><a href="@Url.Action("FitreDonation", "Donate")">Fitre</a></li>
+                                        <li><a href="@Url.Action("RansomDonation", "Donate")">Fidye</a></li>
+                                        <li><a href="@Url.Action("GeneralDonation", "Donate")">Genel Bağış</a></li>
+                                        <li><a href="@Url.Action("AidToMosques", "Donate")">Camilere Yardım</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav__dropdown  @(
+ViewContext.RouteData.Values["Action"].ToString() == "aboutus"
+|| ViewContext.RouteData.Values["Action"].ToString() == "ourgoals"
+|| ViewContext.RouteData.Values["Action"].ToString() == "ourprinciples"
+|| ViewContext.RouteData.Values["Action"].ToString() == "orgstructure"
+|| ViewContext.RouteData.Values["Action"].ToString() == "boardofdirectors"
+|| ViewContext.RouteData.Values["Action"].ToString() == "boardofauditors"
+? "active" : "")">
+
+
+
+                                    @if (Session["selectedlang"].ToString() == "1")
+                                    {
+                                        <a href="#.">Kurumsal</a>
+                                    }
+                                    else
+                                    {
+                                        <a href="#.">Institutionnel</a>
+                                    }
+
+
+                                    <ul class="nav__dropdown-menu">
+
+                                        <li><a href="/Corporate/aboutus">Hakkımızda</a></li>
+                                        <li><a href="/Corporate/ourgoals">Hedeflerimiz</a></li>
+                                        <li><a href="/Corporate/ourprinciples">İlkelerimiz</a></li>
+                                        <li><a href="/Corporate/orgstructure">Kuruluş ve Teşkilat Yapısı</a></li>
+                                        <li><a href="/Corporate/boardofdirectors">Yönetim Kurulu</a></li>
+                                        <li><a href="/Corporate/boardofauditors">Denetleme Kurulu</a></li>
+
+                                    </ul>
+                                </li>
+
+
+                                <li class="nav__dropdown  @(
+ViewContext.RouteData.Values["Action"].ToString() == "contact"
+|| ViewContext.RouteData.Values["Action"].ToString() == "ourassociations"
+|| ViewContext.RouteData.Values["Action"].ToString() == "sisterorganizations"
+|| ViewContext.RouteData.Values["Action"].ToString() == "relatedorganizations"
+
+? "active" : "")">
+
+                                    @if (Session["selectedlang"].ToString() == "1")
+                                    {
+                                        <a href="#.">İLETİŞİM</a>
+                                    }
+                                    else
+                                    {
+                                        <a href="#.">CONTACTER</a>
+                                    }
+                                    <ul class="nav__dropdown-menu">
+
+                                        <li><a href="/Contact/contact">Ditib'le İletişim</a></li>
+                                        <li><a href="/Contact/ourassociations">Derneklerimiz</a></li>
+                                        <li><a href="/Contact/sisterorganizations">Kardeş Kuruluşlar</a></li>
+                                        <li><a href="/Contact/relatedorganizations">Bağlantılı Kuruluşlar</a></li>
+
+                                    </ul>
+                                </li>
+
+                                <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "login" ? "active" : "") ">
+
+
+                                    @if (Session["selectedlang"].ToString() == "1")
+                                    {
+                                        <a href="/Strasbourg/login" style="margin-left:80px !important;"> <i class="fa fa-user"></i> ONLİNE İŞLEMLER</a>
+                                    }
+                                    else
+                                    {
+                                        <a href="/Strasbourg/login" style="margin-left:80px !important;"> <i class="fa fa-user"></i> Transactİons En Lİgne</a>
+                                    }
+
+                                </li>
+                                <!-- <li class=" @(ViewContext.RouteData.Values["Action"].ToString() == "register" ? "active" : "")">
+
+
+
+
+        @if (Session["selectedlang"].ToString() == "1")
+        {
+            <a href="/Strasbourg/register">  <i class="fa fa-user-plus"></i> Kayıt Ol</a>
+        }
+        else
+        {
+            <a href="/Strasbourg/register">  <i class="fa fa-user-plus"></i> Inscrire</a>
+        }
+
+
+    </li>-->
+                                <li>
+                                    @Html.DropDownList("SiteLanguage",
+EnumHelper.GetSelectList(typeof(SiteLanguages)),
+
+new { @class = "form-control", @onchange = "LanguageSelection(this)", @id = "languageselector" })
+                                </li>
+
+
+                            </ul> <!-- end menu -->
+                        </nav> <!-- end nav-wrap -->
+
+
+                    </div> <!-- end flex-parent -->
+                </div> <!-- end container -->
+
+            </div>
+        </header> <!-- end navigation -->
+
+
+
+        @RenderBody()
+
+
+
+
+        <!-- Footer -->
+        <footer class="footer footer--dark">
+            <div class="container">
+                <div class="footer__widgets">
+                    <div class="row">
+
+                        <div class="col-lg-5 col-md-6">
+                            <aside class="widget widget-logo">
+                                <a href="index.html">
+                                    <img src="@ViewBag.siteSettings.Logo" srcset="@ViewBag.siteSettings.Logo" class="logo__img" alt=""
+                                         style="max-width: 40% !important;margin-left: 30%;">
+                                </a>
+
+
+                            </aside>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <aside class="widget widget_nav_menu">
+                                <h4 class="widget-title">LİNKLER</h4>
+                                <ul>
+                                    <li><a href="girisyap.html">Online İşlemler</a></li>
+                                    <li><a href="cfkayit.html">Kayıt Ol</a></li>
+                                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+
+                                </ul>
+                            </aside>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <aside class="widget widget_mc4wp_form_widget">
+                                <h4 class="widget-title">İLETİŞİM</h4>
+                                <p class="newsletter__text" style="color:aliceblue !important;">
+                                    <b>Adres: </b>@ViewBag.siteSettings.Adress<br />
+                                    <b>Telefon : </b> <a href="tel:@ViewBag.siteSettings.Phone"
+                                                         aria-label="twitter">@ViewBag.siteSettings.Phone</a>
+                                                        <br />
+                                                        <b>E-mail : </b> <a href="mailto:@ViewBag.siteSettings.Email"
+                                                                            aria-label="twitter">@ViewBag.siteSettings.Email</a><br />
+                                                                            <a href="iletisim.html" aria-label="twitter">Bize Ulaşın</a>
+                                                                        </p>
+                                                                        <div class="socials socials--large socials--rounded mb-24">
+                                                                            <a href="@ViewBag.siteSettings.Facebook" class="social social-facebook" aria-label="facebook" target="_blank"><i class="ui-facebook"></i></a>
+                                                                            <a href="@ViewBag.siteSettings.Twitter" class="social social-twitter" aria-label="twitter" target="_blank"><i class="ui-twitter"></i></a>
+                                                                            <a href="@ViewBag.siteSettings.Youtube" class="social social-youtube" aria-label="youtube" target="_blank"><i class="fa fa-youtube"></i></a>
+                                                                            <a href="@ViewBag.siteSettings.Instagram" class="social social-instagram" aria-label="instagram" target="_blank"><i class="ui-instagram"></i></a>
+                                                                        </div>
+                                                                    </aside>
+                                                                </div>
+                                                                <p class="copyright" style="padding:10px;">
+                                                                    Copyright 2021 · Designed &amp; Developed by <a href="http://www.vakifglobal.com" style="color:  #1AD2D2 !important;">Vakıf Global</a> All rights reserved
+                                                                </p>
+                                                            </div>
+                                                        </div>
+
+                                                    </div> <!-- end container -->
+
+                                                </footer> <!-- end footer -->
+                                                <div id="back-to-top">
+                                                    <a href="#top" aria-label="Go to top"><i class="ui-arrow-up"></i></a>
+                                                </div>
+                                            </main>
+
+
+
+
+
+                                            <script src="~/Assets/strasbourgpanel/strasbourg/js/jquery.min.js"></script>
+                                            <script src="~/Assets/strasbourgpanel/strasbourg/js/bootstrap.min.js"></script>
+                                            <script src="~/Assets/strasbourgpanel/strasbourg/js/easing.min.js"></script>
+                                            <script src="~/Assets/strasbourgpanel/strasbourg/js/owl-carousel.min.js"></script>
+                                            <script src="~/Assets/strasbourgpanel/strasbourg/js/flickity.pkgd.min.js"></script>
+                                            <script src="~/Assets/strasbourgpanel/strasbourg/js/twitterFetcher_min.js"></script>
+                                            <script src="~/Assets/strasbourgpanel/strasbourg/js/jquery.newsTicker.min.js"></script>
+                                            <script src="~/Assets/strasbourgpanel/strasbourg/js/modernizr.min.js"></script>
+                                            <script src="~/Assets/strasbourgpanel/strasbourg/js/scripts.js"></script>
+                                            <script>
+
+        var selectedLang;
+;        function LanguageSelection(selectObject)
+        {
+
+             selectedLang =  selectObject.value;
+
+    location.href = '@Url.Action("Language", "Base")?lang=' + selectedLang;
+        }
+                                            </script>
+
+
+                                            <script>
+        function setLang() {
+        /**/
+
+            $(function () {
+                var temp = @Session["selectedlang"];
+                $("#languageselector").val(temp);
+            });
+
+        /**/
+    }
+                                            </script>
+
+                                            <script>
+        if (@Session["selectedlang"].ToString() == "2") {
+
+            document.getElementById("menu").style.marginLeft = "-90px";
+
+        }
+                                            </script>
+                                            @RenderSection("generaldonation", required: false)
+                                            @RenderSection("fitredonation", required: false)
+                                            @RenderSection("ransomdonation", required: false)
+                                            @RenderSection("sacrificedonation", required: false)
+                                            @RenderSection("almsdonation", required: false)
+                                            @RenderSection("aidtomosquesjson", required: false)
+                                        </body>
+                                    </html>

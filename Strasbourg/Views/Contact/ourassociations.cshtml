@@ -1,0 +1,65 @@
+﻿@using Strasbourg.Domain.ViewModels
+@model Tuple<IQueryable<AssociationViewModel>, BaseViewModel>
+@{
+    ViewBag.Title = "Ditib Strasbourg";
+    Layout = "~/Views/Shared/strasbourg_layout.cshtml";
+}
+
+<br />
+<div class="main-container container" id="main-container">
+    <!-- post content -->
+    <div class="blog__content mb-72">
+        <h1 class="page-title" style="text-align: center;">Derneklerimiz</h1>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <br />
+
+
+                <!-- Most Popular -->
+                <section class="section mb-24">
+                    <div class="title-wrap title-wrap--line">
+
+                    </div>
+                    <div class="row row-20">
+
+                        @foreach (var item in Model.Item1)
+                        {
+                            <div class="col-md-4" style="text-align:center !important;">
+                                <article class="entry">
+                                    <div class="entry__img-holder">
+                                        <a href="#.">
+                                            <div class="thumb-container thumb-65">
+                                                <img data-src="@item.Image" src="@item.Image" class="entry__img lazyload" alt="">
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="entry__body">
+                                        <div class="entry__header">
+                                            <h2 class="entry__title">
+                                                <a href="#." style="text-transform:uppercase !important;">@item.Name</a>
+                                            </h2>
+                                        </div>
+                                        <div class="entry__excerpt">
+                                            <p><i class="fas fa-map-marker-alt"></i>&nbsp; @item.Adress</p>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        }
+
+                    </div>
+
+                </section> <!-- end most popular -->
+
+                <br />
+            </div>
+
+        </div>
+
+
+    </div> <!-- end post content -->
+
+
+</div> <!-- end main container -->

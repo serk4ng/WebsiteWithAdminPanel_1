@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Ditib Strasbourg";
+    Layout = "~/Views/Shared/strasbourg_layout.cshtml";
+ 
+}
+
+<br />
+
+<div class="main-container container" id="main-container">
+    <!-- post content -->
+    <div class="blog__content col-lg-12">
+        <h1 class="page-title" style="margin-left: 17 0px !important;">Bize Ulaşın</h1>
+
+        <div class="wpb_wrapper">
+            <div class="wpb_gmaps_widget wpb_content_element">
+                <div class="wpb_wrapper"><div class="wpb_map_wraper"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2639.0749748568837!2d7.708978915664883!3d48.58926327926206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796b7d7d3363997%3A0xb69cdeb16581f7a4!2s3+Rue+Thomas+Mann%2C+67200+Strasbourg!5e0!3m2!1str!2sfr!4v1544801463707" width="100%" height="308" frameborder="0" style="border:0"></iframe></div></div>
+
+                <div class="row justify-content-center" style="margin: 10px !important;">
+                    <div class="col-lg-6">
+                        <br />
+                        <h4>Herhangi bir konuda bizimle iletişime geçmek için lütfen aşağıdaki iletişim formunu kullanınız.</h4>
+  
+                            @using (Html.BeginForm("ContactRequestSave", "Contact", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+                            {  
+
+                                <div>
+                                    <label for="NameSurname">Ad Soyad <abbr title="required" class="required">*</abbr></label>
+                                    <input id="NameSurname" type="text" required name="NameSurname">
+                                </div>
+                                <div>
+                                    <label for="Email">E-mail <abbr title="required" class="required">*</abbr></label>
+                                    <input id="email" type="email" name="Email" required>
+                                </div>
+                                <div>
+                                    <label for="Subject">Konu</label>
+                                    <input id="subject" type="text" name="Subject" required>
+                                </div>
+                                <div>
+                                    <label for="Message">Mesajınız <abbr title="required" class="required">*</abbr></label>
+                                    <textarea rows="7" required name="Message"></textarea>
+                                </div>
+
+                                <input type="submit" class="btn btn-lg btn-color btn-button" value="Gönder">
+
+                            }
+                        
+                          
+           
+
+                        <!-- Contact Form -->
+
+                        <br />
+
+                    </div>
+
+                    <div class="col-lg-4">
+                        <br />
+                        <h4>İletişim Bilgilerimiz</h4>
+                        <p><b>DİTİB: </b> Diyanet İşleri Türk İslam Birliği Strasbourg</p>
+                        <p><b>Adres: </b> @ViewBag.siteSettings.Adress</p>
+                        <p><b>Telefon: </b> <a href="tel:@ViewBag.siteSettings.Phone">@ViewBag.siteSettings.Phone</a></p>
+
+                        <p><b>E-mail: </b> <a href="mailto:@ViewBag.siteSettings.Email">@ViewBag.siteSettings.Email</a></p>
+                    </div>
+                </div>
+
+
+            </div> <!-- end post content -->
+
+
+        </div> <!-- end main container -->
+    </div>
+</div>
+

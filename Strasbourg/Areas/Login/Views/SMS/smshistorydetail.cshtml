@@ -1,0 +1,79 @@
+﻿@using Strasbourg.Domain.Enums
+@model Strasbourg.Domain.ViewModels.SMSHistoryViewModel
+@{
+    ViewBag.Title = "Panel | Ditib Strasbourg";
+    Layout = "~/Areas/Login/Views/Shared/panel_layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card-box">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    @using (Html.BeginForm("SMSHistoryDetail", "SMS", FormMethod.Get, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+                    {
+
+                        <h3>SMS Detayı</h3>
+
+                        <div class="row">
+                            <div class="form-group">
+                                @Html.HiddenFor(x => x.Id)
+                            </div>
+                            <div class="col col-lg-12">
+                                <div class="input-group mt-3">
+                                    <span class="input-group-append">
+                                        <button type="button"
+                                                class="btn waves-effect waves-light btn-primary" style="width: 100px !important;">
+                                            Tarih
+                                        </button>
+                                    </span>
+                                    @{
+                                        string date = Model.CreationDate.ToShortDateString();
+                                    }
+                                    <input type="text" class="form-control" value="@date" readonly />
+
+                                </div>
+                            </div>
+                            <div class="col col-lg-12">
+                                <div class="input-group mt-3">
+                                    <span class="input-group-append">
+                                        <button type="button"
+                                                class="btn waves-effect waves-light btn-primary" style="width: 100px !important;">
+                                            Alıcı
+                                        </button>
+                                    </span>
+                                    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control", id = "Content", @required = "required", @readonly = "readonly" })
+
+                                </div>
+                            </div>
+
+                            <div class="col col-lg-12">
+                                <div class="input-group mt-3">
+                                    <span class="input-group-append">
+                                        <button type="button"
+                                                class="btn waves-effect waves-light btn-primary" style="width: 100px !important;">
+                                            Mesaj
+                                        </button>
+                                    </span>
+                                    @Html.TextAreaFor(x => x.Message, new { @class = "form-control", id = "Title", @required = "required", @readonly = "readonly",rows="10" })
+
+                                </div>
+                            </div>
+ 
+                        </div>
+
+
+                    }
+                </div>
+
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+</div>

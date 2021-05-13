@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ditib Strasbourg</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Responsive bootstrap 4 admin template" name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Table datatable css -->
+
+    <link href="assets/libs/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/fixedHeader.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/scroller.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/dataTables.colVis.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/fixedColumns.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+
+    <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet" />
+    <style>
+        /*
+
+RESPONSTABLE 2.0 by jordyvanraaij
+  Designed mobile first!
+
+If you like this solution, you might also want to check out the 1.0 version:
+  https://gist.github.com/jordyvanraaij/9069194
+
+*/
+        .responstable {
+            margin: 1em 0;
+            width: 100%;
+            overflow: hidden;
+            background: #FFF;
+            color: #024457;
+            border-radius: 10px;
+            border: 1px solid #167F92;
+        }
+
+        .responstable tr {
+            border: 1px solid #D9E4E6;
+        }
+
+        .responstable tr:nth-child(odd) {
+            background-color: #EAF3F3;
+        }
+
+        .responstable th {
+            display: none;
+            border: 1px solid #FFF;
+            background-color: #167F92;
+            color: #FFF;
+          
+        }
+        .responstable td {
+
+            background-color: lightgreen;
+    
+          
+        }
+
+        .responstable th:first-child {
+            display: table-cell;
+            text-align: center;
+        }
+
+        .responstable th:nth-child(2) {
+            display: table-cell;
+        }
+
+        .responstable th:nth-child(2) span {
+            display: none;
+        }
+
+        .responstable th:nth-child(2):after {
+            content: attr(data-th);
+        }
+
+        @media (min-width: 480px) {
+            .responstable th:nth-child(2) span {
+                display: block;
+            }
+
+            .responstable th:nth-child(2):after {
+                display: none;
+            }
+        }
+
+        .responstable td {
+            display: block;
+            word-wrap: break-word;
+  
+        }
+
+        .responstable td:first-child {
+            display: table-cell;
+            text-align: center;
+            border-right: 1px solid #D9E4E6;
+        }
+
+        @media (min-width: 480px) {
+            .responstable td {
+                border: 1px solid #D9E4E6;
+            }
+        }
+
+        .responstable th,
+        .responstable td {
+            text-align: left;
+            margin: .5em 1em;
+        }
+
+        @media (min-width: 480px) {
+
+            .responstable th,
+            .responstable td {
+                display: table-cell;
+       
+            }
+        }
+
+        body {
+            padding: 0 2em;
+            font-family: Arial, sans-serif;
+            color: #024457;
+            background: #f2f2f2;
+        }
+
+        h1 {
+            font-family: Verdana;
+            font-weight: normal;
+            color: #024457;
+        }
+
+        h1 span {
+            color: #167F92;
+        }
+    </style>
+</head>
+
+<body data-layout="horizontal">
+
+    <!-- Begin page -->
+    <div id="wrapper">
+        <!-- Navigation Bar-->
+        <header id="topnav">
+            <!-- Topbar Start -->
+            <div class="navbar-custom">
+                <div class="container-fluid">
+                    <ul class="list-unstyled topnav-menu float-right mb-0">
+                        <li class="dropdown notification-list">
+                            <!-- Mobile menu toggle-->
+                            <a class="navbar-toggle nav-link">
+                                <div class="lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </a>
+                            <!-- End mobile menu toggle-->
+                        </li>
+
+
+                        <li class="dropdown notification-list">
+                            <a class="nav-link dropdown-toggle waves-effect waves-light" href="../index.html"
+                                role="button" aria-haspopup="false" aria-expanded="false"><i
+                                    class="ion ion-md-return-left"></i>
+                                <span>Strasbourg Paneli</span>
+                            </a>
+                        </li>
+
+
+                        <li class="dropdown notification-list">
+                            <a class="nav-link dropdown-toggle waves-effect waves-light" href="../login.html"
+                                role="button" aria-haspopup="false" aria-expanded="false"><i class="mdi mdi-logout"></i>
+                                <span>Güvenli Çıkış</span>
+                            </a>
+                        </li>
+
+
+                        <li class="dropdown notification-list">
+                            <!-- Mobile menu toggle-->
+                            <a class="navbar-toggle nav-link">
+                                <div class="lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </a>
+                            <!-- End mobile menu toggle-->
+                        </li>
+
+
+
+
+
+
+                        <li class="dropdown notification-list">
+
+                        </li>
+
+                    </ul>
+
+                    <!-- LOGO -->
+                    <div class="logo-box">
+                        <a href="index.html" class="logo text-center">
+                            <span class="logo-lg">
+                                <span class="logo-lg-text-light">CENAZE FONU</span>
+                                <!-- <span class="logo-lg-text-light">Zircos</span> -->
+                            </span>
+                            <span class="logo-sm">
+                                <!-- <span class="logo-sm-text-dark">Z</span> -->
+                                <span class="logo-sm-text-dark">CF</span>
+                            </span>
+                        </a>
+
+                    </div>
+
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <!-- end Topbar -->
+
+            <div class="topbar-menu">
+                <div class="container-fluid">
+                    <div id="navigation">
+                        <!-- Navigation Menu-->
+                        <ul class="navigation-menu">
+
+                            <li class="has-submenu">
+                                <a href="index.html"> <i class="mdi mdi-view-dashboard"></i>Dashboard</a>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#">
+                                    <i class="ion ion-md-person"></i>Üye Listeleri
+                                </a>
+                                <ul class="submenu megamenu">
+                                    <li>
+                                        <ul>
+                                            <li><a href="allmemberlist.html">Tüm Üyeler</a></li>
+                                            <li><a href="activememberlist.html">Aktif Üyeler</a></li>
+                                            <li><a href="passivememberlist.html">Pasif Üyeler</a></li>
+                                            <li><a href="deletedmemberlist.html">Silinen Üyeler</a></li>
+                                            <li><a href="deceasedmemberlist.html">Vefat Eden Üyeler</a></li>
+                                        </ul>
+                                    </li>
+
+
+                                </ul>
+                            </li>
+
+
+                            <li class="has-submenu">
+                                <a href="#">
+                                    <i class=" mdi mdi-frequently-asked-questions"></i>Talepler
+                                </a>
+                                <ul class="submenu megamenu">
+                                    <li>
+                                        <ul>
+                                            <li><a href="adresschangerequests.html">Adres Değişikliği Talepleri</a></li>
+                                            <li><a href="transferrequests.html">Transfer Talepleri</a></li>
+
+                                        </ul>
+                                    </li>
+
+
+                                </ul>
+                            </li>
+
+
+                            <!--  
+                                    <li class="has-submenu">
+                                        <a href="#">
+                                            <i class="mdi mdi-google-pages"></i>Pages
+                                        </a>
+                                        <ul class="submenu megamenu">
+                                            <li>
+                                                <ul>
+                                                    <li><a href="page-starter.html">Starter Page</a></li>
+                                                    <li><a href="page-login.html">Login</a></li>
+                                                    <li><a href="page-register.html">Register</a></li>
+                                                    <li><a href="page-logout.html">Logout</a></li>
+                                                    <li><a href="page-recoverpw.html">Recover Password</a></li>
+                                                </ul>
+                                            </li>
+    
+                                          
+                                        </ul>
+                                    </li>
+    
+    -->
+
+                        </ul>
+                        <!-- End navigation menu -->
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- end #navigation -->
+                </div>
+                <!-- end container -->
+            </div>
+            <!-- end navbar-custom -->
+        </header>
+        <!-- End Navigation Bar-->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+
+                <br />
+                <!-- end page title -->
+                <div class="row">
+                    <div class="col-sm-2">
+                      
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="card-box">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <form class="form-horizontal">
+
+                                        <h3>İletişim Bilgisi Detayı</h3>
+
+                                        <div class="row">
+
+                                            <div class="col col-lg-12">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">Üye No</button>
+                                                    </span>
+                                                    <input type="text" id="example-input3-group2"
+                                                        name="example-input3-group2" class="form-control"
+                                                        placeholder="" value="12345">
+
+
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-12">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">FR Adresi</button>
+                                                    </span>
+                                                    <textarea class="form-control" rows="3">Adresi</textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-12">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">FR Posta Kodu</button>
+                                                    </span>
+                                                    <input type="text" id="example-input3-group2"
+                                                    name="example-input3-group2" class="form-control"
+                                                    placeholder="" value="12345">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col col-lg-12">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">FR Semt</button>
+                                                    </span>
+                                                    <input type="text" id="example-input3-group2"
+                                                        name="example-input3-group2" class="form-control"
+                                                        placeholder="" value="Semt">
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-12">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">FR Posta Kodu Bölge</button>
+                                                    </span>
+                                                    <textarea class="form-control" rows="2">Pasifler</textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-12">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">TR Adres</button>
+                                                    </span>
+                                                    <textarea class="form-control" rows="3">Adres</textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-12">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">TR İl</button>
+                                                    </span>
+                                                    <input type="text" id="example-input3-group2"
+                                                    name="example-input3-group2" class="form-control"
+                                                    placeholder="" value="Bolu">
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-12">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">TR İlçe</button>
+                                                    </span>
+                                                    <input type="text" id="example-input3-group2"
+                                                    name="example-input3-group2" class="form-control"
+                                                    placeholder="" value="Merkez">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col col-lg-12">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">Telefon Ev 1</button>
+                                                    </span>
+                                                    <input type="text" id="example-input3-group2"
+                                                    name="example-input3-group2" class="form-control"
+                                                    placeholder="" value="+1 123 456 789">
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-12">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">Telefon Ev 2</button>
+                                                    </span>
+                                                    <input type="text" id="example-input3-group2"
+                                                    name="example-input3-group2" class="form-control"
+                                                    placeholder="" value="+1 123 456 789">
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-12">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">Telefon Cep 1</button>
+                                                    </span>
+                                                    <input type="text" id="example-input3-group2"
+                                                    name="example-input3-group2" class="form-control"
+                                                    placeholder="" value="+1 123 456 789">
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-12">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">Telefon Cep 2</button>
+                                                    </span>
+                                                    <input type="text" id="example-input3-group2"
+                                                    name="example-input3-group2" class="form-control"
+                                                    placeholder="" value="+1 123 456 789">
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-12">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">Email</button>
+                                                    </span>
+                                                    <input type="email" id="example-input3-group2"
+                                                    name="example-input3-group2" class="form-control"
+                                                    placeholder="" value="a@a.com">
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-12">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">Telefon SMS Düzelt Cep</button>
+                                                    </span>
+                                                    <textarea class="form-control" rows="2">+1 123 456 789</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                 
+
+                                        <br/>
+                                        <button type="submit" class="btn btn-success waves-effect waves-light"><i class="fas fa-user-edit"></i> Kaydet</button>
+                                      </form>  
+                                </div>
+                               
+                                
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="col-sm-2">
+                      
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+    <!-- END wrapper -->
+
+    <!-- Right Sidebar -->
+    <div class="right-bar">
+        <div class="rightbar-title">
+            <a href="javascript:void(0);" class="right-bar-toggle float-right">
+                <i class="mdi mdi-close"></i>
+            </a>
+            <h4 class="font-16 m-0 text-white">Theme Customizer</h4>
+        </div>
+        <div class="slimscroll-menu">
+
+            <div class="p-4">
+                <div class="alert alert-warning" role="alert">
+                    <strong>Customize </strong> the overall color scheme, layout, etc.
+                </div>
+                <div class="mb-2">
+                    <img src="assets/images/layouts/light.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-3">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="light-mode-switch" checked />
+                    <label class="custom-control-label" for="light-mode-switch">Light Mode</label>
+                </div>
+
+                <div class="mb-2">
+                    <img src="assets/images/layouts/dark.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-3">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch"
+                        data-bsStyle="assets/css/bootstrap-dark.min.css" data-appStyle="assets/css/app-dark.min.css" />
+                    <label class="custom-control-label" for="dark-mode-switch">Dark Mode</label>
+                </div>
+
+                <div class="mb-2">
+                    <img src="assets/images/layouts/rtl.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-3">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="rtl-mode-switch"
+                        data-appStyle="assets/css/app-rtl.min.css" />
+                    <label class="custom-control-label" for="rtl-mode-switch">RTL Mode</label>
+                </div>
+
+                <div class="mb-2">
+                    <img src="assets/images/layouts/dark-rtl.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-5">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="dark-rtl-mode-switch"
+                        data-bsStyle="assets/css/bootstrap-dark.min.css"
+                        data-appStyle="assets/css/app-dark-rtl.min.css" />
+                    <label class="custom-control-label" for="dark-rtl-mode-switch">Dark RTL Mode</label>
+                </div>
+
+                <a href="https://1.envato.market/eKY0g" class="btn btn-danger btn-block mt-3" target="_blank"><i
+                        class="mdi mdi-download mr-1"></i> Download Now</a>
+            </div>
+        </div> <!-- end slimscroll-menu-->
+    </div>
+    <!-- /Right-bar -->
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+
+
+
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+
+    <script src="assets/libs/morris-js/morris.min.js"></script>
+    <script src="assets/libs/raphael/raphael.min.js"></script>
+
+    <!-- Jvector map -->
+    <script src="assets/libs/jquery-vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="assets/libs/jquery-vectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="assets/libs/jquery-vectormap/jquery-jvectormap-us-merc-en.js"></script>
+
+    <!-- Init js -->
+    <script src="assets/js/pages/blog-dashboard.init.js"></script>
+
+    <!-- Datatable plugin js -->
+
+    <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <script src="assets/js/pages/sweetalerts.init.js"></script>
+
+    <script src="assets/libs/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables/buttons.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables/buttons.print.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.keyTable.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.fixedHeader.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.scroller.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.fixedColumns.min.js"></script>
+
+    <script src="assets/libs/morris-js/morris.min.js"></script>
+    <script src="assets/libs/raphael/raphael.min.js"></script>
+
+
+
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/vfs_fonts.js"></script>
+
+
+    <!-- Datatables init -->
+    <script src="assets/js/pages/datatables.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
+
+
+       <!-- Plugins js -->
+       <script src="assets/libs/jquery-mask-plugin/jquery.mask.min.js"></script>
+       <script src="assets/libs/autonumeric/autoNumeric-min.js"></script>
+
+       <!-- Init js-->
+       <script src="assets/js/pages/form-masks.init.js"></script>
+
+
+
+
+</body>
+
+</html>

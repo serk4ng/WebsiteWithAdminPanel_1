@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Ditib Strasbourg";
+    Layout = "~/Views/Shared/strasbourg_layout.cshtml";
+}
+
+
+
+<div class="blog__content mb-72">
+    <h1 class="page-title" style="text-align:center;padding-top:20px;">Kayıt Ol</h1>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-6" style="padding:30px;">
+            <br />
+
+            <form id="contact-form" class="contact-form mt-30 mb-30" method="post" action="#">
+                <div>
+                    <label for="name">Ad Soyad <abbr title="required" class="required">*</abbr></label>
+                    <input name="name" id="name" type="text">
+                </div>
+                <div>
+                    <label for="name">E-mail <abbr title="required" class="required">*</abbr></label>
+                    <input name="name" id="name" type="email">
+                </div>
+                <div>
+                    <label for="email">Şifre <abbr title="required" class="required">*</abbr></label>
+                    <input name="email" id="email" type="password">
+                </div>
+                <div>
+                    <label for="email">Şifre Tekrar <abbr title="required" class="required">*</abbr></label>
+                    <input name="email" id="email" type="password">
+                </div>
+
+                <input type="submit" class="btn btn-lg btn-color btn-button" value="Kayıt Ol" id="submit-message">
+                <div id="msg" class="message"></div>
+            </form>
+            <br />
+
+        </div>
+
+    </div>
+
+
+</div> <!-- end post content -->

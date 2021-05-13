@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Cenaze Fonu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Responsive bootstrap 4 admin template" name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet" />
+    <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body data-layout="horizontal">
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- Navigation Bar-->
+        <header id="topnav">
+            <!-- Topbar Start -->
+            <div class="navbar-custom">
+                <div class="container-fluid">
+                    <ul class="list-unstyled topnav-menu float-right mb-0">
+                        <li class="dropdown notification-list">
+                            <!-- Mobile menu toggle-->
+                            <a class="navbar-toggle nav-link">
+                                <div class="lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </a>
+                            <!-- End mobile menu toggle-->
+                        </li>
+
+
+                        <li class="dropdown notification-list">
+                            <a class="nav-link dropdown-toggle waves-effect waves-light" href="../index.html"
+                                role="button" aria-haspopup="false" aria-expanded="false"><i
+                                    class="ion ion-md-return-left"></i>
+                                <span>Strasbourg Paneli</span>
+                            </a>
+                        </li>
+
+
+                        <li class="dropdown notification-list">
+                            <a class="nav-link dropdown-toggle waves-effect waves-light" href="../login.html"
+                                role="button" aria-haspopup="false" aria-expanded="false"><i class="mdi mdi-logout"></i>
+                                <span>Güvenli Çıkış</span>
+                            </a>
+                        </li>
+
+
+                        <li class="dropdown notification-list">
+                            <!-- Mobile menu toggle-->
+                            <a class="navbar-toggle nav-link">
+                                <div class="lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </a>
+                            <!-- End mobile menu toggle-->
+                        </li>
+
+
+
+
+
+
+                        <li class="dropdown notification-list">
+
+                        </li>
+
+                    </ul>
+
+                    <!-- LOGO -->
+                    <div class="logo-box">
+                        <a href="index.html" class="logo text-center">
+                            <span class="logo-lg">
+                                <span class="logo-lg-text-light">CENAZE FONU</span>
+                                <!-- <span class="logo-lg-text-light">Zircos</span> -->
+                            </span>
+                            <span class="logo-sm">
+                                <!-- <span class="logo-sm-text-dark">Z</span> -->
+                                <span class="logo-sm-text-dark">CF</span>
+                            </span>
+                        </a>
+
+                    </div>
+
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <!-- end Topbar -->
+
+            <div class="topbar-menu">
+                <div class="container-fluid">
+                    <div id="navigation">
+                        <!-- Navigation Menu-->
+                        <ul class="navigation-menu in">
+
+                            <li class="has-submenu">
+                                <a href="index.html"> <i class="mdi mdi-view-dashboard"></i>Dashboard</a>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#">
+                                    <i class="ion ion-md-person"></i>Üye Listeleri
+                                </a>
+                                <ul class="submenu megamenu">
+                                    <li>
+                                        <ul>
+                                            <li><a href="allmemberlist.html">Tüm Üyeler</a></li>
+                                            <li><a href="activememberlist.html">Aktif Üyeler</a></li>
+                                            <li><a href="passivememberlist.html">Pasif Üyeler</a></li>
+                                            <li><a href="deletedmemberlist.html">Silinen Üyeler</a></li>
+                                            <li><a href="deceasedmemberlist.html">Vefat Eden Üyeler</a></li>
+                                            <li><a href="contactlist.html">İletişim Listesi</a></li>
+                                            <li><a href="deceasedcollectionlist.html">Vefat Tahsilat Listesi</a></li>
+                                            <li><a href="collectionarchivelist.html">Tahsilat Arşivi Listesi</a></li>
+                                        </ul>
+                                    </li>
+
+
+                                </ul>
+                            </li>
+
+
+                            <li class="has-submenu">
+                                <a href="#">
+                                    <i class=" mdi mdi-frequently-asked-questions"></i>Talepler
+                                </a>
+                                <ul class="submenu megamenu">
+                                    <li>
+                                        <ul>     
+                                            <li><a href="waitingrequests.html">Bekleyen Talepler</a></li>
+                                            <li><a href="succeededrequests.html">Onaylanan Talepler</a></li>
+                                            <li><a href="deniedrequests.html">Reddedilen Talepler</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#">
+                                    <i class="fas fa-sms"></i>SMS
+                                </a>
+                                <ul class="submenu megamenu">
+                                    <li>
+                                        <ul>
+                                            <li><a data-toggle="modal" data-target="#sendsms">SMS Gönder</a></li>
+                                            <li><a href="sendmasssms.html">Toplu SMS Gönder</a></li>
+                                            <li><a href="smstemplates.html">SMS Şablonları</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#">
+                                    <i class="fas fa-envelope"></i>Email
+                                </a>
+                                <ul class="submenu megamenu">
+                                    <li>
+                                        <ul>
+                                            <li><a  data-toggle="modal" data-target="#sendemail">Email Gönder</a></li>
+                                            <li><a href="sendmassemail.html">Toplu Email Gönder</a></li>
+                                            <li><a href="emailtemplatelist.html">Email Şablonları</a></li>
+                                        </ul>
+                                    </li>
+
+
+                                </ul>
+                            </li>
+                            
+                            <li class="has-submenu">
+                                <a  data-toggle="modal" data-target="#newmemberform" class="newmemberformopen"> <i class="ion ion-md-person-add"></i>Yeni Üye Ekle</a>
+                            </li>
+
+                            <li >
+                                <a href="membercards.html">
+                                <i class="fa fa-address-card"></i>Üye Kartı</a>
+                            </li>
+                            <li style="float: right !important;" >
+                                <a href="generalsettings.html">
+                                <i class="mdi mdi-settings"></i>Ayarlar</a>
+                            </li>
+                            <li style="float: right !important;" >
+                                <a href="logs.html">
+                                <i class="mdi mdi-database-search"></i>Loglar</a>
+                            </li>
+                            
+                        </ul>
+                        <!-- End navigation menu -->
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- end #navigation -->
+                </div>
+                <!-- end container -->
+            </div>
+            <!-- end navbar-custom -->
+        </header>
+        <!-- End Navigation Bar-->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+        <div id="newmemberform" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"
+        style="display: none;">
+        <div class="modal-dialog modal-full">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title mt-0">Yeni Üye Ekle</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form onsubmit="return false">
+                <div class="modal-body">
+              
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="field-1" class="control-label">Ad Soyad</label>
+                                <input type="text" class="form-control" id="adsoyad" placeholder="Ad Soyad"
+                                    required="required">
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+             
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="field-3" class="control-label">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="field-6" class="control-label">Telefon</label>
+                                <input type="tel" class="form-control" id="tel" placeholder="" required>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="field-4" class="control-label">Doğum Tarihi</label>
+                                <input type="text" class="form-control" placeholder="dd/mm/yyyy" id="datepicker2"
+                                    value="" required>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="field-2" class="control-label">Cinsiyet</label>
+                                <select class="form-control" required>
+                                    <option>Erkek</option>
+                                    <option>Kadın</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group no-margin">
+                                <label for="field-7" class="control-label">Fransa Adresi</label>
+                                <textarea class="form-control autogrow" id="fransadresi" placeholder="Fransa Adresi"
+                                    style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;" required></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group no-margin">
+                                <label for="field-7" class="control-label">Türkiye Adresi</label>
+                                <textarea class="form-control autogrow" id="turkiyeadresi" placeholder="Türkiye Adresi"
+                                    style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;" required></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="field-3" class="control-label">Fransa Posta Kodu</label>
+                                <input type="number" class="form-control" id="fransapostakodu" placeholder="" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="field-3" class="control-label">Türkiye Posta Kodu</label>
+                                <input type="number" class="form-control" id="turkiyepostakodu" placeholder="" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="field-6" class="control-label">Fransa Bölge</label>
+                                <select class="form-control" class="form-control" id="fransabolge" required>
+                                    <option>Auvergne-Rhône-Alpes</option>
+                                    <option>Bourgogne-Franche-Comté</option>
+                                    <option>Bretagne</option>
+                                    <option>Centre-Val de Loire</option>
+                                    <option>Corse</option>
+                                    <option selected>Grand Est</option>
+                                    <option>Hauts-de-France</option>
+                                    <option>Île-de-France</option>
+                                    <option>Normandie</option>
+                                    <option>Nouvelle-Aquitaine</option>
+                                    <option>Occitanie</option>
+                                    <option>Pays de la Loire</option>
+                                    <option>Provence-Alpes-Côte d'Azur</option>
+                                    <option>Guadeloupe</option>
+                                    <option>Martinik</option>
+                                    <option>Guyane</option>
+                                    <option>La Réunion</option>
+                                    <option>Mayotte</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">Kapat</button>
+                    <button type="submit" class="btn btn-success waves-effect waves-light sa-success-newmemberform">Kaydet</button>
+                </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+        <div class="content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+
+                    <br />
+                    <div class="row">
+                        <div class="col-lg-6 col-xl-3">
+                            <div class="card widget-box-three">
+                                <div class="card-body">
+                                    <div class="float-right mt-2">
+                                        <i class="mdi mdi-chart-areaspline display-3 m-0"></i>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="text-uppercase font-weight-medium text-truncate mb-2">Toplam ÜYE
+                                            Sayısı</p>
+                                        <h2 class="mb-0"><span data-plugin="counterup">1234</span></h2>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+
+                        <div class="col-lg-6 col-xl-3">
+                            <div class="card widget-box-three">
+                                <div class="card-body">
+                                    <div class="float-right mt-2">
+                                        <i class="mdi mdi-human-male display-3 m-0"></i>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="text-uppercase font-weight-medium text-truncate mb-2">AKTİF ÜYE Sayısı
+                                        </p>
+                                        <h2 class="mb-0"><span data-plugin="counterup">895</span></h2>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+
+                        <div class="col-lg-6 col-xl-3">
+                            <div class="card widget-box-three">
+                                <div class="card-body">
+                                    <div class="float-right mt-2">
+                                        <i class="mdi mdi-human-male display-3 m-0"></i>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="text-uppercase font-weight-medium text-truncate mb-2">PASİF ÜYE Sayısı
+                                        </p>
+                                        <h2 class="mb-0"><span data-plugin="counterup">410</span></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+
+                        <div class="col-lg-6 col-xl-3">
+                            <div class="card widget-box-three">
+                                <div class="card-body">
+                                    <div class="float-right mt-2">
+                                        <i class="fas fa-book-dead display-3 m-0"></i>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="text-uppercase font-weight-medium text-truncate mb-2">Vefat Eden
+                                            Sayısı</p>
+                                        <h2 class="mb-0"><span data-plugin="counterup">652</span></h2>
+                                        <br />
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                    </div>
+                    <!-- end row -->
+                    <div class="row">
+
+                        <div class="col-xl-8" style="height: 377px;">
+                            <div class="card-box">
+                                <br />
+                                <h4 class="header-title">Cenaze Fonu Yıllık Yeni Üye Grafiği</h4>
+                                <canvas id="lineChart" height="280"></canvas>
+                            </div>
+
+                            <div class="card-box" style="display: none;">
+
+                                <h4 class="header-title mb-4">Cenaze Fonu Aylık Üyelik Grafiği</h4>
+                                <div id="morris-bar-example" class="text-center morris-charts" style="height: 280px;">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+
+                        <div class="col-xl-4" style="display:none">
+                            <div class="card-box">
+
+                                <h4 class="header-title mb-4">Total Revenue</h4>
+                                <div id="morris-line-example" class="text-center morris-charts" style="height: 280px;">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                        <div class="col-xl-4">
+                            <div class="card-box">
+
+                                <h4 class="header-title mb-4">Üye Grafiği</h4>
+
+                                <div class="widget-chart text-center">
+                                    <div id="morris-donut-example" class="morris-charts" style="height: 245px;"></div>
+                                    <ul class="list-inline chart-detail-list mb-0">
+                                        <li class="list-inline-item">
+                                            <h6 class="text-success"><i class="fa fa-circle mr-2"></i>Aktif</h6>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <h6 class="text-primary"><i class="fa fa-circle mr-2"></i>Pasif</h6>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <h6 class="text-danger"><i class="fa fa-circle mr-2"></i>Silinen</h6>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <h6 class="text-warning"><i class="fa fa-circle mr-2"></i>Vefat Eden</h6>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card-box">
+                                <h4 class="header-title mb-4">Son 5 Cenaze Fonu Üyeliği Kaydı Bilgisi</h4>
+
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-centered m-0">
+                                        <thead>
+                                            <tr>
+                                                <th>Üye No</th>
+                                                <th>Ad Soyad</th>
+                                                <th>Telefon</th>
+                                                <th>Bölge</th>
+                                                <th>Ödeme Yöntemi</th>
+                                                <th>Yaş</th>
+                                                <th>Üyelik Tarihi</th>
+                                                <th>Durum</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>12345</td>
+                                                <td>
+                                                    Cafer Cindoruk
+                                                </td>
+                                                <td>+12 3456 789</td>
+                                                <td>Grand Est</td>
+                                                <td>Online</td>
+                                                <td>30</td>
+                                                <td>21.12.2020</td>
+                                                <td>Aktif</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>12345</td>
+                                                <td>
+                                                    Cafer Cindoruk
+                                                </td>
+                                                <td>+12 3456 789</td>
+                                                <td>Île-de-France</td>
+                                                <td>Çek</td>
+                                                <td>30</td>
+                                                <td>21.12.2020</td>
+                                                <td>Aktif</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12345</td>
+                                                <td>
+                                                    Cafer Cindoruk
+                                                </td>
+                                                <td>+12 3456 789</td>
+                                                <td>Île-de-France</td>
+                                                <td>Online</td>
+                                                <td>30</td>
+                                                <td>21.12.2020</td>
+                                                <td>Aktif</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12345</td>
+                                                <td>
+                                                    Cafer Cindoruk
+                                                </td>
+                                                <td>+12 3456 789</td>
+                                                <td>Grand Est</td>
+                                                <td>Çek</td>
+                                                <td>30</td>
+                                                <td>21.12.2020</td>
+                                                <td>Aktif</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12345</td>
+                                                <td>
+                                                    Cafer Cindoruk
+                                                </td>
+                                                <td>+12 3456 789</td>
+                                                <td>Île-de-France</td>
+                                                <td>Online</td>
+                                                <td>30</td>
+                                                <td>21.12.2020</td>
+                                                <td>Aktif</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <!-- table-responsive -->
+                            </div>
+                            <!-- end card -->
+                        </div>
+                        <!-- end col -->
+
+                    </div>
+                    <!-- end row -->
+
+                </div>
+                <!-- end container-fluid -->
+
+            </div>
+            <!-- end content -->
+            <div id="sendsms" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5>SMS Gönder</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <div class="form-group">
+                                        <label for="field-1" class="control-label">SMS Türü Seçiniz</label>
+                                        <select class="form-control" id="smstype">
+                                            <option>Ödeme Alındı</option>
+                                            <option>Ödeme Uyarısı</option>
+                                            <option>Silinen Üye</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="field-1" class="control-label">Üye Numarası Giriniz</label>
+                                        <input type="text" class="form-control" placeholder="" value=""
+                                            required="required" id="membernumber">
+                                            <label for="field-1" class="control-label" style="color:darkred;display: none" id="errormembernumber">Lütfen Üye Numarası Giriniz</label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger waves-effect"
+                                data-dismiss="modal">İptal</button>
+                            <button type="button" class="btn btn-success waves-effect waves-light sa-success-sms"
+                                id="smssend">Onayla</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+
+            <div id="sendemail" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5>Email Gönder</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="row">
+                                <div class="col-md-12">
+
+                                    <div class="form-group">
+                                        <label for="field-1" class="control-label">Email Türü Seçiniz</label>
+                                        <select class="form-control" id="smstype">
+                                            <option>E-Tahsilat</option>
+                                            <option>E-Ödeme Uyarısı</option>
+                                            <option>E-Masraf Payı</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="field-1" class="control-label">Üye Numarası Giriniz</label>
+                                        <input type="text" class="form-control" placeholder="" value=""
+                                            required="required" id="membernumberemail">
+                                            <label for="field-1" class="control-label" style="color:darkred;display: none" id="errormembernumberemail">Lütfen Üye Numarası Giriniz</label>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger waves-effect"
+                                data-dismiss="modal">İptal</button>
+                            <button type="button" class="btn btn-success waves-effect waves-light sa-success-email"
+                                id="emailsend">Onayla</button>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+
+
+
+            <!-- Footer Start -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            Copyright 2020 · Designed & Developed by <a href="https://www.vakifglobal.com">Vakıf
+                                Global</a> All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end Footer -->
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+    <!-- END wrapper -->
+
+    <!-- Right Sidebar -->
+    <div class="right-bar">
+        <div class="rightbar-title">
+            <a href="javascript:void(0);" class="right-bar-toggle float-right">
+                <i class="mdi mdi-close"></i>
+            </a>
+            <h4 class="font-16 m-0 text-white">Theme Customizer</h4>
+        </div>
+        <div class="slimscroll-menu">
+
+            <div class="p-4">
+                <div class="alert alert-warning" role="alert">
+                    <strong>Customize </strong> the overall color scheme, layout, etc.
+                </div>
+                <div class="mb-2">
+                    <img src="assets/images/layouts/light.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-3">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="light-mode-switch" checked />
+                    <label class="custom-control-label" for="light-mode-switch">Light Mode</label>
+                </div>
+
+                <div class="mb-2">
+                    <img src="assets/images/layouts/dark.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-3">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch"
+                        data-bsStyle="assets/css/bootstrap-dark.min.css" data-appStyle="assets/css/app-dark.min.css" />
+                    <label class="custom-control-label" for="dark-mode-switch">Dark Mode</label>
+                </div>
+
+                <div class="mb-2">
+                    <img src="assets/images/layouts/rtl.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-3">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="rtl-mode-switch"
+                        data-appStyle="assets/css/app-rtl.min.css" />
+                    <label class="custom-control-label" for="rtl-mode-switch">RTL Mode</label>
+                </div>
+
+                <div class="mb-2">
+                    <img src="assets/images/layouts/dark-rtl.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-5">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="dark-rtl-mode-switch"
+                        data-bsStyle="assets/css/bootstrap-dark.min.css"
+                        data-appStyle="assets/css/app-dark-rtl.min.css" />
+                    <label class="custom-control-label" for="dark-rtl-mode-switch">Dark RTL Mode</label>
+                </div>
+
+                <a href="https://1.envato.market/eKY0g" class="btn btn-danger btn-block mt-3" target="_blank"><i
+                        class="mdi mdi-download mr-1"></i> Download Now</a>
+            </div>
+        </div> <!-- end slimscroll-menu-->
+    </div>
+    <!-- /Right-bar -->
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+
+    <script src="assets/libs/morris-js/morris.min.js"></script>
+    <script src="assets/libs/raphael/raphael.min.js"></script>
+
+    <script src="assets/js/pages/dashboard.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
+    <!-- Chart JS -->
+    <script src="assets/libs/chart-js/Chart.bundle.min.js"></script>
+
+    <script src="assets/js/pages/chartjs.init.js"></script>
+    <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <script src="assets/js/pages/sweetalerts.init.js"></script>
+        <!-- Plugin js-->
+        <script src="assets/libs/parsleyjs/parsley.min.js"></script>
+
+        <!-- Validation init js-->
+        <script src="assets/js/pages/form-validation.init.js"></script>
+    <script>
+
+      
+
+
+    </script>
+</body>
+
+</html>

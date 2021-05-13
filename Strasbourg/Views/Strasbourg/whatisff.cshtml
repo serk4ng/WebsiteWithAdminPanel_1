@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = "~/Views/Shared/strasbourg_layout.cshtml";
+    ViewBag.Active = ViewContext.RouteData.Values["action"];
+    ViewBag.Title = "Ditib Strasbourg";
+}
+
+<div class="main-container container" id="main-container">
+    <!-- post content -->
+    <div class="blog__content mb-72">
+        <br/>
+        @if (Session["selectedlang"].ToString() == "1")
+        {
+            <h1 class="page-title">Cenaze Fonu Nedir ?</h1>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <br />
+
+                    <p>Strazburg DİTİB Cenaze Nakli Yardımlaşma Fonu, insanlarımıza acılı günlerinde yardımcı olmak gayesiyle 1996 yılında kurulmuştur ve bir sigorta şirketi statüsünde olmayıp, hizmetlerini imkânlar çerçevesinde karşılıklı yardımlaşma esasına dayalı anlayış içerisinde sürdürmektedir.</p>
+
+                    <br /><br /><br /><br /><br /><br /><br />
+                </div>
+
+            </div>
+
+        }else {
+    <h1 class="page-title">Qu'est-ce que le fonds funéraire?</h1>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <br />
+
+                <p>Le Fonds de Solidarité Transfert Funéraire Strasbourg DİTİB a été créé en 1996 dans le but d'aider notre peuple dans ses jours douloureux et il n'a pas le statut de compagnie d'assurance, il continue ses services dans le cadre de l'entraide.</p>
+
+                <br /><br /><br /><br /><br /><br /><br />
+            </div>
+
+        </div>
+
+        }
+
+ 
+
+    </div> <!-- end post content -->
+
+
+</div> <!-- end main container -->

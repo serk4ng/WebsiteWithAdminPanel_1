@@ -1,0 +1,162 @@
+﻿@using Strasbourg.Domain.Enums
+@model Strasbourg.Domain.ViewModels.AlmsDonationViewModel
+@{
+    ViewBag.Title = "Panel | Ditib Strasbourg";
+    Layout = "~/Areas/Login/Views/Shared/panel_layout.cshtml";
+}
+
+<br />
+<!-- end page title -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card-box">
+            <div class="row">
+                <div class="col-lg-12">
+                    <form class="form-horizontal">
+
+                        <h3>Zekat Bağışı Detayı</h3>
+
+                        <div class="row">
+                            <div class="form-group">
+                                @Html.HiddenFor(x => x.Id)
+                            </div>
+                            <div class="col col-lg-12">
+                                <div class="input-group mt-3">
+                                    <span class="input-group-append">
+                                        <button type="button"
+                                                class="btn waves-effect waves-light btn-primary"
+                                                style="width: 150px !important;">
+                                            Tarih
+                                        </button>
+                                    </span>
+                                    @Html.TextBoxFor(x => x.CreationDate, new { @class = "form-control", @required = "required", @readonly = "readonly" })
+
+                                </div>
+                            </div>
+                            <div class="col col-lg-12">
+                                <div class="input-group mt-3">
+                                    <span class="input-group-append">
+                                        <button type="button"
+                                                class="btn waves-effect waves-light btn-primary"
+                                                style="width: 150px !important;">
+                                            Ad Soyad
+                                        </button>
+                                    </span>
+                                    <input type="text" id="example-input3-group2"
+                                           name="example-input3-group2" class="form-control"
+                                           placeholder="Ad Soyad" value="@Model.Name @Model.Surname" readonly>
+                                </div>
+                            </div>
+
+                            <div class="col col-lg-12">
+                                <div class="input-group mt-3">
+                                    <span class="input-group-append">
+                                        <button type="button"
+                                                class="btn waves-effect waves-light btn-primary"
+                                                style="width: 150px !important;">
+                                            Email
+                                        </button>
+                                    </span>
+                                    @Html.TextBoxFor(x => x.Email, new { @class = "form-control", @required = "required", @readonly = "readonly" })
+
+                                </div>
+                            </div>
+
+                            <div class="col col-lg-12">
+                                <div class="input-group mt-3">
+                                    <span class="input-group-append">
+                                        <button type="button"
+                                                class="btn waves-effect waves-light btn-primary"
+                                                style="width: 150px !important;">
+                                            Telefon
+                                        </button>
+                                    </span>
+                                    @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control", @required = "required", @readonly = "readonly" })
+                                </div>
+                            </div>
+
+                            <div class="col col-lg-12">
+                                <div class="input-group mt-3">
+                                    <span class="input-group-append">
+                                        <button type="button"
+                                                class="btn waves-effect waves-light btn-primary"
+                                                style="width: 150px !important;">
+                                            Şehir
+                                        </button>
+                                    </span>
+                                    @Html.TextBoxFor(x => x.City, new { @class = "form-control", @required = "required", @readonly = "readonly" })
+                                </div>
+                            </div>
+                            <div class="col col-lg-12">
+                                <div class="input-group mt-3">
+                                    <span class="input-group-append">
+                                        <button type="button"
+                                                class="btn waves-effect waves-light btn-primary"
+                                                style="width: 150px !important;">
+                                            Adres
+                                        </button>
+                                    </span>
+                                    @Html.TextAreaFor(x => x.Adress, new { @class = "form-control", @required = "required", @readonly = "readonly" })
+                                </div>
+                            </div>
+                            <div class="col col-lg-12">
+                                <div class="input-group mt-3">
+                                    <span class="input-group-append">
+                                        <button type="button"
+                                                class="btn waves-effect waves-light btn-primary"
+                                                style="width: 150px !important;">
+                                            Posta Kodu
+                                        </button>
+                                    </span>
+                                    @Html.TextBoxFor(x => x.ZipCode, new { @class = "form-control", @required = "required", @readonly = "readonly" })
+                                </div>
+                            </div>
+                            <div class="col col-lg-12">
+                                <div class="input-group mt-3">
+                                    <span class="input-group-append">
+                                        <button type="button"
+                                                class="btn waves-effect waves-light btn-primary"
+                                                style="width: 150px !important;">
+                                            Ek Bilgiler
+                                        </button>
+                                    </span>
+                                    @Html.TextAreaFor(x => x.AdditionalInfo, new { @class = "form-control", @required = "required", @readonly = "readonly" })
+                                </div>
+                            </div>
+
+
+
+                            <div class="col col-lg-12">
+                                <div class="input-group mt-3">
+                                    <span class="input-group-append">
+                                        <button type="button"
+                                                class="btn waves-effect waves-light btn-primary"
+                                                style="width: 150px !important;">
+                                            Zekat Miktarı
+                                        </button>
+                                    </span>
+                                    <input type="text" id="example-input3-group2"
+                                           name="example-input3-group2" class="form-control"
+                                           placeholder="" value="@Model.AlmsAmount €" readonly>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <br />
+        
+                    </form>
+                </div>
+
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+

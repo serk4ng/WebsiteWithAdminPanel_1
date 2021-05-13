@@ -1,0 +1,258 @@
+﻿@using Strasbourg.Domain.ViewModels
+@model IQueryable<AllDonationsViewModel>
+@{ ViewBag.Title = "Panel | Ditib Strasbourg";
+
+    Layout = "~/Areas/Login/Views/Shared/panel_layout.cshtml"; }
+
+
+<!-- Start Content-->
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-lg-6 col-xl-3">
+            <div class="card widget-box-three">
+                <div class="card-body">
+                    <div class="float-right mt-2">
+                        <i class="mdi mdi-chart-areaspline display-3 m-0"></i>
+                    </div>
+                    <div class="overflow-hidden">
+                        <p class="text-uppercase font-weight-medium text-truncate mb-2">CENAZE FONU ÜYE SAYISI</p>
+                        <h2 class="mb-0"><span data-plugin="counterup">859</span></h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end col -->
+
+
+        <div class="col-lg-6 col-xl-3">
+            <div class="card widget-box-three">
+                <div class="card-body">
+                    <div class="float-right mt-2">
+                        <i class="mdi mdi-human-male display-3 m-0"></i>
+                    </div>
+                    <div class="overflow-hidden">
+                        <p class="text-uppercase font-weight-medium text-truncate mb-2">
+                            AKTİF ÜYE SAYISI
+                        </p>
+                        <h2 class="mb-0"><span data-plugin="counterup">410</span></h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end col -->
+
+        <div class="col-lg-6 col-xl-3">
+            <div class="card widget-box-three">
+                <div class="card-body">
+                    <div class="float-right mt-2">
+                        <i class="mdi mdi-human-male display-3 m-0"></i>
+                    </div>
+                    <div class="overflow-hidden">
+                        <p class="text-uppercase font-weight-medium text-truncate mb-2">PASİF ÜYE SAYISI</p>
+                        <h2 class="mb-0"><span data-plugin="counterup">252</span></h2>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- end col -->
+
+        <div class="col-lg-6 col-xl-3">
+            <div class="card widget-box-three">
+                <div class="card-body">
+                    <div class="float-right mt-2">
+                        <i class="mdi mdi-home-currency-usd display-3 m-0"></i>
+                    </div>
+                    <div class="overflow-hidden">
+                        <p class="text-uppercase font-weight-medium text-truncate mb-2">TOPLAM BAĞIŞ SAYISI</p>
+                        <h2 class="mb-0"><span data-plugin="counterup">@ViewBag.alldonatecount</span></h2>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- end col -->
+    </div>
+    <!-- end row -->
+
+    <div class="row">
+
+        <div class="col-xl-8" style="height: 377px;">
+            <div class="card-box">
+                <br />
+                <h4 class="header-title">Cenaze Fonu Yıllık Yeni Üye Grafiği</h4>
+                <canvas id="lineChart" height="280"></canvas>
+            </div>
+
+            <div class="card-box" style="display: none;">
+
+                <h4 class="header-title mb-4">Cenaze Fonu Aylık Üyelik Grafiği</h4>
+                <div id="morris-bar-example" class="text-center morris-charts" style="height: 280px;">
+                </div>
+            </div>
+        </div>
+        <!-- end col -->
+
+        <div class="col-xl-4" style="display:none">
+            <div class="card-box">
+
+                <h4 class="header-title mb-4">Total Revenue</h4>
+                <div id="morris-line-example" class="text-center morris-charts" style="height: 280px;">
+                </div>
+            </div>
+        </div>
+        <!-- end col -->
+        <div class="col-xl-4">
+            <div class="card-box">
+
+                <h4 class="header-title mb-4">Yıllık Bağış Grafiği</h4>
+
+                <div class="widget-chart text-center">
+                    <div id="morris-donut-example" class="morris-charts" style="height: 245px;"></div>
+                    <ul class="list-inline chart-detail-list mb-0">
+                        <li class="list-inline-item">
+                            <h6 class="text-danger"><i class="fa fa-circle mr-2"></i>Kurban</h6>
+                        </li>
+                        <li class="list-inline-item">
+                            <h6 class="text-success"><i class="fa fa-circle mr-2"></i>Zekat</h6>
+                        </li>
+                        <li class="list-inline-item">
+                            <h6 class="text-warning"><i class="fa fa-circle mr-2"></i>Fitre</h6>
+                        </li>
+                        <li class="list-inline-item">
+                            <h6 style="color:#9200cf"><i class="fa fa-circle mr-2"></i>Fidye</h6>
+                        </li>
+                        <li class="list-inline-item">
+                            <h6 class="text-primary"><i class="fa fa-circle mr-2"></i>Genel</h6>
+                        </li>
+                        <li class="list-inline-item">
+                            <h6 class="text-dark"><i class="fa fa-circle mr-2"></i>Cami</h6>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end col -->
+    </div>
+    <!-- end row -->
+
+    <div class="row">
+        <div class="col-xl-6">
+            <div class="card-box">
+                <h4 class="header-title mb-4">Son 5 Cenaze Fonu Üyeliği Bilgisi</h4>
+
+                <div class="table-responsive">
+                    <table class="table table-hover table-centered m-0">
+                        <thead>
+                            <tr>
+                                <th>Ad Soyad</th>
+                                <th>Telefon</th>
+                                <th>Üyelik Tarihi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Cafer Cindoruk
+                                </td>
+                                <td>+12 3456 789</td>
+                                <td>07.12.2020</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    Cafer Cindoruk
+                                </td>
+                                <td>+12 3456 789</td>
+                                <td>07.12.2020</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Cafer Cindoruk
+                                </td>
+                                <td>+12 3456 789</td>
+                                <td>07.12.2020</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Cafer Cindoruk
+                                </td>
+                                <td>+12 3456 789</td>
+                                <td>07.12.2020</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Cafer Cindoruk
+                                </td>
+                                <td>+12 3456 789</td>
+                                <td>07.12.2020</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <!-- table-responsive -->
+            </div>
+            <!-- end card -->
+        </div>
+        <!-- end col -->
+
+        <div class="col-xl-6">
+            <div class="card-box">
+                <h4 class="header-title mb-4">Son 5 Bağış Bilgisi</h4>
+
+                <div class="table-responsive">
+                    <table class="table table-hover table-centered m-0">
+                        <thead>
+                            <tr>
+                                <th>Tarih</th>
+                                <th>Ad Soyad</th>
+                                <th>Telefon</th>
+                                <th>Türü</th>
+                                <th>Miktar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.CreationDate</td>
+                                    <td>
+                                        @item.Name @item.Surname
+                                    </td>
+                                    <td>@item.Phone</td>
+                                    <td>@item.DonationType</td>
+                                    <td>@item.Price €</td>
+
+                                </tr>
+
+                            }
+
+                        </tbody>
+                    </table>
+
+                </div>
+                <!-- table-responsive -->
+            </div>
+            <!-- end card -->
+        </div>
+        <!-- end col -->
+
+    </div>
+    <!-- end row -->
+
+</div>
+<!-- end container-fluid -->
+
+
+@section indexcharts{
+    <script>
+        !function (e) { "use strict"; var a = function () { this.$realData = [] }; a.prototype.createBarChart = function (e, a, r, t, o, i) { Morris.Bar({ element: e, data: a, xkey: r, ykeys: t, labels: o, hideHover: "auto", resize: !0, gridLineColor: "rgba(108, 120, 151, 0.1)", barSizeRatio: .2, barColors: i, postUnits: "k" }) }, a.prototype.createLineChart = function (e, a, r, t, o, i, n, s, l) { Morris.Line({ element: e, data: a, xkey: r, ykeys: t, labels: o, fillOpacity: i, pointFillColors: n, pointStrokeColors: s, behaveLikeLine: !0, gridLineColor: "rgba(108, 120, 151, 0.1)", hideHover: "auto", resize: !0, pointSize: 0, lineColors: l, postUnits: "k" }) }, a.prototype.createDonutChart = function (e, a, r) { Morris.Donut({ element: e, data: a, resize: !0, colors: r }) }, a.prototype.init = function () { this.createBarChart("morris-bar-example", [{ y: "01/2020", a: 42 }, { y: "02/2020", a: 142 }, { y: "03/2020", a: 342 }, { y: "04/2020", a: 85 }, { y: "05/2020", a: 342 }, { y: "06/2020", a: 40 }, { y: "07/2020", a: 80 }, { y: "08/2020", a: 190 }, { y: "09/2020", a: 240 }, { y: "10/2020", a: 185 }, { y: "11/2020", a: 349 }, { y: "12/2020", a: 236 }], "y", ["a"], ["Üye"], ["#3bafda"]); this.createLineChart("morris-line-example", [{ y: "2008", a: 50, b: 0 }, { y: "2009", a: 75, b: 50 }, { y: "2010", a: 30, b: 80 }, { y: "2011", a: 50, b: 50 }, { y: "2012", a: 75, b: 10 }, { y: "2013", a: 50, b: 40 }, { y: "2014", a: 75, b: 50 }, { y: "2015", a: 100, b: 70 }], "y", ["a", "b"], ["Series A", "Series B"], ["0.9"], ["#ffffff"], ["#999999"], ["#10c469", "#188ae2"]); this.createDonutChart("morris-donut-example", [{ label: "Kurban", value: @ViewBag.sacrificecount }, { label: "Zekat", value: @ViewBag.almscount }, { label: "Fitre", value: @ViewBag.fitrecount }, { label: "Genel", value: @ViewBag.generalcount }, { label: "Cami", value: @ViewBag.aidtomosquecount }, { label: "Fidye", value: @ViewBag.ransomcount }], ["#f5707a", "#4bd396", "#f9c851", "#188ae2", "#575a65", "#9200cf"]) }, e.Dashboard1 = new a, e.Dashboard1.Constructor = a }(window.jQuery), function (e) { "use strict"; window.jQuery.Dashboard1.init() }();
+    </script>
+}

@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ditib Strasbourg</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Ditib Strasbourg" name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet" />
+    <link href="assets/libs/jquery-vectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+
+        <!-- Topbar Start -->
+        <div class="navbar-custom">
+            <ul class="list-unstyled topnav-menu float-right mb-0">
+
+
+                <li class="dropdown notification-list">
+                    <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#"
+                        role="button" aria-haspopup="false" aria-expanded="false">
+                        <span class="d-none d-sm-inline-block ml-1">Cafer Cindoruk</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+
+                        <!-- item-->
+                        <a href="profile.html" class="dropdown-item notify-item">
+                            <i class="mdi mdi-account-outline"></i>
+                            <span>Profil</span>
+                        </a>
+
+                        <!-- item-->
+                        <a href="signout.html" class="dropdown-item notify-item">
+                            <i class="mdi mdi-settings-outline"></i>
+                            <span>Güvenli Çıkış</span>
+                        </a>
+
+                    </div>
+                </li>
+
+            </ul>
+
+            <!-- LOGO -->
+            <div class="logo-box">
+                <a href="index.html" class="logo text-center">
+                    <span class="logo-lg">
+                        <!--<img src="assets/images/logo-light.png" alt="" height="18">-->
+                        <span class="logo-lg-text-light">DİTİB STRASBOURG</span>
+
+                    </span>
+                    <span class="logo-sm">
+                        <span class="logo-sm-text-dark">DS</span>
+                        <!-- <img src="assets/images/logo-sm.png" alt="" height="24"> -->
+                    </span>
+                </a>
+            </div>
+
+            <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                <li>
+                    <button class="button-menu-mobile waves-effect">
+                        <i class="mdi mdi-menu"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- end Topbar -->
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu">
+
+            <div class="slimscroll-menu">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+
+                    <ul class="metismenu" id="side-menu">
+
+                        <li>
+                            <a href="index.html" class="waves-effect waves-light">
+                                <i class="mdi mdi-view-dashboard"></i>
+                                <span> Dashboard </span>
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-currency-usd"></i>
+                                <span> Bağış İşlemleri </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                
+                                <li>
+                                    <a href="javascript: void(0);" class="waves-effect waves-light">
+                                        <i class="mdi mdi-layers"></i>
+                                        <span> Kurban Bağışı </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul class="nav-second-level" aria-expanded="false">
+                                        <li><a href="sacrificedonatelist.html">Bağış Listesi</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="javascript: void(0);" class="waves-effect waves-light">
+                                        <i class="mdi mdi-layers"></i>
+                                        <span> Zekat Bağışı </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul class="nav-second-level" aria-expanded="false">
+                                        <li><a href="zakatdonatelist.html">Bağış Listesi</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="javascript: void(0);" class="waves-effect waves-light">
+                                        <i class="mdi mdi-layers"></i>
+                                        <span> Fitre Bağışı </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul class="nav-second-level" aria-expanded="false">
+                                        <li><a href="fitrdonatelist.html">Bağış Listesi</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="javascript: void(0);" class="waves-effect waves-light">
+                                        <i class="mdi mdi-layers"></i>
+                                        <span> Fidye Bağışı </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul class="nav-second-level" aria-expanded="false">
+                                        <li><a href="ransomdonatelist.html">Bağış Listesi</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="javascript: void(0);" class="waves-effect waves-light">
+                                        <i class="mdi mdi-layers"></i>
+                                        <span> Genel Bağış</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul class="nav-second-level" aria-expanded="false">
+                                        <li><a href="generaldonatelist.html">Bağış Listesi</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="javascript: void(0);" class="waves-effect waves-light">
+                                        <i class="mdi mdi-layers"></i>
+                                        <span> Camilere Yardım </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul class="nav-second-level" aria-expanded="false">
+                                        <li><a href="aidmosqueslist.html">Yardım Listesi</a></li>
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="CenazeFonu/index.html" class="waves-effect waves-light">
+                                <i class="mdi mdi-home-currency-usd"></i>
+                                <span> Cenaze Fonu </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-home-flood"></i>
+                                <span> Derneklerimiz </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="associationlist.html">Dernek Listesi</a></li>
+                                <li><a href="addassociation.html"> Dernek Ekle</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-home-flood"></i>
+                                <span> Kardeş Kuruluşlar </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="sisterorganizationlist.html">Kuruluş Listesi</a></li>
+                                <li><a href="addsisterorganization.html"> Kuruluş Ekle</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-home-flood"></i>
+                                <span> Bağlantılı Kuruluşlar</span>
+
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="relatedorganizationlist.html">Kuruluş Listesi</a></li>
+                                <li><a href="addrelatedorganization.html"> Kuruluş Ekle</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-face"></i>
+                                <span>Yönetim Kurulu</span>
+
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="boardofmanagementlist.html">Kişi Listesi</a></li>
+                                <li><a href="addboardofmanagement.html"> Kişi Ekle</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-newspaper"></i>
+                                <span> Haberler </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="newslist.html">Haber Listesi</a></li>
+                                <li><a href="addnews.html"> Haber Ekle</a></li>
+
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="fa fa-user"></i>
+                                <span> Kullanıcılar </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="userlist.html">Kullanıcı Listesi</a></li>
+                                <li><a href="adduser.html"> Kullanıcı Ekle</a></li>
+
+                            </ul>
+                        </li>
+
+
+
+
+                        <li>
+                            <a href="sitesettings.html" class="waves-effect waves-light">
+                                <i class="mdi mdi-setting"></i>
+                                <span> Site Ayarları </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- End Sidebar -->
+
+                <div class="clearfix"></div>
+
+                <div class="help-box">
+                    <h5 class="text-muted mt-0">YARDIM</h5>
+                    <p class=""><span class="text-info">Email:</span>
+                        <br /> info@vakifglobal.com</p>
+                    <p class="mb-0"><span class="text-info">Telefon:</span>
+                        <br /> (+90) 531 734 29 66</p>
+                </div>
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-lg-6 col-xl-3">
+                            <div class="card widget-box-three">
+                                <div class="card-body">
+                                    <div class="float-right mt-2">
+                                        <i class="mdi mdi-chart-areaspline display-3 m-0"></i>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="text-uppercase font-weight-medium text-truncate mb-2">CENAZE FONU ÜYE SAYISI</p>
+                                        <h2 class="mb-0"><span data-plugin="counterup">859</span></h2>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+
+                    
+                        
+                        <div class="col-lg-6 col-xl-3">
+                            <div class="card widget-box-three">
+                                <div class="card-body">
+                                    <div class="float-right mt-2">
+                                        <i class="mdi mdi-human-male display-3 m-0"></i>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="text-uppercase font-weight-medium text-truncate mb-2">AKTİF ÜYE SAYISI
+                                        </p>
+                                        <h2 class="mb-0"><span data-plugin="counterup">410</span></h2>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+
+                        <div class="col-lg-6 col-xl-3">
+                            <div class="card widget-box-three">
+                                <div class="card-body">
+                                    <div class="float-right mt-2">
+                                        <i class="mdi mdi-human-male display-3 m-0"></i>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="text-uppercase font-weight-medium text-truncate mb-2">PASİF ÜYE SAYISI</p>
+                                        <h2 class="mb-0"><span data-plugin="counterup">252</span></h2>
+                                       
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+
+                        <div class="col-lg-6 col-xl-3">
+                            <div class="card widget-box-three">
+                                <div class="card-body">
+                                    <div class="float-right mt-2">
+                                        <i class="mdi mdi-home-currency-usd display-3 m-0"></i>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="text-uppercase font-weight-medium text-truncate mb-2">TOPLAM BAĞIŞ SAYISI</p>
+                                        <h2 class="mb-0"><span data-plugin="counterup">895</span></h2>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                    </div>
+                    <!-- end row -->
+
+                    <div class="row">
+                     
+                        <div class="col-xl-8" style="height: 377px;">
+                            <div class="card-box">
+                                <br/>
+                                <h4 class="header-title">Cenaze Fonu Yıllık Yeni Üye Grafiği</h4>
+                                <canvas id="lineChart" height="280"></canvas>
+                            </div>
+                            
+                            <div class="card-box" style="display: none;">
+
+                                <h4 class="header-title mb-4">Cenaze Fonu Aylık Üyelik Grafiği</h4>
+                                <div id="morris-bar-example" class="text-center morris-charts" style="height: 280px;">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+
+                        <div class="col-xl-4" style="display:none">
+                            <div class="card-box">
+
+                                <h4 class="header-title mb-4">Total Revenue</h4>
+                                <div id="morris-line-example" class="text-center morris-charts" style="height: 280px;">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                        <div class="col-xl-4">
+                            <div class="card-box">
+
+                                <h4 class="header-title mb-4">Yıllık Bağış Grafiği</h4>
+
+                                <div class="widget-chart text-center">
+                                    <div id="morris-donut-example" class="morris-charts" style="height: 245px;"></div>
+                                    <ul class="list-inline chart-detail-list mb-0">
+                                        <li class="list-inline-item">
+                                            <h6 class="text-danger"><i class="fa fa-circle mr-2"></i>Kurban</h6>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <h6 class="text-success"><i class="fa fa-circle mr-2"></i>Zekat</h6>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <h6 class="text-warning"><i class="fa fa-circle mr-2"></i>Fitre</h6>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <h6 class="text-primary"><i class="fa fa-circle mr-2"></i>Genel</h6>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <h6 class="text-dark"><i class="fa fa-circle mr-2"></i>Cami</h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                    </div>
+                    <!-- end row -->
+
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="card-box">
+                                <h4 class="header-title mb-4">Son 5 Cenaze Fonu Üyeliği Bilgisi</h4>
+
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-centered m-0">
+                                        <thead>
+                                            <tr>
+                                                <th>Ad Soyad</th>
+                                                <th>Telefon</th>
+                                                <th>Üyelik Tarihi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    Cafer Cindoruk
+                                                </td>
+                                                <td>+12 3456 789</td>
+                                                <td>07.12.2020</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    Cafer Cindoruk
+                                                </td>
+                                                <td>+12 3456 789</td>
+                                                <td>07.12.2020</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Cafer Cindoruk
+                                                </td>
+                                                <td>+12 3456 789</td>
+                                                <td>07.12.2020</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Cafer Cindoruk
+                                                </td>
+                                                <td>+12 3456 789</td>
+                                                <td>07.12.2020</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Cafer Cindoruk
+                                                </td>
+                                                <td>+12 3456 789</td>
+                                                <td>07.12.2020</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <!-- table-responsive -->
+                            </div>
+                            <!-- end card -->
+                        </div>
+                        <!-- end col -->
+
+                        <div class="col-xl-6">
+                            <div class="card-box">
+                                <h4 class="header-title mb-4">Son 5 Bağış Bilgisi</h4>
+
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-centered m-0">
+                                        <thead>
+                                            <tr>
+                                                <th>Ad Soyad</th>
+                                                <th>Telefon</th>
+                                                <th>Türü</th>
+                                                <th>Tarih</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    Cafer Cindoruk
+                                                </td>
+                                                <td>+12 3456 789</td>
+                                                <td>Kurban</td>
+                                                <td>07.12.2020</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Cafer Cindoruk
+                                                </td>
+                                                <td>+12 3456 789</td>
+                                                <td>Zekat</td>
+                                                <td>07.12.2020</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Cafer Cindoruk
+                                                </td>
+                                                <td>+12 3456 789</td>
+                                                <td>Genel</td>
+                                                <td>07.12.2020</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Cafer Cindoruk
+                                                </td>
+                                                <td>+12 3456 789</td>
+                                                <td>Kurban</td>
+                                                <td>07.12.2020</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                    Cafer Cindoruk
+                                                </td>
+                                                <td>+12 3456 789</td>
+                                                <td>Genel</td>
+                                                <td>07.12.2020</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <!-- table-responsive -->
+                            </div>
+                            <!-- end card -->
+                        </div>
+                        <!-- end col -->
+
+                    </div>
+                    <!-- end row -->
+
+                </div>
+                <!-- end container-fluid -->
+
+            </div>
+            <!-- end content -->
+
+
+
+            <!-- Footer Start -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            Copyright 2020 · Designed & Developed by <a href="https://www.vakifglobal.com">Vakıf Global</a> All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end Footer -->
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+    <!-- END wrapper -->
+
+    <!-- Right Sidebar -->
+    <div class="right-bar">
+        <div class="rightbar-title">
+            <a href="javascript:void(0);" class="right-bar-toggle float-right">
+                <i class="mdi mdi-close"></i>
+            </a>
+            <h4 class="font-16 m-0 text-white">Theme Customizer</h4>
+        </div>
+        <div class="slimscroll-menu">
+
+            <div class="p-4">
+                <div class="alert alert-warning" role="alert">
+                    <strong>Customize </strong> the overall color scheme, layout, etc.
+                </div>
+                <div class="mb-2">
+                    <img src="assets/images/layouts/light.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-3">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="light-mode-switch" checked />
+                    <label class="custom-control-label" for="light-mode-switch">Light Mode</label>
+                </div>
+
+                <div class="mb-2">
+                    <img src="assets/images/layouts/dark.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-3">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch"
+                        data-bsStyle="assets/css/bootstrap-dark.min.css" data-appStyle="assets/css/app-dark.min.css" />
+                    <label class="custom-control-label" for="dark-mode-switch">Dark Mode</label>
+                </div>
+
+                <div class="mb-2">
+                    <img src="assets/images/layouts/rtl.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-3">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="rtl-mode-switch"
+                        data-appStyle="assets/css/app-rtl.min.css" />
+                    <label class="custom-control-label" for="rtl-mode-switch">RTL Mode</label>
+                </div>
+
+                <div class="mb-2">
+                    <img src="assets/images/layouts/dark-rtl.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-5">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="dark-rtl-mode-switch"
+                        data-bsStyle="assets/css/bootstrap-dark.min.css"
+                        data-appStyle="assets/css/app-dark-rtl.min.css" />
+                    <label class="custom-control-label" for="dark-rtl-mode-switch">Dark RTL Mode</label>
+                </div>
+
+                <a href="https://1.envato.market/eKY0g" class="btn btn-danger btn-block mt-3" target="_blank"><i
+                        class="mdi mdi-download mr-1"></i> Download Now</a>
+            </div>
+        </div> <!-- end slimscroll-menu-->
+    </div>
+    <!-- /Right-bar -->
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+
+    <script src="assets/libs/morris-js/morris.min.js"></script>
+    <script src="assets/libs/raphael/raphael.min.js"></script>
+
+    <script src="assets/js/pages/dashboard.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
+
+        <!-- Chart JS -->
+        <script src="assets/libs/chart-js/Chart.bundle.min.js"></script>
+
+        <script src="assets/js/pages/chartjs.init.js"></script>
+
+
+</body>
+
+</html>

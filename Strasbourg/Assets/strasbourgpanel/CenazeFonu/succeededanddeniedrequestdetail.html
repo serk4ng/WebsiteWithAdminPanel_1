@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Ditib Strasbourg</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Responsive bootstrap 4 admin template" name="description" />
+        <meta content="Coderthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+    
+        <!-- Table datatable css -->
+    
+        <link href="assets/libs/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables/fixedHeader.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables/scroller.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables/dataTables.colVis.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables/fixedColumns.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    
+    
+        <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+            <!-- Responsive Table css -->
+            <link href="assets/libs/rwd-table/rwd-table.min.css" rel="stylesheet" type="text/css" />
+        <!-- App css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet" />
+    
+        <style>
+            .request-wait input::-webkit-input-placeholder {
+                /* WebKit browsers */
+                color: #F9C851 !important;
+            }
+    
+            .request-success input::-webkit-input-placeholder {
+                /* WebKit browsers */
+                color: #4BD396 !important;
+            }
+    
+            .request-denied input::-webkit-input-placeholder {
+                /* WebKit browsers */
+                color: #F5707A !important;
+            }
+        </style>
+    </head>
+    
+    <body data-layout="horizontal">
+
+        <!-- Begin page -->
+        <div id="wrapper">
+            <!-- Navigation Bar-->
+            <header id="topnav">
+                    <!-- Topbar Start -->
+                    <div class="navbar-custom">
+                        <div class="container-fluid">
+                            <ul class="list-unstyled topnav-menu float-right mb-0">
+                                <li class="dropdown notification-list">
+                                    <!-- Mobile menu toggle-->
+                                    <a class="navbar-toggle nav-link">
+                                        <div class="lines">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </a>
+                                    <!-- End mobile menu toggle-->
+                                </li>
+ 
+    
+                                <li class="dropdown notification-list">
+                                    <a class="nav-link dropdown-toggle waves-effect waves-light" href="../index.html" role="button" aria-haspopup="false" aria-expanded="false"><i class="ion ion-md-return-left"></i>
+                                          <span>Strasbourg Paneli</span>
+                                    </a>
+                                </li>
+                                    
+    
+                                <li class="dropdown notification-list">
+                                    <a class="nav-link dropdown-toggle waves-effect waves-light" href="../login.html" role="button" aria-haspopup="false" aria-expanded="false"><i class="mdi mdi-logout"></i>
+                                        <span>Güvenli Çıkış</span>
+                                    </a>
+                                </li>
+                              
+    
+                                <li class="dropdown notification-list">
+                                    <!-- Mobile menu toggle-->
+                                    <a class="navbar-toggle nav-link">
+                                        <div class="lines">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </a>
+                                    <!-- End mobile menu toggle-->
+                                </li>
+
+    
+    
+                    
+    
+    
+                                <li class="dropdown notification-list">
+                              
+                                </li>
+    
+                            </ul>
+    
+                            <!-- LOGO -->
+                            <div class="logo-box">
+                                <a href="index.html" class="logo text-center">
+                                    <span class="logo-lg">
+                                        <span class="logo-lg-text-light">CENAZE FONU</span>
+                                        <!-- <span class="logo-lg-text-light">Zircos</span> -->
+                                    </span>
+                                    <span class="logo-sm">
+                                        <!-- <span class="logo-sm-text-dark">Z</span> -->
+                                        <span class="logo-sm-text-dark">CF</span>
+                                    </span>
+                                </a>
+                              
+                            </div>
+                            
+
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <!-- end Topbar -->
+    
+                    <div class="topbar-menu">
+                        <div class="container-fluid">
+                            <div id="navigation">
+                                <!-- Navigation Menu-->
+                                <ul class="navigation-menu in">
+        
+                                    <li class="has-submenu">
+                                        <a href="index.html"> <i class="mdi mdi-view-dashboard"></i>Dashboard</a>
+                                    </li>
+        
+                                    <li class="has-submenu">
+                                        <a href="#">
+                                            <i class="ion ion-md-person"></i>Üye Listeleri
+                                        </a>
+                                        <ul class="submenu megamenu">
+                                            <li>
+                                                <ul>
+                                                    <li><a href="allmemberlist.html">Tüm Üyeler</a></li>
+                                                    <li><a href="activememberlist.html">Aktif Üyeler</a></li>
+                                                    <li><a href="passivememberlist.html">Pasif Üyeler</a></li>
+                                                    <li><a href="deletedmemberlist.html">Silinen Üyeler</a></li>
+                                                    <li><a href="deceasedmemberlist.html">Vefat Eden Üyeler</a></li>
+                                                </ul>
+                                            </li>
+        
+        
+                                        </ul>
+                                    </li>
+        
+        
+                                    <li class="has-submenu">
+                                        <a href="#">
+                                            <i class=" mdi mdi-frequently-asked-questions"></i>Talepler
+                                        </a>
+                                        <ul class="submenu megamenu">
+                                            <li>
+                                                <ul>
+                                                    <li><a href="adresschangerequests.html">Adres Değişikliği Talepleri</a></li>
+                                                    <li><a href="transferrequests.html">Transfer Talepleri</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+        
+                                    <li class="has-submenu">
+                                        <a href="#">
+                                            <i class="fas fa-sms"></i>SMS
+                                        </a>
+                                        <ul class="submenu megamenu">
+                                            <li>
+                                                <ul>
+                                                    <li><a data-toggle="modal" data-target="#sendsms">SMS Gönder</a></li>
+                                                    <li><a href="sendmasssms.html">Toplu SMS Gönder</a></li>
+                                                    <li><a href="smstemplates.html">SMS Şablonları</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+        
+                                    <li class="has-submenu">
+                                        <a href="#">
+                                            <i class="fas fa-envelope"></i>Email
+                                        </a>
+                                        <ul class="submenu megamenu">
+                                            <li>
+                                                <ul>
+                                                    <li><a  data-toggle="modal" data-target="#sendemail">Email Gönder</a></li>
+                                                    <li><a href="sendmassemail.html">Toplu Email Gönder</a></li>
+                                                    <li><a href="emailtemplatelist.html">Email Şablonları</a></li>
+                                                </ul>
+                                            </li>
+        
+        
+                                        </ul>
+                                    </li>
+        
+        
+                                </ul>
+                                <!-- End navigation menu -->
+        
+                                <div class="clearfix"></div>
+                            </div>
+                            <!-- end #navigation -->
+                        </div>
+                        <!-- end container -->
+                    </div>
+                    <!-- end navbar-custom -->
+                </header>
+                <!-- End Navigation Bar-->
+                <div id="sendsms" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5>SMS Gönder</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+    
+                                <div class="row">
+                                    <div class="col-md-12">
+    
+                                        <div class="form-group">
+                                            <label for="field-1" class="control-label">SMS Türü Seçiniz</label>
+                                            <select class="form-control" id="smstype">
+                                                <option>Ödeme Alındı</option>
+                                                <option>Ödeme Uyarısı</option>
+                                                <option>Silinen Üye</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="field-1" class="control-label">Üye Numarası Giriniz</label>
+                                            <input type="text" class="form-control" placeholder="" value=""
+                                                required="required" id="membernumber">
+                                                <label for="field-1" class="control-label" style="color:darkred;display: none" id="errormembernumber">Lütfen Üye Numarası Giriniz</label>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger waves-effect"
+                                    data-dismiss="modal">İptal</button>
+                                <button type="button" class="btn btn-success waves-effect waves-light sa-success-sms"
+                                    id="smssend">Onayla</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+    
+                <div id="sendemail" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5>Email Gönder</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+    
+                                <div class="row">
+                                    <div class="col-md-12">
+    
+                                        <div class="form-group">
+                                            <label for="field-1" class="control-label">Email Türü Seçiniz</label>
+                                            <select class="form-control" id="smstype">
+                                                <option>E-Tahsilat</option>
+                                                <option>E-Ödeme Uyarısı</option>
+                                                <option>E-Masraf Payı</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="field-1" class="control-label">Üye Numarası Giriniz</label>
+                                            <input type="text" class="form-control" placeholder="" value=""
+                                                required="required" id="membernumberemail">
+                                                <label for="field-1" class="control-label" style="color:darkred;display: none" id="errormembernumberemail">Lütfen Üye Numarası Giriniz</label>
+                                        </div>
+                                    </div>
+    
+                                </div>
+    
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger waves-effect"
+                                    data-dismiss="modal">İptal</button>
+                                <button type="button" class="btn btn-success waves-effect waves-light sa-success-email"
+                                    id="emailsend">Onayla</button>
+                            </div>
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+                  
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+    
+                       <br/>
+                        <!-- end page title -->
+ 
+                        <div class="row">
+                            <div class="card-box table-responsive">
+                                <h3>Talep Detayı</h3>
+                            </div>
+    
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <h4>TEST ALANI</h4>
+                                <div style="margin-bottom:10px">
+    
+                                <button class="btn btn-primary" onclick="testrequest(0)">email</button>
+                                <button class="btn btn-primary" onclick="testrequest(1)">ceptel1</button>
+                                <button class="btn btn-primary" onclick="testrequest(2)">ceptel2</button>
+                                <button class="btn btn-primary" onclick="testrequest(3)">evtel1</button>
+                                 
+                            </div>
+                            <div style="margin-bottom:10px">
+                                <button class="btn btn-primary" onclick="testrequest(4)">evtel2</button>
+                                <button class="btn btn-primary" onclick="testrequest(5)">fr adresi</button>
+                                <button class="btn btn-primary" onclick="testrequest(6)">fr posta kodu</button>
+                            </div>
+                            <div style="margin-bottom:10px">
+                                <button class="btn btn-primary" onclick="testrequest(7)">fr şehir</button>
+                                <button class="btn btn-primary" onclick="testrequest(8)">fr bölge</button>
+                                <button class="btn btn-primary" onclick="testrequest(9)">tr adres</button>
+                            </div>
+                            <div style="margin-bottom:10px">
+                                <button class="btn btn-primary" onclick="testrequest(10)">tr posta kodu</button>
+                                <button class="btn btn-primary" onclick="testrequest(11)">aile reisi</button>
+                                <button class="btn btn-primary" onclick="testrequest(12)">aile transfer</button>
+                            </div>
+                                <button class="btn btn-primary" onclick="testrequest(13)">vefat</button>
+                             
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="card-box">
+                                    <form>
+                                        <div class="row">
+    
+                                       
+                                            <div id="changeemail" style="width: 100%;">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Ad Soyad</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Cafer Cindoruk" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Üye No</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            value="12345" readonly>
+                                                    </div>
+                                                </div>
+        
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Email Değişikliği" readonly>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Eski Email</label>
+                                                        <input type="email" class="form-control" id="field-3"
+                                                        value="a@a.com" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Yeni Email</label>
+                                                        <input type="email" class="form-control" id="email"
+                                                        value="b@b.com" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep Tarihi</label>
+                                                        <input type="email" class="form-control" id="taleptarihi"
+                                                        value="22.02.2021" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group request-denied">
+                                                        <label for="field-2" class="control-label">Talep Durumu</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Reddedildi" readonly>
+                                                    </div>
+                                                </div>
+    
+                                            </div>
+    
+    
+    
+                                            <div id="changemobilephone1" style="width:100%;display: none;">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Ad Soyad</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Cafer Cindoruk" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Üye No</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            value="12345" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                        value="Cep Tel 1 Değişikliği" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Eski Cep Tel 1</label>
+                                                        <input type="tel" class="form-control" id="field-3"
+                                                        value="+1 123 456 789" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Yeni Cep Tel 1</label>
+                                                        <input type="tel" class="form-control" id="ceptel1" value=" +1 438 342 133" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep Tarihi</label>
+                                                        <input type="email" class="form-control" id="taleptarihi"
+                                                        value="22.02.2021" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group request-denied">
+                                                        <label for="field-2" class="control-label">Talep Durumu</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Reddedildi" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div id="changemobilephone2" style="width:100%;display: none;">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Ad Soyad</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Cafer Cindoruk" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Üye No</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            value="12345" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Cep Tel 2 Değişikliği" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Eski Cep Tel 2</label>
+                                                        <input type="tel" class="form-control" id="field-3"
+                                                        value="+1 123 456 789" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Yeni Cep Tel 2</label>
+                                                        <input type="tel" class="form-control" id="ceptel2" value="+1 484 341 634" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep Tarihi</label>
+                                                        <input type="email" class="form-control" id="taleptarihi"
+                                                        value="22.02.2021" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group request-denied">
+                                                        <label for="field-2" class="control-label">Talep Durumu</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Reddedildi" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div id="changehomephone1" style="width:100%;display: none;">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Ad Soyad</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Cafer Cindoruk" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Üye No</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            value="12345" readonly>
+                                                    </div>
+                                                </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="field-2" class="control-label">Talep</label>
+                                                    <input type="text" class="form-control" id="field-3"
+                                                        placeholder="Ev Tel 1 Değişikliği" readonly>
+                                                </div>
+                                            </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Eski Ev Tel 1</label>
+                                                        <input type="tel" class="form-control" id=""
+                                                        value="+1 123 456 789" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Yeni Ev Tel 1</label>
+                                                        <input type="tel" class="form-control" id="evtel1" placeholder="" value="+ 1 544 342 764" readonly>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep Tarihi</label>
+                                                        <input type="email" class="form-control" id="taleptarihi"
+                                                        value="22.02.2021" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group request-denied">
+                                                        <label for="field-2" class="control-label">Talep Durumu</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Reddedildi" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+    
+                                            <div id="changehomephone2" style="width:100%;display: none;">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Ad Soyad</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Cafer Cindoruk" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Üye No</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            value="12345" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Ev Tel 2 Değişikliği" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Eski Ev Tel 2</label>
+                                                        <input type="tel" class="form-control" id="field-3"
+                                                            value="+1 123 456 789" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Yeni Ev Tel 2</label>
+                                                        <input type="tel" class="form-control" id="evtel2" placeholder="" value="+1 452 425 561" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep Tarihi</label>
+                                                        <input type="email" class="form-control" id="taleptarihi"
+                                                        value="22.02.2021" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group request-denied">
+                                                        <label for="field-2" class="control-label">Talep Durumu</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Reddedildi" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div id="changefranceadress" style="width:100%;display: none;">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Ad Soyad</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Cafer Cindoruk" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Üye No</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            value="12345" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Fransa Adresi Değişikliği" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Eski Fransa
+                                                            Adresi</label>
+                                                        <textarea class="form-control autogrow" id="field-7" placeholder=""
+                                                            style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"
+                                                            readonly>Adres</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Yeni Fransa
+                                                            Adresi</label>
+                                                        <textarea class="form-control autogrow" id="fradress" placeholder=""
+                                                            style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;" readonly>Yeni Adres</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep Tarihi</label>
+                                                        <input type="email" class="form-control" id="taleptarihi"
+                                                        value="22.02.2021" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group request-success">
+                                                        <label for="field-2" class="control-label">Talep Durumu</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Onaylandı" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+    
+                                            <div id="changefrancezipcode" style="width:100%;display: none;">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Ad Soyad</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Cafer Cindoruk" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Üye No</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            value="12345" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Fransa Posta Kodu Değişikliği" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Eski Fransa Posta
+                                                            Kodu</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            value="12345" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Yeni Fransa Posta
+                                                            Kodu</label>
+                                                        <input type="text" class="form-control" id="frzipcode"
+                                                            placeholder="" value="54321" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep Tarihi</label>
+                                                        <input type="email" class="form-control" id="taleptarihi"
+                                                        value="22.02.2021" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group request-success">
+                                                        <label for="field-2" class="control-label">Talep Durumu</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Onaylandı" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+    
+    
+    
+                                            <div id="changefrancecity" style="width:100%;display: none;">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Ad Soyad</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Cafer Cindoruk" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Üye No</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            value="12345" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Fransa Şehir Değişikliği" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Eski Fransa Şehir</label>
+                                                        <input type="tel" class="form-control" id="field-3"
+                                                            value="Strasbourg" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Yeni Fransa Şehir</label>
+                                                        <input type="text" class="form-control" id="frcity" value="Paris" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep Tarihi</label>
+                                                        <input type="email" class="form-control" id="taleptarihi"
+                                                        value="22.02.2021" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group request-success">
+                                                        <label for="field-2" class="control-label">Talep Durumu</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Onaylandı" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+    
+                                            <div id="changefranceregion" style="width:100%;display: none;">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Ad Soyad</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Cafer Cindoruk" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Üye No</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            value="12345" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Fransa Bölge Değişikliği" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Eski Fransa Bölge</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                        value="Grand Est" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Yeni Fransa Bölge</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            value="Île-de-France" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep Tarihi</label>
+                                                        <input type="email" class="form-control" id="taleptarihi"
+                                                        value="22.02.2021" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group request-success">
+                                                        <label for="field-2" class="control-label">Talep Durumu</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Onaylandı" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+    
+    
+                                            <div id="changeturkeyadress" style="width:100%;display: none;">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Ad Soyad</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Cafer Cindoruk" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Üye No</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            value="12345" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Türkiye Adres Değişikliği" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Eski Türkiye
+                                                            Adresi</label>
+                                                        <textarea class="form-control autogrow" id="field-7" placeholder=""
+                                                            style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"
+                                                            readonly>Adres</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Yeni Türkiye
+                                                            Adresi</label>
+                                                        <textarea class="form-control autogrow" id="tradress"  
+                                                            style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"
+                                                             readonly> Yeni Adres</textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep Tarihi</label>
+                                                        <input type="email" class="form-control" id="taleptarihi"
+                                                        value="22.02.2021" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group request-success">
+                                                        <label for="field-2" class="control-label">Talep Durumu</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Onaylandı" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div id="changeturkeyzipcode" style="width:100%;display: none;">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Ad Soyad</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Cafer Cindoruk" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Üye No</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            value="12345" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Türkiye Posta Kodu Değişikliği" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Eski Türkiye Posta
+                                                            Kodu</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                        value="12345" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Yeni Türkiye Posta
+                                                            Kodu</label>
+                                                        <input type="text" class="form-control" id="trzipcode"
+                                                            value="54321" required readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep Tarihi</label>
+                                                        <input type="email" class="form-control" id="taleptarihi"
+                                                        value="22.02.2021" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group request-success">
+                                                        <label for="field-2" class="control-label">Talep Durumu</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Onaylandı" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                                            <div id="changefamilymanager" style="width:100%;display: none;">
+                                               
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Aile Reisi Değişikliği" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Eski Aile Reisi</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                        value="Cafer Cindoruk" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Üye No</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                        value="12345" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Yeni Aile Reisi</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                        value="Caferiye Cindoruk" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Eski Aile Reisinin Yakınlık Derecesi</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                        value="Oğlu" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep Tarihi</label>
+                                                        <input type="email" class="form-control" id="taleptarihi"
+                                                        value="22.02.2021" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group request-success">
+                                                        <label for="field-2" class="control-label">Talep Durumu</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Onaylandı" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                           
+                                           
+                                            <div id="transfermember" style="width:100%;display: none;">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            value="Transfer" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Transfer Edilecek Kişi</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            value="Caferiye Cindoruk" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Transfer Olcağı Üye</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                        value="Mitat Caferoğlu" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Mevcut Üye Numarası</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                        value="23412" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Transfer Olcağı Üye Numarası</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                        value="12345" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep Tarihi</label>
+                                                        <input type="email" class="form-control" id="taleptarihi"
+                                                        value="22.02.2021" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group request-success">
+                                                        <label for="field-2" class="control-label">Talep Durumu</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Onaylandı" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+            
+                                           
+                                            <div id="declarationofdeath" style="width:100%;display: none;">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Vefat Eden Kişi</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            value="Cafer Cindoruk" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Üye No</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            value="12345" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            value="Vefat Bildirimi" readonly>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Vefat Belgesi</label>
+                                                        <iframe src="http://www.natprod.org/sites/default/files/pdf-algorithms-addison-wesley-series-in-computer-science-robert-sedgewick-pdf-download-free-book-56353b4.pdf" width="100%" height="500px">
+                                                        </iframe>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="field-2" class="control-label">Talep Tarihi</label>
+                                                        <input type="email" class="form-control" id="taleptarihi"
+                                                        value="22.02.2021" readonly>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group request-success">
+                                                        <label for="field-2" class="control-label">Talep Durumu</label>
+                                                        <input type="text" class="form-control" id="field-3"
+                                                            placeholder="Onaylandı" readonly>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+    
+                                        </div>
+                                        <br/>
+                                        <div class="col-lg-12 text-center">
+                                            <button type="submit" class="btn btn-danger waves-effect waves-light"><i class="fas fa-trash-alt"></i> Sil</button>
+                                        </div>
+                                 
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <!-- end container-fluid -->
+    
+                </div>
+                <!-- end content -->
+    
+                
+    
+                <!-- Footer Start -->
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                Copyright 2020 · Designed & Developed by <a href="http://www.vakifglobal.com">Vakıf Global</a> All rights reserved.
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- end Footer -->
+    
+            </div>
+    
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+        </div>
+        <!-- END wrapper -->
+
+        <!-- Right Sidebar -->
+        <div class="right-bar">
+            <div class="rightbar-title">
+                <a href="javascript:void(0);" class="right-bar-toggle float-right">
+                    <i class="mdi mdi-close"></i>
+                </a>
+                <h4 class="font-16 m-0 text-white">Theme Customizer</h4>
+            </div>
+            <div class="slimscroll-menu">
+        
+                <div class="p-4">
+                    <div class="alert alert-warning" role="alert">
+                        <strong>Customize </strong> the overall color scheme, layout, etc.
+                    </div>
+                    <div class="mb-2">
+                        <img src="assets/images/layouts/light.png" class="img-fluid img-thumbnail" alt="">
+                    </div>
+                    <div class="custom-control custom-switch mb-3">
+                        <input type="checkbox" class="custom-control-input theme-choice" id="light-mode-switch" checked />
+                        <label class="custom-control-label" for="light-mode-switch">Light Mode</label>
+                    </div>
+            
+                    <div class="mb-2">
+                        <img src="assets/images/layouts/dark.png" class="img-fluid img-thumbnail" alt="">
+                    </div>
+                    <div class="custom-control custom-switch mb-3">
+                        <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css" 
+                            data-appStyle="assets/css/app-dark.min.css" />
+                        <label class="custom-control-label" for="dark-mode-switch">Dark Mode</label>
+                    </div>
+            
+                    <div class="mb-2">
+                        <img src="assets/images/layouts/rtl.png" class="img-fluid img-thumbnail" alt="">
+                    </div>
+                    <div class="custom-control custom-switch mb-3">
+                        <input type="checkbox" class="custom-control-input theme-choice" id="rtl-mode-switch" data-appStyle="assets/css/app-rtl.min.css" />
+                        <label class="custom-control-label" for="rtl-mode-switch">RTL Mode</label>
+                    </div>
+
+                    <div class="mb-2">
+                        <img src="assets/images/layouts/dark-rtl.png" class="img-fluid img-thumbnail" alt="">
+                    </div>
+                    <div class="custom-control custom-switch mb-5">
+                        <input type="checkbox" class="custom-control-input theme-choice" id="dark-rtl-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css" 
+                            data-appStyle="assets/css/app-dark-rtl.min.css" />
+                        <label class="custom-control-label" for="dark-rtl-mode-switch">Dark RTL Mode</label>
+                    </div>
+
+                    <a href="https://1.envato.market/eKY0g" class="btn btn-danger btn-block mt-3" target="_blank"><i class="mdi mdi-download mr-1"></i> Download Now</a>
+                </div>
+            </div> <!-- end slimscroll-menu-->
+        </div>
+        <!-- /Right-bar -->
+
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <script src="assets/libs/morris-js/morris.min.js"></script>
+        <script src="assets/libs/raphael/raphael.min.js"></script>
+
+ 
+        <!-- Init js -->
+        <script src="assets/js/pages/blog-dashboard.init.js"></script>
+
+            <!-- Datatable plugin js -->
+
+    <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <script src="assets/js/pages/sweetalerts.init.js"></script>
+
+    <script src="assets/libs/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables/buttons.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables/buttons.print.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.keyTable.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.fixedHeader.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.scroller.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.fixedColumns.min.js"></script>
+
+    <script src="assets/libs/morris-js/morris.min.js"></script>
+    <script src="assets/libs/raphael/raphael.min.js"></script>
+ 
+    <!-- Init js -->
+    <script src="assets/js/pages/responsive-table.init.js"></script>
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/vfs_fonts.js"></script>
+
+    <!-- Datatables init -->
+    <script src="assets/js/pages/datatables.init.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.min.js"></script>
+
+        <script>
+            jQuery(function(){""
+               jQuery('#sortdate').click();
+               jQuery('#sortdate').click();
+            });
+            </script>
+
+
+<script>
+    var request = 0;
+</script>
+<script>
+  function testrequest(r){
+      request = r;
+      requestcontrol();
+  }
+</script>
+
+<script>
+  function requestcontrol(){
+
+      /*  
+      0 email değişikliği
+      1 cep tel 1
+      2 cep tel 2
+      3 ev tel 1
+      4 ev tel 2
+      5 fransa adresi
+      6 fransa posta kodu
+      7 fransa şehir
+      8 fransa bölge
+      9 türkiye adresi
+      10 türkiye posta kodu
+      11 aile reisi değişikliği
+      12 transfer
+      13 vefat bildirimi
+
+       */
+         
+       if(request == 0)
+       {
+          document.getElementById("changeemail").style.display = "block";
+          document.getElementById("changemobilephone1").style.display = "none";
+          document.getElementById("changemobilephone2").style.display = "none";
+          document.getElementById("changehomephone1").style.display = "none";
+          document.getElementById("changehomephone2").style.display = "none";
+          document.getElementById("changefranceadress").style.display = "none";
+          document.getElementById("changefrancezipcode").style.display = "none";
+          document.getElementById("changefrancecity").style.display = "none";
+          document.getElementById("changefranceregion").style.display = "none";
+          document.getElementById("changeturkeyadress").style.display = "none";
+          document.getElementById("changeturkeyzipcode").style.display = "none";
+          document.getElementById("changefamilymanager").style.display = "none";
+          document.getElementById("declarationofdeath").style.display = "none";
+          document.getElementById("transfermember").style.display = "none";
+       } 
+       else if(request == 1){
+          document.getElementById("changemobilephone1").style.display = "block";
+          document.getElementById("changeemail").style.display = "none";
+          document.getElementById("changemobilephone2").style.display = "none";
+          document.getElementById("changehomephone1").style.display = "none";
+          document.getElementById("changehomephone2").style.display = "none";
+          document.getElementById("changefranceadress").style.display = "none";
+          document.getElementById("changefrancezipcode").style.display = "none";
+          document.getElementById("changefrancecity").style.display = "none";
+          document.getElementById("changefranceregion").style.display = "none";
+          document.getElementById("changeturkeyadress").style.display = "none";
+          document.getElementById("changeturkeyzipcode").style.display = "none";
+          document.getElementById("changefamilymanager").style.display = "none";
+          document.getElementById("declarationofdeath").style.display = "none";
+          document.getElementById("transfermember").style.display = "none";
+       }
+       else if(request == 2){
+          document.getElementById("changemobilephone2").style.display = "block";
+          document.getElementById("changeemail").style.display = "none";
+          document.getElementById("changemobilephone1").style.display = "none";
+          document.getElementById("changehomephone1").style.display = "none";
+          document.getElementById("changehomephone2").style.display = "none";
+          document.getElementById("changefranceadress").style.display = "none";
+          document.getElementById("changefrancezipcode").style.display = "none";
+          document.getElementById("changefrancecity").style.display = "none";
+          document.getElementById("changefranceregion").style.display = "none";
+          document.getElementById("changeturkeyadress").style.display = "none";
+          document.getElementById("changeturkeyzipcode").style.display = "none";
+          document.getElementById("changefamilymanager").style.display = "none";
+          document.getElementById("declarationofdeath").style.display = "none";
+          document.getElementById("transfermember").style.display = "none";
+       }
+       else if(request == 3){
+          document.getElementById("changehomephone1").style.display = "block";
+          document.getElementById("changeemail").style.display = "none";
+          document.getElementById("changemobilephone1").style.display = "none";
+          document.getElementById("changemobilephone2").style.display = "none";
+          document.getElementById("changehomephone2").style.display = "none";
+          document.getElementById("changefranceadress").style.display = "none";
+          document.getElementById("changefrancezipcode").style.display = "none";
+          document.getElementById("changefrancecity").style.display = "none";
+          document.getElementById("changefranceregion").style.display = "none";
+          document.getElementById("changeturkeyadress").style.display = "none";
+          document.getElementById("changeturkeyzipcode").style.display = "none";
+          document.getElementById("changefamilymanager").style.display = "none";
+          document.getElementById("declarationofdeath").style.display = "none";
+          document.getElementById("transfermember").style.display = "none";
+       }
+       else if(request == 4){
+          document.getElementById("changehomephone2").style.display = "block";
+          document.getElementById("changeemail").style.display = "none";
+          document.getElementById("changemobilephone1").style.display = "none";
+          document.getElementById("changemobilephone2").style.display = "none";
+          document.getElementById("changehomephone1").style.display = "none";
+          document.getElementById("changefranceadress").style.display = "none";
+          document.getElementById("changefrancezipcode").style.display = "none";
+          document.getElementById("changefrancecity").style.display = "none";
+          document.getElementById("changefranceregion").style.display = "none";
+          document.getElementById("changeturkeyadress").style.display = "none";
+          document.getElementById("changeturkeyzipcode").style.display = "none";
+          document.getElementById("changefamilymanager").style.display = "none";
+          document.getElementById("declarationofdeath").style.display = "none";
+          document.getElementById("transfermember").style.display = "none";
+       }
+       else if(request == 5){
+          document.getElementById("changefranceadress").style.display = "block";
+          document.getElementById("changeemail").style.display = "none";
+          document.getElementById("changemobilephone1").style.display = "none";
+          document.getElementById("changemobilephone2").style.display = "none";
+          document.getElementById("changehomephone1").style.display = "none";
+          document.getElementById("changehomephone2").style.display = "none";
+          document.getElementById("changefrancezipcode").style.display = "none";
+          document.getElementById("changefrancecity").style.display = "none";
+          document.getElementById("changefranceregion").style.display = "none";
+          document.getElementById("changeturkeyadress").style.display = "none";
+          document.getElementById("changeturkeyzipcode").style.display = "none";
+          document.getElementById("changefamilymanager").style.display = "none";
+          document.getElementById("declarationofdeath").style.display = "none";
+          document.getElementById("transfermember").style.display = "none";
+       }
+       else if(request == 6){
+          document.getElementById("changefrancezipcode").style.display = "block";
+          document.getElementById("changeemail").style.display = "none";
+          document.getElementById("changemobilephone1").style.display = "none";
+          document.getElementById("changemobilephone2").style.display = "none";
+          document.getElementById("changehomephone1").style.display = "none";
+          document.getElementById("changehomephone2").style.display = "none";
+          document.getElementById("changefranceadress").style.display = "none";
+          document.getElementById("changefrancecity").style.display = "none";
+          document.getElementById("changefranceregion").style.display = "none";
+          document.getElementById("changeturkeyadress").style.display = "none";
+          document.getElementById("changeturkeyzipcode").style.display = "none";
+          document.getElementById("changefamilymanager").style.display = "none";
+          document.getElementById("declarationofdeath").style.display = "none";
+          document.getElementById("transfermember").style.display = "none";
+       }
+       else if(request == 7){
+          document.getElementById("changefrancecity").style.display = "block";
+          document.getElementById("changeemail").style.display = "none";
+          document.getElementById("changemobilephone1").style.display = "none";
+          document.getElementById("changemobilephone2").style.display = "none";
+          document.getElementById("changehomephone1").style.display = "none";
+          document.getElementById("changehomephone2").style.display = "none";
+          document.getElementById("changefranceadress").style.display = "none";
+          document.getElementById("changefrancezipcode").style.display = "none";
+          document.getElementById("changefranceregion").style.display = "none";
+          document.getElementById("changeturkeyadress").style.display = "none";
+          document.getElementById("changeturkeyzipcode").style.display = "none";
+          document.getElementById("changefamilymanager").style.display = "none";
+          document.getElementById("declarationofdeath").style.display = "none";
+          document.getElementById("transfermember").style.display = "none";
+       }
+       else if(request == 8){
+          document.getElementById("changefranceregion").style.display = "block";
+          document.getElementById("changeemail").style.display = "none";
+          document.getElementById("changemobilephone1").style.display = "none";
+          document.getElementById("changemobilephone2").style.display = "none";
+          document.getElementById("changehomephone1").style.display = "none";
+          document.getElementById("changehomephone2").style.display = "none";
+          document.getElementById("changefranceadress").style.display = "none";
+          document.getElementById("changefrancezipcode").style.display = "none";
+          document.getElementById("changefrancecity").style.display = "none";
+          document.getElementById("changeturkeyadress").style.display = "none";
+          document.getElementById("changeturkeyzipcode").style.display = "none";
+          document.getElementById("changefamilymanager").style.display = "none";
+          document.getElementById("declarationofdeath").style.display = "none";
+          document.getElementById("transfermember").style.display = "none";
+       }
+       else if(request == 9){
+          document.getElementById("changeturkeyadress").style.display = "block";
+          document.getElementById("changeemail").style.display = "none";
+          document.getElementById("changemobilephone1").style.display = "none";
+          document.getElementById("changemobilephone2").style.display = "none";
+          document.getElementById("changehomephone1").style.display = "none";
+          document.getElementById("changehomephone2").style.display = "none";
+          document.getElementById("changefranceadress").style.display = "none";
+          document.getElementById("changefrancezipcode").style.display = "none";
+          document.getElementById("changefrancecity").style.display = "none";
+          document.getElementById("changefranceregion").style.display = "none";
+          document.getElementById("changeturkeyzipcode").style.display = "none";
+          document.getElementById("changefamilymanager").style.display = "none";
+          document.getElementById("declarationofdeath").style.display = "none";
+          document.getElementById("transfermember").style.display = "none";
+       }
+       else if(request == 10){
+          document.getElementById("changeturkeyzipcode").style.display = "block";
+          document.getElementById("changeemail").style.display = "none";
+          document.getElementById("changemobilephone1").style.display = "none";
+          document.getElementById("changemobilephone2").style.display = "none";
+          document.getElementById("changehomephone1").style.display = "none";
+          document.getElementById("changehomephone2").style.display = "none";
+          document.getElementById("changefranceadress").style.display = "none";
+          document.getElementById("changefrancezipcode").style.display = "none";
+          document.getElementById("changefrancecity").style.display = "none";
+          document.getElementById("changefranceregion").style.display = "none";
+          document.getElementById("changeturkeyadress").style.display = "none";
+          document.getElementById("changefamilymanager").style.display = "none";
+          document.getElementById("declarationofdeath").style.display = "none";
+          document.getElementById("transfermember").style.display = "none";
+       }
+       else if(request == 11){
+          document.getElementById("changefamilymanager").style.display = "block";
+          document.getElementById("changeturkeyzipcode").style.display = "none";
+          document.getElementById("changeemail").style.display = "none";
+          document.getElementById("changemobilephone1").style.display = "none";
+          document.getElementById("changemobilephone2").style.display = "none";
+          document.getElementById("changehomephone1").style.display = "none";
+          document.getElementById("changehomephone2").style.display = "none";
+          document.getElementById("changefranceadress").style.display = "none";
+          document.getElementById("changefrancezipcode").style.display = "none";
+          document.getElementById("changefrancecity").style.display = "none";
+          document.getElementById("changefranceregion").style.display = "none";
+          document.getElementById("changeturkeyadress").style.display = "none";
+          document.getElementById("declarationofdeath").style.display = "none";
+          document.getElementById("transfermember").style.display = "none";
+       }
+       else if(request == 12){
+          document.getElementById("transfermember").style.display = "block";
+          document.getElementById("changefamilymanager").style.display = "none";
+          document.getElementById("changeturkeyzipcode").style.display = "none";
+          document.getElementById("changeemail").style.display = "none";
+          document.getElementById("changemobilephone1").style.display = "none";
+          document.getElementById("changemobilephone2").style.display = "none";
+          document.getElementById("changehomephone1").style.display = "none";
+          document.getElementById("changehomephone2").style.display = "none";
+          document.getElementById("changefranceadress").style.display = "none";
+          document.getElementById("changefrancezipcode").style.display = "none";
+          document.getElementById("changefrancecity").style.display = "none";
+          document.getElementById("changefranceregion").style.display = "none";
+          document.getElementById("changeturkeyadress").style.display = "none";
+          document.getElementById("declarationofdeath").style.display = "none";
+       }
+       else if(request == 13){
+          document.getElementById("declarationofdeath").style.display = "block";
+          document.getElementById("transfermember").style.display = "none";
+          document.getElementById("changefamilymanager").style.display = "none";
+          document.getElementById("changeturkeyzipcode").style.display = "none";
+          document.getElementById("changeemail").style.display = "none";
+          document.getElementById("changemobilephone1").style.display = "none";
+          document.getElementById("changemobilephone2").style.display = "none";
+          document.getElementById("changehomephone1").style.display = "none";
+          document.getElementById("changehomephone2").style.display = "none";
+          document.getElementById("changefranceadress").style.display = "none";
+          document.getElementById("changefrancezipcode").style.display = "none";
+          document.getElementById("changefrancecity").style.display = "none";
+          document.getElementById("changefranceregion").style.display = "none";
+          document.getElementById("changeturkeyadress").style.display = "none";
+          document.getElementById("transfermember").style.display = "none";
+       }
+       
+  }
+</script>
+    </body>
+
+</html>

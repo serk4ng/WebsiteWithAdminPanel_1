@@ -1,0 +1,1314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Online İşlemler | Cenaze Fonu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Responsive bootstrap 4 admin template" name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Table datatable css -->
+    <link href="assets/libs/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/fixedHeader.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/scroller.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/dataTables.colVis.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/fixedColumns.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+
+    <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet" />
+    <link href="assets/css/app.css" rel="stylesheet" type="text/css" />
+
+
+    <style>
+        /*
+
+RESPONSTABLE 2.0 by jordyvanraaij
+  Designed mobile first!
+
+If you like this solution, you might also want to check out the 1.0 version:
+  https://gist.github.com/jordyvanraaij/9069194
+
+*/
+        .responstable {
+            margin: 1em 0;
+            width: 100%;
+            overflow: hidden;
+            background: #FFF;
+            color: #024457;
+            border-radius: 10px;
+            border: 1px solid #167F92;
+        }
+
+        .responstable tr {
+            border: 1px solid #D9E4E6;
+        }
+
+        .responstable tr:nth-child(odd) {
+            background-color: #fff !important;
+        }
+
+        .responstable th {
+            display: none;
+            border: 1px solid #FFF;
+            background-color: #167F92;
+            color: #FFF;
+          
+        }
+        .responstable td {
+
+            background-color: lightgreen;
+    
+          
+        }
+
+        .responstable th:first-child {
+            display: table-cell;
+            text-align: center;
+        }
+
+        .responstable th:nth-child(2) {
+            display: table-cell;
+        }
+
+        .responstable th:nth-child(2) span {
+            display: none;
+        }
+
+        .responstable th:nth-child(2):after {
+            content: attr(data-th);
+        }
+
+        @media (min-width: 480px) {
+            .responstable th:nth-child(2) span {
+                display: block;
+            }
+
+            .responstable th:nth-child(2):after {
+                display: none;
+            }
+        }
+
+        .responstable td {
+            display: block;
+            word-wrap: break-word;
+  
+        }
+
+        .responstable td:first-child {
+            display: table-cell;
+            text-align: center;
+            border-right: 1px solid #D9E4E6;
+        }
+
+        @media (min-width: 480px) {
+            .responstable td {
+                border: 1px solid #D9E4E6;
+            }
+        }
+
+        .responstable th,
+        .responstable td {
+            text-align: left;
+            margin: .5em 1em;
+        }
+
+        @media (min-width: 480px) {
+
+            .responstable th,
+            .responstable td {
+                display: table-cell;
+       
+            }
+        }
+
+        
+
+        h1 {
+            font-family: Verdana;
+            font-weight: normal;
+            color: #024457;
+        }
+
+        h1 span {
+            color: #167F92;
+        }
+    </style>
+<style type="text/css">
+
+	p {margin: 0; padding: 0;}	.ft10{font-size:18px;font-family:Times;color:#000000;margin-left: 90px;}
+	.ft11{font-size:13px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color:#000000;margin-left: 90px;}
+	.ft12{font-size:12px;font-family:Times;color:#0000ff;margin-left: 90px;}
+	.ft13{font-size:12px;font-family:Times;color:#111111;margin-left: 90px;}
+	.ft14{font-size:14px;font-family:Times;color:#000000;margin-left: 90px;}
+	.ft15{font-size:15px;font-family:Times;color:#000000;margin-left: 90px;}
+	.ft16{font-size:15px;font-family:Times;color:#000000;margin-left: 90px;}
+	.ft17{font-size:13px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color:#000000;margin-left:90px;}
+	.ft18{font-size:13px;font-family:Times;color:#000000;margin-left: 90px;}
+	.ft19{font-size:14px;font-family:Times;color:#fefefe !important;margin-left: 90px;}
+	.ft110{font-size:13px;font-family:Times;color:#000000;margin-left: 90px;}
+	.ft111{font-size:12px;font-family:Times;color:#fefefe;margin-left: 90px;}
+	.ft112{font-size:14px;font-family:Times;color:#ff0000;margin-left: 90px;}
+	.ft113{font-size:15px;line-height:21px;font-family:Times;color:#000000;margin-left: 90px;}
+	.ft114{font-size:15px;line-height:21px;font-family:Times;color:#000000;margin-left: 90px;}
+
+
+
+    .u10{font-size:20px;font-family:Times;color:#000000;margin-left: 90px;}
+    .u11{font-size:16px;font-family:Times;color:#000000;margin-left: 90px;}
+	.u12{font-size:16px;font-family:Times;color:#0000ff;margin-left: 90px;}
+	.u13{font-size:14px;font-family:Times;color:#111111;margin-left: 90px;}
+	.u14{font-size:16px;font-family:Times;color:#000000;margin-left: 90px;}
+	.u15{font-size:17px;font-family:Times;color:#000000;margin-left: 90px;}
+	.u16{font-size:17px;font-family:Times;color:#000000;margin-left: 90px;}
+	.u17{font-size:15px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color:#000000;margin-left: 40px;}
+	.u18{font-size:14px;font-family:Times;color:#fefefe;margin-left: 80px;}
+	.u19{font-size:15px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color:#000000;margin-left: 40px;}
+	.u110{font-size:14px;font-family:Times;color:#fefefe;margin-left: 80px;}
+	.u111{font-size:16px;font-family:Times;color:#000000;margin-left: 70px;}
+	.u112{font-size:16px;font-family:Times;color:#000000;margin-left: 90px;}
+	.u113{font-size:16px;font-family:Times;color:#ff0000;margin-left: 90px;}
+	.u114{font-size:17px;line-height:21px;font-family:Times;color:#000000;margin-left: 90px;}
+	.u115{font-size:17px;line-height:21px;font-family:Times;color:#000000;margin-left: 90px;}
+	.u116{font-size:17px;line-height:18px;font-family:Times;color:#000000;margin-left: 90px;}
+	.u117{font-size:16px;line-height:16px;font-family:Times;color:#000000;margin-left: 90px;}
+
+
+
+    .mp10{font-size:20px;font-family:Times;color:#000000;margin-left: 70px;}
+	.mp11{font-size:16px;font-family:Times;color:#000000;margin-left: 60px;}
+	.mp12{font-size:17px;font-family:Times;color:#000000;margin-left: 70px;}
+	.mp13{font-size:16px;font-family:Times;color:#000000;margin-left: 70px;}
+	.mp14{font-size:17px;font-family:Times;color:#000000;margin-left: 70px;}
+	.mp15{font-size:16px;font-family:Times;color:#000000;margin-left: 35px;}
+	.mp16{font-size:16px;font-family:Times;color:#111111;margin-left: 70px;}
+	.mp17{font-size:16px;font-family:Times;color:#000000;margin-left: 70px;}
+	.mp18{font-size:16px;font-family:Times;color:#000000;margin-left: 60px;}
+	.mp19{font-size:16px;font-family:Times;color:#ffffff;margin-left: 60px;}
+	.mp110{font-size:16px;font-family:Times;color:#000000;margin-left: 40px;}
+	.mp111{font-size:16px;font-family:Times;color:#ffffff;margin-left: 60px;}
+	.mp112{font-size:16px;font-family:Times;color:#fefefe;margin-left: 70px;}
+	.mp113{font-size:19px;font-family:Times;color:#000000;margin-left: 70px;}
+	.mp114{font-size:19px;font-family:Times;color:#000000;margin-left: 70px;}
+	.mp115{font-size:17px;line-height:21px;font-family:Times;color:#000000;margin-left: 70px;}
+	.mp116{font-size:17px;line-height:21px;font-family:Times;color:#000000;margin-left: 70px;}
+	.mp117{font-size:16px;line-height:18px;font-family:Times;color:#000000;margin-left: 70px;}
+	.mp118{font-size:16px;line-height:18px;font-family:Times;color:#000000;margin-left: 70px;}
+	.mp119{font-size:16px;line-height:16px;font-family:Times;color:#000000;margin-left: 70px;}
+
+</style>
+    
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        
+        <!-- Topbar Start -->
+        <div class="navbar-custom">
+            <ul class="list-unstyled topnav-menu float-right mb-0">
+
+
+                <li class="dropdown notification-list">
+                    <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#"
+                        role="button" aria-haspopup="false" aria-expanded="false">
+                        <span class="d-none d-sm-inline-block ml-1">Cafer Cindoruk</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+
+                        <!-- item-->
+                        <a href="profile.html" class="dropdown-item notify-item">
+                            <i class="mdi mdi-account-outline"></i>
+                            <span>Profil</span>
+                        </a>
+
+                        <!-- item-->
+                        <a href="../strasbourg/girisyap.html" class="dropdown-item notify-item">
+                            <i class="mdi mdi-settings-outline"></i>
+                            <span>Güvenli Çıkış</span>
+                        </a>
+
+                    </div>
+                </li>
+
+            </ul>
+
+                   <!-- LOGO -->
+                   <div class="logo-box">
+                    <a href="index.html" class="logo text-center">
+                        <span class="logo-lg">
+                            <!--<img src="assets/images/logo-light.png" alt="" height="18">-->
+                            <span class="logo-lg-text-light">Cenaze Fonu    
+                            </span>
+                            <p style="color: white;margin-top: -40px;">Online İşlemler</p>
+                        </span>
+                        <span class="logo-sm">
+                            <span class="logo-sm-text-dark">CF</span>
+                            <!-- <img src="assets/images/logo-sm.png" alt="" height="24"> -->
+                        </span>
+                    </a>
+                </div>
+                <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                    <li>
+                        <button class="button-menu-mobile waves-effect">
+                            <i class="mdi mdi-menu"></i>
+                        </button>
+                    </li>
+            
+          
+    
+                    <li class="dropdown d-none d-lg-block">
+                        <a class="nav-link dropdown-toggle mr-0 waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/images/flags/tr.png" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Türkçe <i class="mdi mdi-chevron-down"></i> </span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <img src="assets/images/flags/french.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">French</span>
+                            </a>
+    
+            
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <img src="assets/images/flags/us.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">English</span>
+                            </a>
+    
+                            
+    
+                        </div>
+                    </li>
+    
+    
+                </ul>
+        </div>
+        <!-- end Topbar -->
+        
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu">
+
+            <div class="slimscroll-menu">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu" style="margin-top: 20px;">
+
+                    <ul class="metismenu" id="side-menu">
+
+                        <li>
+                            <a href="index.html" class="waves-effect waves-light">
+                                <i class="mdi mdi-view-dashboard"></i>
+                                <span> Anasayfa </span>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light active">
+                                <i class="ion ion-md-person"></i>
+                                <span> Aile Ferdi İşlemleri </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+
+                                <li><a href="addfamilymember.html">Aile Ferdi Ekle</a></li>
+                                <li><a href="familymemberlist.html">Aile Ferdi Listesi</a></li>
+                            </ul>
+                            </li>
+
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect waves-light">
+                                    <i class="fas fa-exchange-alt"></i>
+                                    <span> Talepler </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+                                    
+                                    <li><a href="contactinfochangerequest.html">İletişim Bilgisi Değişikliği Talebi</a></li>
+                                    <li><a href="familymanagerchangerequest.html">Aile Reisi Değişikliği Talebi</a></li>
+                                    <li><a href="transferrequest.html">Transfer Talebi</a></li>
+                                    <li><a href="declarationofdeath.html">Vefat Bildirimi</a></li>
+                                    <li><a href="myrequests.html">Taleplerim</a></li>
+                                </ul>
+                            </li>
+
+                         
+
+                            <li>
+                                <a href="payment.html" class="waves-effect waves-light">
+                                    <i class="mdi mdi-currency-eur"></i>
+                                    <span> Ödeme </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../strasbourg/girisyap.html" class="waves-effect waves-light">
+                                    <i class="mdi mdi-logout"></i>
+                                    <span> Çıkış Yap </span>
+                                </a>
+                            </li>
+
+                    </ul>
+                </div>
+                <!-- End Sidebar -->
+
+                <div class="clearfix"></div>
+
+                <div class="help-box">
+                    <h5 class="text-muted mt-0">Yardım</h5>
+                    <p class=""><span class="text-info">Email:</span>
+                        <br/> info@ditibstrasbourg.fr</p>
+                    <p class="mb-0"><span class="text-info">Telefon:</span>
+                        <br/> (+123) 123 456 789</p>
+                </div>
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+            <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+                    <br/>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="card-box">
+                                <div class="row">
+                                    <form class="form-horizontal">
+    
+                                        <h3>Aile Ferdi Detayı</h3>
+    
+                                        <div class="row">
+    
+                                            <div class="col col-lg-12">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">Ad Soyad</button>
+                                                    </span>
+                                                    <input type="text" id="example-input3-group2"
+                                                        name="example-input3-group2" class="form-control"
+                                                        placeholder="Ad Soyad" value="Cafer Cindoruk" readonly>
+    
+    
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-12">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">Üye No</button>
+                                                    </span>
+                                                    <input type="text" id="example-input3-group2"
+                                                        name="example-input3-group2" class="form-control"
+                                                        placeholder="Üye No" value="12345" readonly>
+    
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-12">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">Üyelik</button>
+                                                    </span>
+                                                    <input type="text" id="example-input3-group2"
+                                                        name="example-input3-group2" class="form-control"
+                                                        placeholder="Üyelik" value="Aktif" readonly>
+    
+                                                </div>
+                                            </div>
+    
+                                        </div>
+    
+    
+                                        <div class="row">
+    
+                                            <div class="col col-lg-6">
+    
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">Başlangıç Tarihi</button>
+                                                    </span>
+                                                    <input type="text" class="form-control" placeholder="dd/mm/yyyy"
+                                                        id="datepicker2" value="12/12/2020" style="font-size:14.2px;" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-6">
+    
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">A.T</button>
+                                                    </span>
+                                                    <input type="text" class="form-control" placeholder="dd/mm/yyyy"
+                                                        id="datepicker2" value="12/12/2020" style="font-size:14.3px;" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-12">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">Yakınlığı</button>
+                                                    </span>
+                                                    <select class="form-control" readonly>
+                                                        <option>Kendisi</option>
+                                                        <option>Kocası</option>
+                                                        <option>Hanımı</option>
+                                                        <option selected>Oğlu</option>
+                                                        <option>Kızı</option>
+                                                        <option>Babası</option>
+                                                        <option>Annesi</option>
+                                                        <option>E.Torun</option>
+                                                        <option>K.Torun</option>
+                                                        <option>E.Kardeşi</option>
+                                                        <option>K.Kardeşi</option>
+                                                        <option>Gelini</option>
+                                                        <option>Damadı</option>
+                                                        <option>K.Baba</option>
+                                                        <option>K.Valide</option>
+                                                        <option>Baldız</option>
+                                                        <option>Enişte</option>
+                                                        <option>Kayın</option>
+                                                        <option>E.Yiğeni</option>
+                                                        <option>K.Yiğeni</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="row">
+                                            <br />
+    
+                                            <div class="col col-lg-6">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">Doğum Tarihi</button>
+                                                    </span>
+                                                    <input type="text" class="form-control" placeholder="dd/mm/yyyy"
+                                                        id="datepicker" value="10/10/1980" style="font-size:14.3px;" readonly>
+    
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-6">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">G.Ü</button>
+                                                    </span>
+                                                    <input type="text" placeholder="" data-a-sign="€ "
+                                                        class="form-control autonumber" value="50" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-6">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">Cinsiyet</button>
+                                                    </span>
+                                                    <input type="text" id="example-input3-group2"
+                                                        name="example-input3-group2" class="form-control"
+                                                        placeholder="Cinsiyet" value="Erkek" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-6">
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">Nakil</button>
+                                                    </span>
+                                                    <input type="text" id="example-input3-group2"
+                                                        name="example-input3-group2" class="form-control" placeholder=""
+                                                        value="" readonly>
+                                                </div>
+                                            </div>
+    
+                                            <div class="col col-lg-6">
+    
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">Başlangıç Tarihi</button>
+                                                    </span>
+                                                    <input type="text" class="form-control" placeholder="dd/mm/yyyy"
+                                                        id="datepicker2" value="12/12/2020" style="font-size:14.5px;" readonly>
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-6">
+    
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">A.T</button>
+                                                    </span>
+                                                    <input type="text" class="form-control" placeholder="dd/mm/yyyy"
+                                                        id="datepicker2" value="12/12/2020" style="font-size:14.2px;" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col col-lg-12">
+                                                <br /> <br />
+                                                <div class="input-group mt-3">
+                                                    <span class="input-group-append">
+                                                        <button type="button"
+                                                            class="btn waves-effect waves-light btn-primary"
+                                                            style="width: 150px !important;">Başlangıç Tarihi</button>
+                                                    </span>
+                                                    <input type="text" class="form-control" placeholder="dd/mm/yyyy"
+                                                        id="datepicker2" value="12/12/2020" readonly>
+                                                </div>
+                                            </div>
+    
+    
+                                            <div class="col-lg-12">
+                                                <div class="card-box">
+    
+                                                    <ul class="nav nav-tabs nav-justified" role="tablist">
+                                                        <li class="nav-item">
+                                                            <a class="nav-link active" id="home1-tab" data-toggle="tab"
+                                                                href="#home1" role="tab" aria-controls="home1"
+                                                                aria-selected="true">
+                                                                <span class="d-block d-sm-none"><i
+                                                                        class="fas fa-home"></i></span>
+                                                                <span class="d-none d-sm-block">Fransa Adresi</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="nav-link" id="profile1-tab" data-toggle="tab"
+                                                                href="#profile1" role="tab" aria-controls="profile1"
+                                                                aria-selected="false">
+                                                                <span class="d-block d-sm-none"><i
+                                                                        class="fas fa-user"></i></span>
+                                                                <span class="d-none d-sm-block">Türkiye Adresi </span>
+                                                            </a>
+                                                        </li>
+    
+                                                    </ul>
+                                                    <div class="tab-content">
+                                                        <div class="tab-pane active show" id="home1" role="tabpanel"
+                                                            aria-labelledby="home1-tab">
+    
+                                                            <div class="input-group mt-3">
+                                                                <span class="input-group-append">
+                                                                    <button type="button"
+                                                                        class="btn waves-effect waves-light btn-primary"
+                                                                        style="width: 150px !important;">Fransa
+                                                                        Adresi</button>
+                                                                </span>
+                                                                <textarea class="form-control" rows="3" readonly>Adres</textarea>
+                                                            </div>
+    
+                                                            <div class="input-group mt-3">
+                                                                <span class="input-group-append">
+                                                                    <button type="button"
+                                                                        class="btn waves-effect waves-light btn-primary"
+                                                                        style="width: 150px !important;">Posta Kodu</button>
+                                                                </span>
+                                                                <input type="phone" id="example-input3-group2"
+                                                                    name="example-input3-group2" class="form-control"
+                                                                    placeholder="" value="12345" readonly>
+                                                            </div>
+                                                            <div class="input-group mt-3">
+                                                                <span class="input-group-append">
+                                                                    <button type="button"
+                                                                        class="btn waves-effect waves-light btn-primary"
+                                                                        style="width: 150px !important;">Şehir</button>
+                                                                </span>
+                                                                <input type="phone" id="example-input3-group2"
+                                                                    name="example-input3-group2" class="form-control"
+                                                                    placeholder="Şehir" value="Strasbourg" readonly>
+                                                            </div>
+    
+                                                        </div>
+                                                        <div class="tab-pane " id="profile1" role="tabpanel"
+                                                            aria-labelledby="profile1-tab">
+                                                            <div class="input-group mt-3">
+                                                                <span class="input-group-append">
+                                                                    <button type="button"
+                                                                        class="btn waves-effect waves-light btn-primary"
+                                                                        style="width: 150px !important;">Türkiye
+                                                                        Adresi</button>
+                                                                </span>
+                                                                <textarea class="form-control" rows="3"
+                                                                    readonly="" readonly>Adres</textarea>
+                                                            </div>
+    
+                                                            <div class="input-group mt-3">
+                                                                <span class="input-group-append">
+                                                                    <button type="button"
+                                                                        class="btn waves-effect waves-light btn-primary"
+                                                                        style="width: 150px !important;">Posta Kodu</button>
+                                                                </span>
+                                                                <input type="phone" id="example-input3-group2"
+                                                                    name="example-input3-group2" class="form-control"
+                                                                    placeholder="" value="12345" readonly>
+                                                            </div>
+                                                            <div class="input-group mt-3">
+                                                                <span class="input-group-append">
+                                                                    <button type="button"
+                                                                        class="btn waves-effect waves-light btn-primary"
+                                                                        style="width: 150px !important;">Şehir</button>
+                                                                </span>
+                                                                <input type="phone" id="example-input3-group2"
+                                                                    name="example-input3-group2" class="form-control"
+                                                                    placeholder="Şehir" value="Bolu" readonly>
+                                                            </div>
+    
+                                                        </div>
+    
+                                                    </div>
+                                                    <br /> <br />
+                                                    <div class="input-group mt-3">
+                                                        <span class="input-group-append">
+                                                            <button type="button"
+                                                                class="btn waves-effect waves-light btn-primary"
+                                                                style="width: 150px !important;">Cep Tel 1</button>
+                                                        </span>
+                                                        <input type="phone" id="example-input3-group2"
+                                                            name="example-input3-group2" class="form-control" placeholder=""
+                                                            value="+33 00 00 0000" readonly>
+                                                    </div>
+                                                    <div class="input-group mt-3">
+                                                        <span class="input-group-append">
+                                                            <button type="button"
+                                                                class="btn waves-effect waves-light btn-primary"
+                                                                style="width: 150px !important;">Cep Tel 2</button>
+                                                        </span>
+                                                        <input type="phone" id="example-input3-group2"
+                                                            name="example-input3-group2" class="form-control" placeholder=""
+                                                            value="+33 00 00 0000" readonly>
+                                                    </div>
+                                                    <div class="input-group mt-3">
+                                                        <span class="input-group-append">
+                                                            <button type="button"
+                                                                class="btn waves-effect waves-light btn-primary"
+                                                                style="width: 150px !important;">Cep Tel 3</button>
+                                                        </span>
+                                                        <input type="phone" id="example-input3-group2"
+                                                            name="example-input3-group2" class="form-control" placeholder=""
+                                                            value="+33 00 00 0000" readonly>
+                                                    </div>
+                                                    <div class="input-group mt-3">
+                                                        <span class="input-group-append">
+                                                            <button type="button"
+                                                                class="btn waves-effect waves-light btn-primary"
+                                                                style="width: 150px !important;">E-mail</button>
+                                                        </span>
+                                                        <input type="email" id="example-input3-group2"
+                                                            name="example-input3-group2" class="form-control" placeholder=""
+                                                            value="" readonly>
+                                                    </div>
+    
+                                                    <div class="input-group mt-3">
+                                                        <span class="input-group-append">
+                                                            <button type="button"
+                                                                class="btn waves-effect waves-light btn-primary"
+                                                                style="width: 150px !important;">Bilgi E-mail</button>
+                                                        </span>
+                                                        <input type="email" id="example-input3-group2"
+                                                            name="example-input3-group2" class="form-control" placeholder=""
+                                                            value="" readonly>
+                                                    </div>
+                                                    <div class="input-group mt-3">
+                                                        <span class="input-group-append">
+                                                            <button type="button"
+                                                                class="btn waves-effect waves-light btn-primary"
+                                                                style="width: 150px !important;">IBAN</button>
+                                                        </span>
+                                                        <input type="text" id="example-input3-group2"
+                                                            name="example-input3-group2" class="form-control" placeholder=""
+                                                            value="" readonly>
+                                                    </div>
+    
+                                                    <div class="input-group mt-3">
+                                                        <span class="input-group-append">
+                                                            <button type="button"
+                                                                class="btn waves-effect waves-light btn-primary"
+                                                                style="width: 150px !important;">BIC</button>
+                                                        </span>
+                                                        <input type="text" id="example-input3-group2"
+                                                            name="example-input3-group2" class="form-control" placeholder=""
+                                                            value="" readonly>
+                                                    </div>
+                                                    <div class="input-group mt-3">
+                                                        <span class="input-group-append">
+                                                            <button type="button"
+                                                                class="btn waves-effect waves-light btn-primary"
+                                                                style="width: 150px !important;">Mektup</button>
+                                                        </span>
+    
+    
+    
+                                                        <div class="form-check" onchange="lettercheck()"
+                                                            style="margin-left: 20px;">
+                                                            <input class="form-check-input" type="checkbox" value=""
+                                                                id="lettercheck"
+                                                                style="height:30px; width:30px; vertical-align: middle;"
+                                                                checked readonly>
+                                                            <label class="form-check-label" for="lettercheck"
+                                                                id="lettercheckvalue"
+                                                                style="margin-left: 20px;margin-top: 10px;">
+                                                                <b style="color: darkred;" >Geri Döndü</b> | 29.01.2021
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="input-group mt-3">
+                                                        <span class="input-group-append">
+                                                            <button type="button"
+                                                                class="btn waves-effect waves-light btn-primary"
+                                                                style="width: 150px !important;">grup MP</button>
+                                                        </span>
+                                                        <select class="form-control" readonly>
+                                                            <option>A</option>
+                                                            <option>P</option>
+                                                            <option>YA</option>
+                                                            <option>YPA</option>
+                                                            <option>SA</option>
+                                                        </select>
+                                                    </div>
+    
+                                               
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+                                    </form>
+                                </div>
+    
+                            </div>
+    
+    
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card-box">
+    
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <h3>Üye Ücret İşlemleri</h3>
+    
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <table class="responstable">
+                                                    <tr>
+                                                        <th>Devir</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>0.00 €</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <table class="responstable">
+                                                    <tr>
+                                                        <th>İlave İşlem Farkı</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>0.00 €</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <table class="responstable">
+                                                    <tr>
+                                                        <th>Borçlandır</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>0.00 €</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <table class="responstable">
+                                                    <tr>
+                                                        <th>Giriş Ücreti</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>0.00 €</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+    
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-3">
+                                                <table class="responstable">
+                                                    <tr>
+                                                        <th>Masraf Payı</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>75.00 €</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <table class="responstable">
+                                                    <tr>
+                                                        <th>Diğer Toplam</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>0.00 €</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <table class="responstable">
+                                                    <tr>
+                                                        <th>Toplam Ödeme</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>0.00 €</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                <table class="responstable">
+                                                    <tr>
+                                                        <th>Kalan Borç</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>75.00 €</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+    
+                                        </div>
+                                    </div>
+                              
+                                    <div class="col-lg-12">
+                                        <br/>
+                                        <div class="card" style="left: 29.5%;" id="mymembercard">
+    
+                                            <div class="card__front card__part" id="target2" style="background-image: url('assets/images/cenaze_karti_2015-1.png');    width: 323.52755906px !important;
+                                                height: 204.01889764px;">
+                
+                                                <p class="card_numer" id="cardname" style="margin-top: 70px;"> Cafer Cindoruk</p>
+                
+                
+                                                <p class="card__info" id="cardnumber">22222</p>
+                
+                                            </div>
+                
+                                            <div class="card__back card__part" style="background-image: url('assets/images/cenaze_karti_2015-1.png');width:323.52755906px;
+                                                height: 204.01889764px;" id="target">
+                                                <div class="card__black-line"
+                                                    style="text-align: center; font-size: 8px;margin-top: 30px;">
+                                                    <p> Aile reisi için düzenlenen bu kart, dosyada kayıtlı diğer aile fertleri için de
+                                                        geçerlidir. Adres, telefon ve aile durumundaki değişiklikleri en kısa zamanda
+                                                        yazılı olarak bildiriniz.
+                                                        DİTİB Strasbourg</p>
+                                                    <p>
+                                                        Adres: 3 Rue Thomas Mann 67200 Strasbourg E-mail: cenazefonu@ditibstrasbourg.fr
+                                                        Tel: 03 88 330 430 Çalışma saatleri: 09:30 - 12:30 / 13:30 - 17:30
+                                                        Vefat durumunda 7/24 aşağıdaki numarayı arayınız. (En cas de décès, veuillez
+                                                        appeler le numéro)
+                                                        06 61 72 86 23</p>
+                                                    <p>Cette carte est strictement personnelle.
+                                                        Toute personne trouvant cette carte est priée de bien vouloir la retournée au
+                                                        DITIB svp</p>
+                                                </div>
+                                                <div class="card__back-content">
+                
+                                                </div>
+                                            </div>
+                
+                                        </div>
+                                    </div>
+                                  
+                                    <div class="col-md-12">
+                                        <div id="voucher" style="position:relative;width:892px;height:1263px;display: none;">
+                                            <img width="892" height="1263" src="assets/images/target001.png" alt="background image" style="margin-top: 3px !important;margin-left: 55px;"/>
+                                            <p style="position:absolute;top:45px;left:462px;white-space:nowrap" class="ft10"><b>DİTİB Strasbourg</b></p>
+                                            <p style="position:absolute;top:69px;left:392px;white-space:nowrap" class="ft10"><b>Cenaze Nakli Yardımlaşma Fonu</b></p>
+                                            <p style="position:absolute;top:114px;left:240px;white-space:nowrap;font-size: 16px;" class="ft11">3 Rue Thomas Mann 67200 STRASBOURG &#160;Tel : 03 88 330 430 Cenaze olduğunda: 06 61 72 86 23</p>
+                                            <p style="position:absolute;top:132px;left:307px;white-space:nowrap;font-size: 16px;" class="ft11">E-posta: cenazefonu@ditibstrasbourg.fr - İnternet sitesi: www.ditibstrasbourg.fr</p>
+                                            <p style="position:absolute;top:245px;left:26px;white-space:nowrap" class="ft11">Dosya Numaranız:</p>
+                                            <p style="position:absolute;top:265px;left:34px;white-space:nowrap" class="ft11">Kayıtlı kişi sayısı:</p>
+                                            <p style="position:absolute;top:245px;left:150px;white-space:nowrap" class="ft12"><b>St- 11015</b></p>
+                                            <p style="position:absolute;top:264px;left:150px;white-space:nowrap" class="ft13">5</p>
+                                            <p style="position:absolute;top:283px;left:150px;white-space:nowrap" class="ft11">06 49 63 61 14 &#160; &#160;/ .. .. .. .. ..</p>
+                                            <p style="position:absolute;top:284px;left:53px;white-space:nowrap" class="ft11">Cep Telefonu:</p>
+                                            <p style="position:absolute;top:302px;left:150px;white-space:nowrap" class="ft11">adil@bulbul.fr</p>
+                                            <p style="position:absolute;top:302px;left:86px;white-space:nowrap" class="ft11">E-Posta:</p>
+                                            <p style="position:absolute;top:226px;left:44px;white-space:nowrap" class="ft11">Dosya Durumu:</p>
+                                            <p style="position:absolute;top:204px;left:17px;white-space:nowrap" class="ft14"><b>ÜYE BİLGİLERİ</b></p>
+                                            <p style="position:absolute;top:224px;left:150px;white-space:nowrap" class="ft12"><b>Aktif</b></p>
+                                            <p style="position:absolute;top:228px;left:509px;white-space:nowrap" class="ft114"><b>TEST BULBUL<br/></b>24 B RUE DU CIMETIERE<br/>67600 SELESTAT</p>
+                                            <p style="position:absolute;top:201px;left:509px;white-space:nowrap" class="ft17">ST- 11015</p>
+                                            <p style="position:absolute;top:154px;left:660px;white-space:nowrap" class="ft16" style="margin-bottom: 10px;">Strasbourg, le&#160;</p><br/>
+                                            <p style="position:absolute;top:157px;left:767px;white-space:nowrap" class="ft18"><b>21.12.2020</b></p>
+                                            <p style="position:absolute;top:511px;left:21px;white-space:nowrap" class="ft11">31/07/2015</p>
+                                            <p style="position:absolute;top:511px;left:509px;white-space:nowrap" class="ft11">K.VALIDE</p>
+                                            <p style="position:absolute;top:511px;left:643px;white-space:nowrap" class="ft11">K</p>
+                                            <p style="position:absolute;top:511px;left:421px;white-space:nowrap" class="ft11">01/01/1956</p>
+                                            <p style="position:absolute;top:511px;left:96px;white-space:nowrap" class="ft11">FATMA ISLANMAZ</p>
+                                            <p style="position:absolute;top:511px;left:798px;white-space:nowrap" class="ft11">31/01/2016</p>
+                                            <p style="position:absolute;top:511px;left:736px;white-space:nowrap" class="ft11">16.00€</p>
+                                            <p style="position:absolute;top:530px;left:21px;white-space:nowrap" class="ft11">31/07/2015</p>
+                                            <p style="position:absolute;top:530px;left:509px;white-space:nowrap" class="ft11">HANIMI</p>
+                                            <p style="position:absolute;top:530px;left:643px;white-space:nowrap" class="ft11">K</p>
+                                            <p style="position:absolute;top:530px;left:421px;white-space:nowrap" class="ft11">20/11/1979</p>
+                                            <p style="position:absolute;top:530px;left:96px;white-space:nowrap" class="ft11">SIBEL ISLANMAZ BULBUL</p>
+                                            <p style="position:absolute;top:530px;left:798px;white-space:nowrap" class="ft11">31/10/2015</p>
+                                            <p style="position:absolute;top:530px;left:736px;white-space:nowrap" class="ft11">16.00€</p>
+                                            <p style="position:absolute;top:550px;left:21px;white-space:nowrap" class="ft11">31/07/2015</p>
+                                            <p style="position:absolute;top:550px;left:509px;white-space:nowrap" class="ft11">OGLU</p>
+                                            <p style="position:absolute;top:550px;left:643px;white-space:nowrap" class="ft11">E</p>
+                                            <p style="position:absolute;top:550px;left:421px;white-space:nowrap" class="ft11">26/12/2011</p>
+                                            <p style="position:absolute;top:550px;left:96px;white-space:nowrap" class="ft11">TUNA BULBUL</p>
+                                            <p style="position:absolute;top:550px;left:798px;white-space:nowrap" class="ft11">31/10/2015</p>
+                                            <p style="position:absolute;top:550px;left:736px;white-space:nowrap" class="ft11">16.00€</p>
+                                            <p style="position:absolute;top:569px;left:21px;white-space:nowrap" class="ft11">07/12/2015</p>
+                                            <p style="position:absolute;top:569px;left:509px;white-space:nowrap" class="ft11">KIZI</p>
+                                            <p style="position:absolute;top:569px;left:643px;white-space:nowrap" class="ft11">K</p>
+                                            <p style="position:absolute;top:569px;left:421px;white-space:nowrap" class="ft11">07/11/2015</p>
+                                            <p style="position:absolute;top:569px;left:96px;white-space:nowrap" class="ft11">FEYZA BULBUL</p>
+                                            <p style="position:absolute;top:569px;left:798px;white-space:nowrap" class="ft11">07/12/2015</p>
+                                            <p style="position:absolute;top:569px;left:736px;white-space:nowrap" class="ft11">16.00€</p>
+                                            <p style="position:absolute;top:435px;left:401px;white-space:nowrap" class="ft14"><b>Kayıt Bilgisi</b></p>
+                                            <p style="position:absolute;top:464px;left:17px;white-space:nowrap" class="ft19">Kayıt Tarihi</p>
+                                            <p style="position:absolute;top:464px;left:153px;white-space:nowrap" class="ft19">Adı Soyadı</p>
+                                            <p style="position:absolute;top:464px;left:417px;white-space:nowrap" class="ft19">Doğum tarihi</p>
+                                            <p style="position:absolute;top:464px;left:515px;white-space:nowrap" class="ft19">Yakınlığı</p>
+                                            <p style="position:absolute;top:466px;left:792px;white-space:nowrap" class="ft19">Aktif üyelik</p>
+                                            <p style="position:absolute;top:464px;left:624px;white-space:nowrap" class="ft19">Cinsiyet</p>
+                                            <p style="position:absolute;top:490px;left:21px;white-space:nowrap" class="ft11">31/07/2015&#160;&nbsp;&nbsp;&nbsp;&nbsp;ADIL BULBUL</p>
+                                            <p style="position:absolute;top:490px;left:421px;white-space:nowrap" class="ft11">05/06/1981</p>
+                                            <p style="position:absolute;top:490px;left:643px;white-space:nowrap" class="ft11">E</p>
+                                            <p style="position:absolute;top:491px;left:798px;white-space:nowrap" class="ft11">31/10/2015</p>
+                                            <p style="position:absolute;top:490px;left:509px;white-space:nowrap" class="ft11">Aile Reisi</p>
+                                            <p style="position:absolute;top:490px;left:736px;white-space:nowrap" class="ft11">16.00€</p>
+                                            <p style="position:absolute;top:464px;left:693px;white-space:nowrap" class="ft19">Ücretler</p>
+                                            <p style="position:absolute;top:604px;left:395px;white-space:nowrap" class="ft14"><b>Ödeme Bilgisi</b></p>
+                                            <p style="position:absolute;top:640px;left:28px;white-space:nowrap" class="ft19">Geçmiş bakiye</p>
+                                            <p style="position:absolute;top:640px;left:405px;white-space:nowrap" class="ft19">Masraf Payı</p>
+                                            <p style="position:absolute;top:697px;left:560px;white-space:nowrap" class="ft18"><b>21.12.2020 itibarı ile borcunuz:</b></p>
+                                            <p style="position:absolute;top:697px;left:831px;white-space:nowrap" class="ft18"><b>80€</b></p>
+                                            <p style="position:absolute;top:665px;left:90px;white-space:nowrap" class="ft17">0,00€</p>
+                                            <p style="position:absolute;top:640px;left:164px;white-space:nowrap" class="ft19">Madde 7/D</p>
+                                            <p style="position:absolute;top:665px;left:228px;white-space:nowrap" class="ft17">0,00€</p>
+                                            <p style="position:absolute;top:665px;left:452px;white-space:nowrap" class="ft17">80,00€</p>
+                                            <p style="position:absolute;top:665px;left:834px;white-space:nowrap" class="ft110">0,00€</p>
+                                            <p style="position:absolute;top:640px;left:526px;white-space:nowrap" class="ft19">Giriş ücreti</p>
+                                            <p style="position:absolute;top:665px;left:576px;white-space:nowrap" class="ft17">0,00€</p>
+                                            <p style="position:absolute;top:640px;left:654px;white-space:nowrap" class="ft19">Toplam</p>
+                                            <p style="position:absolute;top:664px;left:686px;white-space:nowrap" class="ft17">80.00€</p>
+                                            <p style="position:absolute;top:641px;left:759px;white-space:nowrap" class="ft111"><b>Yapılan ödeme</b></p>
+                                            <p style="position:absolute;top:640px;left:308px;white-space:nowrap" class="ft19">Diğer</p>
+                                            <p style="position:absolute;top:665px;left:342px;white-space:nowrap" class="ft17">0,00€</p>
+                                            <p style="position:absolute;top:1194px;left:265px;white-space:nowrap" class="ft112"><b>İNTERNET SİTEMİZDEN</b></p>
+                                            <p style="position:absolute;top:1194px;left:435px;white-space:nowrap" class="ft14"><b>&#160;ÖDEME YAPABİLİRSİNİZ.</b></p>
+                                            <p style="position:absolute;top:1212px;left:121px;white-space:nowrap" class="ft14"><b>&#160;ÇEK İÇİN LÜTFEN ÜYE NUMARANIZI GÖNDERECEĞİNİZ&#160;</b></p>
+                                            <p style="position:absolute;top:1212px;left:534px;white-space:nowrap" class="ft112"><b>ÇEK</b></p>
+                                            <p style="position:absolute;top:1212px;left:565px;white-space:nowrap" class="ft14"><b>'IN ARKA KISMINA YAZINIZ.</b></p>
+                                            </div>
+    
+    
+    
+    
+                                            <div id="feealert" style="position:relative;width:892px;height:1263px;display: none;">
+                                                <img width="892" height="1263" src="assets/images/target002.png" alt="background image" style="margin-left: 45px;"/>
+                                                <p style="position:absolute;top:45px;left:462px;white-space:nowrap" class="u10"><b>DİTİB Strasbourg</b></p>
+                                                <p style="position:absolute;top:69px;left:392px;white-space:nowrap" class="u10"><b>Cenaze Nakli Yardımlaşma Fonu</b></p>
+                                                <p style="position:absolute;top:114px;left:240px;white-space:nowrap" class="u11">3 Rue Thomas Mann 67200 STRASBOURG &#160;Tel : 03 88 330 430 Cenaze olduğunda: 06 61 72 86 23</p>
+                                                <p style="position:absolute;top:132px;left:307px;white-space:nowrap" class="u11">E-posta: cenazefonu@ditibstrasbourg.fr - İnternet sitesi: www.ditibstrasbourg.fr</p>
+                                                <p style="position:absolute;top:248px;left:26px;white-space:nowrap" class="u11">Dosya Numaranız:</p>
+                                                <p style="position:absolute;top:268px;left:34px;white-space:nowrap" class="u11">Kayıtlı kişi sayısı:</p>
+                                                <p style="position:absolute;top:250px;left:150px;white-space:nowrap" class="u12"><b>St- 11015</b></p>
+                                                <p style="position:absolute;top:269px;left:150px;white-space:nowrap" class="u13">5</p>
+                                                <p style="position:absolute;top:286px;left:150px;white-space:nowrap" class="u11">06 49 63 61 14 &#160; &#160;/ .. .. .. .. ..</p>
+                                                <p style="position:absolute;top:287px;left:53px;white-space:nowrap" class="u11">Cep Telefonu:</p>
+                                                <p style="position:absolute;top:305px;left:150px;white-space:nowrap" class="u11">adil@bulbul.fr</p>
+                                                <p style="position:absolute;top:305px;left:86px;white-space:nowrap" class="u11">E-Posta:</p>
+                                                <p style="position:absolute;top:229px;left:44px;white-space:nowrap" class="u11">Dosya Durumu:</p>
+                                                <p style="position:absolute;top:208px;left:29px;white-space:nowrap" class="u14"><b>ÜYE BİLGİLERİ</b></p>
+                                                <p style="position:absolute;top:227px;left:150px;white-space:nowrap" class="u12"><b>Aktif</b></p>
+                                                <p style="position:absolute;top:228px;left:510px;white-space:nowrap" class="u115"><b>TEST BULBUL<br/></b>24 B RUE DU CIMETIERE<br/>67600 SELESTAT</p>
+                                                <p style="position:absolute;top:204px;left:510px;white-space:nowrap" class="u11">ST- 11015</p>
+                                                <p style="position:absolute;top:165px;left:672px;white-space:nowrap;margin-top: -10px;" class="u16">Strasbourg, le&#160;<b>6.07.2020</b></p>
+                                                <p style="position:absolute;top:933px;left:28px;white-space:nowrap" class="u18">Geçmiş bakiye</p>
+                                                <p style="position:absolute;top:933px;left:405px;white-space:nowrap" class="u18">Masraf Payı</p>
+                                                <p style="position:absolute;top:957px;left:90px;white-space:nowrap" class="u17">0,00€</p>
+                                                <p style="position:absolute;top:933px;left:164px;white-space:nowrap" class="u18">Madde 7/D</p>
+                                                <p style="position:absolute;top:957px;left:228px;white-space:nowrap" class="u17">0,00€</p>
+                                                <p style="position:absolute;top:959px;left:452px;white-space:nowrap" class="u17">80,00€</p>
+                                                <p style="position:absolute;top:959px;left:834px;white-space:nowrap" class="u19"><b>0,00€</b></p>
+                                                <p style="position:absolute;top:933px;left:526px;white-space:nowrap" class="u18">Giriş ücreti</p>
+                                                <p style="position:absolute;top:959px;left:576px;white-space:nowrap" class="u17">0,00€</p>
+                                                <p style="position:absolute;top:933px;left:654px;white-space:nowrap" class="u18">Toplam</p>
+                                                <p style="position:absolute;top:958px;left:686px;white-space:nowrap" class="u17">80.00€</p>
+                                                <p style="position:absolute;top:934px;left:759px;white-space:nowrap" class="u110"><b>Yapılan ödeme</b></p>
+                                                <p style="position:absolute;top:933px;left:308px;white-space:nowrap" class="u18">Diğer</p>
+                                                <p style="position:absolute;top:959px;left:342px;white-space:nowrap" class="u17">0,00€</p>
+                                                <p style="position:absolute;top:991px;left:558px;white-space:nowrap" class="u111"><b>21/12/2020 itibarı ile borcunuz :</b></p>
+                                                <p style="position:absolute;top:991px;left:834px;white-space:nowrap" class="u111"><b>80€</b></p>
+                                                <p style="position:absolute;top:454px;left:71px;white-space:nowrap;" class="u16">Sayın&#160;<b>ADIL BULBUL</b>,</p>
+                                                <p style="position:absolute;top:495px;left:71px;white-space:nowrap" class="u112">Kayıtlarımızın incelenmesi neticesinde aidatınızın henüz ödenmediği görülmektedir.</p>
+                                                <p style="position:absolute;top:529px;left:71px;white-space:nowrap" class="u112">Aidatın ödenmemesi durumunda Yardımlaşma Fonu yönergesinin 7. maddesine göre işlem yapılacaktır.</p>
+                                                <p style="position:absolute;top:565px;left:71px;white-space:nowrap" class="u116"><b>Madde 7: Ödeme Yükümlülüğü<br/>a-&#160;</b>Bir&#160;takvim&#160;yılında&#160;yapılan&#160;masraflar&#160;üye&#160;sayısına&#160;bölünerek&#160;bir&#160;kişiye&#160;düşen&#160;masraf&#160;payı&#160;bulunur.&#160;Bu&#160;rakam</p>
+                                                <p style="position:absolute;top:600px;left:17px;white-space:nowrap" class="u117">ailedeki&#160;kişi&#160;sayısıyla&#160;çarpılarak&#160;ailenin&#160;ödeyeceği&#160;yıllık&#160;masraf&#160;payı&#160;bulunur&#160;ve&#160;takip&#160;eden&#160;yılın&#160;başlarında&#160;aile&#160;reisine<br/>yazılı olarak bildirilir.</p>
+                                                <p style="position:absolute;top:634px;left:71px;white-space:nowrap" class="u14"><b>b-&#160;</b>Bekleme&#160;süresini&#160;tamamlayıp&#160;Fon’dan&#160;yararlanma&#160;hakkını&#160;yılın&#160;sonlarına&#160;doğru&#160;kazanan&#160;üyelerimiz&#160;de&#160;o&#160;yıla</p>
+                                                <p style="position:absolute;top:651px;left:17px;white-space:nowrap" class="u112">ait masraf payını ödemekle yükümlüdür.</p>
+                                                <p style="position:absolute;top:669px;left:71px;white-space:nowrap" class="u14"><b>c-&#160;</b>Mektuplar&#160;normal&#160;posta&#160;tarifesiyle&#160;gönderilir.&#160;Çeşitli&#160;sebeplerle&#160;kendisine&#160;yıllık&#160;masraf&#160;payını&#160;bildiren&#160;mektup</p>
+                                                <p style="position:absolute;top:685px;left:17px;white-space:nowrap" class="u112">ulaşmayan üyeler D.İ.T.İ.B.’i arayarak bilgi almakla yükümlüdürler.</p>
+                                                <p style="position:absolute;top:703px;left:71px;white-space:nowrap" class="u14"><b>d-&#160;</b>Aile&#160;reisi&#160;yıllık&#160;masraf&#160;payını&#160;belirtilen&#160;tarihe&#160;kadar&#160;ödemekle&#160;yükümlüdür.&#160;Zamanında&#160;ödenmezse&#160;gecikme</p>
+                                                <p style="position:absolute;top:720px;left:17px;white-space:nowrap" class="u117">farkı&#160;talep&#160;edilir.&#160;Masraf&#160;payını&#160;ödemeyenlere&#160;bir&#160;uyarı&#160;yazısı&#160;gönderilir.&#160;Uyarı&#160;tarihini&#160;takip&#160;eden&#160;30&#160;gün&#160;içerisinde<br/>masraf&#160;payını&#160;gecikme&#160;farkıyla&#160;birlikte&#160;ödemeyenlerin&#160;üyelikleri&#160;iki&#160;ay&#160;süreyle&#160;askıya&#160;alınır&#160;ve&#160;artık&#160;Fon’dan<br/>yararlanamazlar.</p>
+                                                <p style="position:absolute;top:771px;left:71px;white-space:nowrap" class="u14"><b>e-&#160;</b>Üyeliği&#160;askıya&#160;alınanlar&#160;borçlarını&#160;öderlerse&#160;ödeme&#160;tarihinden&#160;2&#160;ay&#160;sonra&#160;üyelikleri&#160;yeniden&#160;geçerli&#160;hale</p>
+                                                <p style="position:absolute;top:787px;left:17px;white-space:nowrap" class="u112">getirilir. Askı süresi içerisinde de ödemezlerse üyelikleri tamamen silinir.</p>
+                                                <p style="position:absolute;top:1206px;left:265px;white-space:nowrap" class="u113"><b>İNTERNET SİTEMİZDEN</b></p>
+                                                <p style="position:absolute;top:1206px;left:435px;white-space:nowrap" class="u14"><b>&#160;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ÖDEME YAPABİLİRSİNİZ.</b></p>
+                                                <p style="position:absolute;top:1224px;left:121px;white-space:nowrap" class="u14"><b>&#160;ÇEK İÇİN LÜTFEN ÜYE NUMARANIZI GÖNDERECEĞİNİZ&#160;</b></p>
+                                            
+                                                <p style="position:absolute;top:1224px;left:565px;white-space:nowrap" class="u14"><b>'IN ARKA KISMINA YAZINIZ.</b></p>
+                                                </div>
+                                        
+    
+    
+                                                <div id="costshare" style="position:relative;width:892px;height:1263px;display: none;">
+                                                    <img width="892" height="1263" src="assets/images/target003.png" alt="background image" style="margin-left: 30px;margin-top: 8px;"/>
+                                                    <p style="position:absolute;top:41px;left:465px;white-space:nowrap" class="mp10"><b>DİTİB Strasbourg</b></p>
+                                                    <p style="position:absolute;top:65px;left:395px;white-space:nowrap" class="mp10"><b>Cenaze Nakli Yardımlaşma Fonu</b></p>
+                                                    <p style="position:absolute;top:109px;left:243px;white-space:nowrap;font-size: 16px;" class="mp11">3 Rue Thomas Mann 67200 STRASBOURG &#160;Tel : 03 88 330 430 Cenaze olduğunda: 06 61 72 86 23</p>
+                                                    <p style="position:absolute;top:127px;left:248px;white-space:nowrap;font-size: 16px;" class="mp11">E-posta: cenazefonu@ditibstrasbourg.fr - İnternet sitesi: https://www.ditibstrasbourg.fr/cenaze-fonu/</p>
+                                                    <p style="position:absolute;top:150px;left:674px;white-space:nowrap;margin-left: 62px;" class="mp12">Strasbourg, le&#160;</p>
+                                                    <p style="position:absolute;top:152px;left:781px;white-space:nowrap;margin-left: 55px;" class="mp13"><b>01/01/2021</b></p>
+                                                    <p style="position:absolute;top:232px;left:513px;white-space:nowrap" class="mp116"><b>TEST BULBUL<br/></b>24 B RUE DU CIMETIERE<br/>67600 SELESTAT</p>
+                                                    <p style="position:absolute;top:197px;left:513px;white-space:nowrap;margin-left: 70px;" class="mp15">ST- 11015</p>
+                                                    <p style="position:absolute;top:280px;left:29px;white-space:nowrap" class="mp11">Dosya Numaranız:</p>
+                                                    <p style="position:absolute;top:312px;left:37px;white-space:nowrap" class="mp11">Kayıtlı kişi sayısı:</p>
+                                                    <p style="position:absolute;top:280px;left:153px;white-space:nowrap" class="mp13"><b>St- 11015</b></p>
+                                                    <p style="position:absolute;top:312px;left:153px;white-space:nowrap" class="mp16">5</p>
+                                                    <p style="position:absolute;top:343px;left:153px;white-space:nowrap" class="mp11">06 49 63 61 14 &#160; &#160;/ .. .. .. .. ..</p>
+                                                    <p style="position:absolute;top:343px;left:56px;white-space:nowrap" class="mp11">Cep Telefonu:</p>
+                                                    <p style="position:absolute;top:373px;left:153px;white-space:nowrap;font-size: 18px;" class= "mp11">adil@bulbul.fr</p>
+                                                    <p style="position:absolute;top:375px;left:89px;white-space:nowrap" class="mp11">E-Posta:</p>
+                                                    <p style="position:absolute;top:248px;left:47px;white-space:nowrap" class="mp11">Dosya Durumu:</p>
+                                                    <p style="position:absolute;top:216px;left:20px;white-space:nowrap" class="mp17"><b>ÜYE BİLGİLERİ</b></p>
+                                                    <p style="position:absolute;top:247px;left:153px;white-space:nowrap" class="mp13"><b>Aktif</b></p>
+                                                    <p style="position:absolute;top:441px;left:74px;white-space:nowrap" class="mp117">Değerli Üyemiz,<br/>2020&#160;yılı&#160;kişi&#160;başına&#160;düşen&#160;masraf&#160;payı&#160;<b>16€&#160;(on&#160;altı)&#160;</b>Euro&#160;olarak&#160;hesaplanmıştır.&#160;Ailenizin&#160;kişi&#160;sayısı&#160;göz&#160;önüne</p>
+                                                    <p style="position:absolute;top:477px;left:35px;white-space:nowrap" class="mp118">alınarak&#160;ödeyeceğiniz&#160;miktar&#160;aşağıda&#160;gösterilmiştir.&#160;Masraf&#160;payınızı&#160;<b>15&#160;Mart&#160;2021&#160;tarihine&#160;kadar&#160;ödemeniz<br/>gerekmektedir.</b></p>
+                                                    <p style="position:absolute;top:529px;left:74px;white-space:nowrap" class="mp18">Ödemenizi&#160;<b>https://www.ditibstrasbourg.fr/</b>&#160;internet sitemizden güvenle yapabilirsiniz.</p>
+                                                    <p style="position:absolute;top:564px;left:74px;white-space:nowrap" class="mp119">Sağ tarafta bulunan&#160;<b>Karekodunu</b>&#160;kullanarak&#160;<b>Online</b>&#160;ödeme sayfasına gidebilirsiniz.<br/>Saygılarımızla.</p>
+                                                    <p style="position:absolute;top:754px;left:334px;white-space:nowrap" class="mp19">Masraf Payı</p>
+                                                    <p style="position:absolute;top:779px;left:91px;white-space:nowrap" class="mp15">0,00€</p>
+                                                    <p style="position:absolute;top:754px;left:147px;white-space:nowrap" class="mp19">Madde 7/D</p>
+                                                    <p style="position:absolute;top:779px;left:198px;white-space:nowrap" class="mp15">0,00€</p>
+                                                    <p style="position:absolute;top:779px;left:374px;white-space:nowrap" class="mp15">80,00€</p>
+                                                    <p style="position:absolute;top:779px;left:679px;white-space:nowrap" class="mp110"><b>0,00€</b></p>
+                                                    <p style="position:absolute;top:754px;left:433px;white-space:nowrap" class="mp19">Giriş ücreti</p>
+                                                    <p style="position:absolute;top:779px;left:475px;white-space:nowrap" class="mp15">0,00€</p>
+                                                    <p style="position:absolute;top:754px;left:533px;white-space:nowrap" class="mp19">Toplam</p>
+                                                    <p style="position:absolute;top:778px;left:556px;white-space:nowrap" class="mp15">80.00€</p>
+                                                    <p style="position:absolute;top:755px;left:609px;white-space:nowrap" class="mp111"><b>Yapılan ödeme</b></p>
+                                                    <p style="position:absolute;top:754px;left:262px;white-space:nowrap" class="mp19">Diğer</p>
+                                                    <p style="position:absolute;top:779px;left:285px;white-space:nowrap" class="mp15">0,00€</p>
+                                                    <p style="position:absolute;top:754px;left:29px;white-space:nowrap" class="mp19">Geçmiş bakiye</p>
+                                                    <p style="position:absolute;top:674px;left:24px;white-space:nowrap" class="mp11">31/07/2015</p>
+                                                    <p style="position:absolute;top:674px;left:512px;white-space:nowrap" class="mp11">K.VALIDE</p>
+                                                    <p style="position:absolute;top:674px;left:646px;white-space:nowrap" class="mp11">K</p>
+                                                    <p style="position:absolute;top:674px;left:424px;white-space:nowrap" class="mp11">01/01/1956</p>
+                                                    <p style="position:absolute;top:674px;left:99px;white-space:nowrap" class="mp11">FATMA ISLANMAZ</p>
+                                                    <p style="position:absolute;top:674px;left:801px;white-space:nowrap" class="mp11">31/01/2016</p>
+                                                    <p style="position:absolute;top:674px;left:739px;white-space:nowrap" class="mp11">16.00€</p>
+                                                    <p style="position:absolute;top:694px;left:24px;white-space:nowrap" class="mp11">31/07/2015</p>
+                                                    <p style="position:absolute;top:694px;left:512px;white-space:nowrap" class="mp11">HANIMI</p>
+                                                    <p style="position:absolute;top:694px;left:646px;white-space:nowrap" class="mp11">K</p>
+                                                    <p style="position:absolute;top:694px;left:424px;white-space:nowrap" class="mp11">20/11/1979</p>
+                                                    <p style="position:absolute;top:694px;left:99px;white-space:nowrap" class="mp11">SIBEL ISLANMAZ BULBUL</p>
+                                                    <p style="position:absolute;top:694px;left:801px;white-space:nowrap" class="mp11">31/10/2015</p>
+                                                    <p style="position:absolute;top:694px;left:739px;white-space:nowrap" class="mp11">16.00€</p>
+                                                    <p style="position:absolute;top:713px;left:24px;white-space:nowrap" class="mp11">31/07/2015</p>
+                                                    <p style="position:absolute;top:713px;left:512px;white-space:nowrap" class="mp11">OGLU</p>
+                                                    <p style="position:absolute;top:713px;left:646px;white-space:nowrap" class="mp11">E</p>
+                                                    <p style="position:absolute;top:713px;left:424px;white-space:nowrap" class="mp11">26/12/2011</p>
+                                                    <p style="position:absolute;top:713px;left:99px;white-space:nowrap" class="mp11">TUNA BULBUL</p>
+                                                    <p style="position:absolute;top:713px;left:801px;white-space:nowrap" class="mp11">31/10/2015</p>
+                                                    <p style="position:absolute;top:713px;left:739px;white-space:nowrap" class="mp11">16.00€</p>
+                                                    <p style="position:absolute;top:733px;left:24px;white-space:nowrap" class="mp11">07/12/2015</p>
+                                                    <p style="position:absolute;top:733px;left:512px;white-space:nowrap" class="mp11">KIZI</p>
+                                                    <p style="position:absolute;top:733px;left:646px;white-space:nowrap" class="mp11">K</p>
+                                                    <p style="position:absolute;top:733px;left:424px;white-space:nowrap" class="mp11">07/11/2015</p>
+                                                    <p style="position:absolute;top:733px;left:99px;white-space:nowrap" class="mp11">FEYZA BULBUL</p>
+                                                    <p style="position:absolute;top:733px;left:801px;white-space:nowrap" class="mp11">07/12/2015</p>
+                                                    <p style="position:absolute;top:733px;left:739px;white-space:nowrap" class="mp11">16.00€</p>
+                                                    <p style="position:absolute;top:628px;left:20px;white-space:nowrap" class="mp19">Kayıt Tarihi</p>
+                                                    <p style="position:absolute;top:628px;left:156px;white-space:nowrap" class="mp19"><b>Adı Soyadı</b></p>
+                                                    <p style="position:absolute;top:628px;left:420px;white-space:nowrap;margin-left: 58px;" class="mp19">Doğum tarihi</p>
+                                                    <p style="position:absolute;top:628px;left:518px;white-space:nowrap" class="mp19">Yakınlığı</p>
+                                                    <p style="position:absolute;top:628px;left:795px;white-space:nowrap;margin-left: 60px;" class="mp112">Aktif üyelik</p>
+                                                    <p style="position:absolute;top:628px;left:627px;white-space:nowrap" class="mp19">Cinsiyet</p>
+                                                    <p style="position:absolute;top:653px;left:24px;white-space:nowrap" class="mp11">31/07/2015&#160;&nbsp;&nbsp;ADIL BULBUL</p>
+                                                    <p style="position:absolute;top:653px;left:424px;white-space:nowrap" class="mp11">05/06/1981</p>
+                                                    <p style="position:absolute;top:653px;left:646px;white-space:nowrap" class="mp11">E</p>
+                                                    <p style="position:absolute;top:653px;left:801px;white-space:nowrap" class="mp11">31/10/2015</p>
+                                                    <p style="position:absolute;top:653px;left:512px;white-space:nowrap" class="mp11">Aile Reisi</p>
+                                                    <p style="position:absolute;top:653px;left:739px;white-space:nowrap" class="mp11">16.00€</p>
+                                                    <p style="position:absolute;top:628px;left:696px;white-space:nowrap;margin-left:78px;" class="mp19">Ücretler</p>
+                                                    <p style="position:absolute;top:755px;left:757px;white-space:nowrap" class="mp111"><b>Toplam Borç</b></p>
+                                                    <p style="position:absolute;top:778px;left:824px;white-space:nowrap;font-size: 16px;margin-left: 10px;" class="mp13"><b>80.00€</b></p>
+                                                    <p style="position:absolute;top:1184px;left:316px;white-space:nowrap" class="mp113">ÇEK İLE ÖDEME YAPMAK İÇİN</p>
+                                                    <p style="position:absolute;top:1206px;left:88px;white-space:nowrap" class="mp113">LÜTFEN ALICI KISMINA&#160;<b>DİTİB</b>&#160;VE ÇEK'İN ARKA KISMINA&#160;<b>ÜYE NUMARANIZI</b>&#160;YAZINIZ.</p>
+                                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+      
+             
+
+                </div>
+                <!-- end container-fluid -->
+
+            </div>
+            <!-- end content -->
+
+            
+
+            <!-- Footer Start -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            Copyright 2021 · Designed & Developed by <a href="https://www.vakifglobal.com">Vakıf
+                                Global</a> All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end Footer -->
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+    <!-- END wrapper -->
+
+    <!-- Right Sidebar -->
+    <div class="right-bar">
+        <div class="rightbar-title">
+            <a href="javascript:void(0);" class="right-bar-toggle float-right">
+                <i class="mdi mdi-close"></i>
+            </a>
+            <h4 class="font-16 m-0 text-white">Theme Customizer</h4>
+        </div>
+        <div class="slimscroll-menu">
+        
+            <div class="p-4">
+                <div class="alert alert-warning" role="alert">
+                    <strong>Customize </strong> the overall color scheme, layout, etc.
+                </div>
+                <div class="mb-2">
+                    <img src="assets/images/layouts/light.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-3">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="light-mode-switch" checked />
+                    <label class="custom-control-label" for="light-mode-switch">Light Mode</label>
+                </div>
+            
+                <div class="mb-2">
+                    <img src="assets/images/layouts/dark.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-3">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css" 
+                        data-appStyle="assets/css/app-dark.min.css" />
+                    <label class="custom-control-label" for="dark-mode-switch">Dark Mode</label>
+                </div>
+            
+                <div class="mb-2">
+                    <img src="assets/images/layouts/rtl.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-3">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="rtl-mode-switch" data-appStyle="assets/css/app-rtl.min.css" />
+                    <label class="custom-control-label" for="rtl-mode-switch">RTL Mode</label>
+                </div>
+
+                <div class="mb-2">
+                    <img src="assets/images/layouts/dark-rtl.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-5">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="dark-rtl-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css" 
+                        data-appStyle="assets/css/app-dark-rtl.min.css" />
+                    <label class="custom-control-label" for="dark-rtl-mode-switch">Dark RTL Mode</label>
+                </div>
+
+                <a href="https://1.envato.market/eKY0g" class="btn btn-danger btn-block mt-3" target="_blank"><i class="mdi mdi-download mr-1"></i> Download Now</a>
+            </div>
+        </div> <!-- end slimscroll-menu-->
+    </div>
+    <!-- /Right-bar -->
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+ 
+
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+
+    <!-- Datatable plugin js -->
+    <script src="assets/libs/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables/buttons.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables/buttons.print.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.keyTable.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.fixedHeader.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.scroller.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.fixedColumns.min.js"></script>
+
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/vfs_fonts.js"></script>
+
+    <!-- Datatables init -->
+    <script src="assets/js/pages/datatables.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
+
+</body>
+
+</html>

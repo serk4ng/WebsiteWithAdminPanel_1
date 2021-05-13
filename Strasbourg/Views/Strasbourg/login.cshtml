@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Ditib Strasbourg";
+    Layout = "~/Views/Shared/strasbourg_layout.cshtml";
+    ViewBag.Active = ViewContext.RouteData.Values["action"];
+}
+
+<div class="mywrapper">
+
+    <div class="mycontainer">
+ 
+        <div class="col-left">
+            <div class="login-text">
+                <img src="/Assets/strasbourgpanel/strasbourg/img/logo_default.png" srcset="/Assets/strasbourgpanel/strasbourg/img/logo_default.png" class="logo__img" alt=""
+                     style="max-width: 40% !important;">
+                <h2>Tekrar Hoşgeldiniz</h2>
+                <a href="/Strasbourg/register" style="color:white !important;font-size:22px;">  <i class="fa fa-user-plus"></i> Kayıt Ol</a>
+
+            </div>
+        </div>
+        <div class="col-right">
+            <div class="login-form">
+                <h2>Giriş Yap</h2>
+                <form id="contact-form" class="contact-form mt-30 mb-30" method="post" action="../UserPanel/index.html">
+                    <p>
+                        <label> E-mail Adres<span>*</span></label>
+                        <input type="email" placeholder=" Email" required>
+                    </p>
+                    <p>
+                        <label>Şifre<span>*</span></label>
+                        <input type="password" placeholder="****" required>
+                    </p>
+                    <p>
+                        <input type="submit" value="Giriş" />
+                    </p>
+                    <p>
+                        <a href="">Şifremi Unuttum! </a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="credit">
+
+    </div>
+</div>

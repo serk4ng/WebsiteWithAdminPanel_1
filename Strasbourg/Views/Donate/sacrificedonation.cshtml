@@ -1,0 +1,173 @@
+﻿@using Strasbourg.Domain.ViewModels
+@model Tuple<SacrificePriceViewModel, BaseViewModel>
+@{
+    ViewBag.Title = "Ditib Strasbourg";
+
+    Layout = "~/Views/Shared/strasbourg_layout.cshtml";
+}
+
+<br />
+
+<div class="main-container container" id="main-container" style="background-color: #f6f9fb !important;">
+    <!-- post content -->
+    <div class="blog__content mb-72">
+        <img src="~/Assets/strasbourgpanel/strasbourg/img/bannerkurban.svg">
+        <p>DİTİB Strasbourg KURBAN Online Bağış Sistemi Paiement en ligne des dons du sacrifice<p>
+            <hr />
+
+        <p>
+            Association de droit local inscrite au TA de Strasbourg sous le volume 90 Folio 69 // sise : 3, Rue Thomas Mann 67200 STRASBOURG.<br />
+            Conditions de vente : Attention les licences vendues sur internet ne pourront faire l’objet d’aucun remboursement ultérieur.
+        </p>
+    </div>
+    <hr />
+
+    <h1 class="page-title" style="text-align: center;">Ditib Strasbourg Kurban Online Bağış </h1>
+
+    @using (Html.BeginForm("SacrificeDonationPost", "Donate", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+    {
+        <div style="background-color: #fff  !important; padding : 20px 50px ; color: white !important; margin-bottom: 20px !important;">
+            <div class="form-row">
+                <div class="form-group col-lg-6">
+                    <label for="inputPassword4">Ad</label>
+                    <input type="text" class="form-control" name="Name" id="name">
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="inputPassword4">Soyad</label>
+                    <input type="text" class="form-control" name="Surname" id="surname">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-lg-6">
+                    <label for="inputEmail4">E-mail</label>
+                    <input type="email" class="form-control" name="Email" required id="email">
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="inputEmail4">Telefon</label>
+                    <input type="tel" class="form-control" name="PhoneNumber" required id="phonenumber">
+                </div>
+
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-lg-6">
+                    <label for="inputPassword4">Posta Kodu</label>
+                    <input type="text" class="form-control" name="ZipCode" required id="zipcode">
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="inputPassword4">Şehir</label>
+                    <input type="text" class="form-control" name="City" required id="city">
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="inputPassword4">Adres</label>
+                    <input type="text" class="form-control" name="Adress" required id="adress">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-lg-6">
+                    <label for="inputPassword4">Kurban Çeşidi</label>
+                    <select name="SacrificeType" id="sacrificetype">
+                        <option value="Kurban">Kurban</option>
+                        <option value="Akika">Akika</option>
+                        <option value="Adak">Adak</option>
+                        <option value="Şükür">Şükür</option>
+                    </select>
+                </div>
+                <div class="form-group col-lg-6">
+                    <label for="inputEmail4">
+                        Birden Fazla bağışçı varsa, adını soyadını ve telefon numarasını
+                        belirtiniz
+                    </label>
+                    <textarea class="form-control" id="other" name="Other" rows="3"></textarea>
+                </div>
+
+            </div>
+
+        </div>
+        <div style="background-color: #fff  !important; padding : 20px 50px ; color: white !important; ">
+            <div style=" color: black; font-size: 10px !important;">
+                Ces informations sont obligatoires pour le traitement de votre commande. Elles seront conservées pour la durée de prescription légale attachée à l’opération. L&#039;accès à vos données personnelles est strictement limité à l’association et au sous-traitant en charge de l’hébergement du site. Conformément à la loi « informatique et libertés » du 6 janvier 1978 modifiée et au Règlement européen n°2016/679/UE du 27 avril 2016 (applicable dès le 25 mai 2018), vous bénéficiez d’un droit d’accès, de rectification, de portabilité et d’effacement de vos données ou encore de limitation du traitement. Vous pouvez également, pour des motifs légitimes, vous opposer au traitement des données vous concernant. Vous pouvez exercer ces droits en adressant un courrier au responsable du traitement : adil.bulbul@ditibstrasbourg.fr
+            </div>
+
+            <br />
+            <hr>
+            <div class="row">
+                <div class="col col-lg-2">
+                    <form>
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked>
+                        <label for="vehicle1" id="krbn"> Kurban Bağışı</label><br>
+                    </form>
+                </div>
+                <div class="col col-lg-6">
+                    <label for="kurbanbagis">Adet</label>
+                    <select name="SacrificeCount" style="width: 26%;" id="sacrificecount" onchange="kurbanfiyat()">
+                        <option value="none" selected disabled hidden>
+                            Adet Seçiniz
+                        </option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </div>
+            <br />
+            <hr>
+            <div class="row">
+                <div class="col col-lg-2">
+
+                    <h5>Toplam Tutar: </h5>
+                </div>
+                <div class="col col-lg-6">
+                    <p id="Total" name="TotalPrice"></p>
+                </div>
+            </div>
+            <br />
+
+            <button type="submit" class="btn btn-danger">Devam Et</button>
+            <div class="form-group">
+                <input type="text" class="form-control" name="Total" required id="total" style="visibility:hidden;">
+            </div>
+        </div>
+        <br /> <br />
+    }
+
+
+
+</div> <!-- end post content -->
+<script>
+
+    function kurbanfiyat() {
+        var x = document.getElementById("sacrificecount").value;
+        var selection = document.getElementById("Total").innerHTML = x * @Model.Item1.Price + " €";
+        document.getElementById("total").value = x * @Model.Item1.Price;
+    }
+</script>
+
+
+@if (Session["sacrificedonationjson"] != null)
+{
+
+    @section sacrificedonation{
+        <script>
+    document.getElementById("name").value =  "@Session["sacrificedonationname"].ToString()";
+    document.getElementById("surname").value = "@Session["sacrificedonationsurname"].ToString()";
+    document.getElementById("email").value = "@Session["sacrificedonationemail"].ToString()";
+    document.getElementById("adress").value = "@Session["sacrificedonationadress"].ToString()";
+    document.getElementById("city").value = "@Session["sacrificedonationcity"].ToString()";
+    document.getElementById("phonenumber").value = "@Session["sacrificedonationphonenumber"].ToString()";
+    document.getElementById("zipcode").value = "@Session["sacrificedonationzipcode"].ToString()";
+    document.getElementById("other").value = "@Session["sacrificedonationother"].ToString()";
+    document.getElementById("sacrificetype").value = "@Session["sacrificedonationsacrificetype"].ToString()";
+
+        </script>
+    }
+}

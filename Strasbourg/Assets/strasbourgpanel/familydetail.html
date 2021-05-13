@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ditib Strasbourg</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Responsive bootstrap 4 admin template" name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Table datatable css -->
+
+    <link href="assets/libs/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/fixedHeader.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/scroller.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/dataTables.colVis.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/fixedColumns.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+
+    <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet" />
+
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- Topbar Start -->
+        <div class="navbar-custom">
+            <ul class="list-unstyled topnav-menu float-right mb-0">
+
+
+                <li class="dropdown notification-list">
+                    <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#"
+                        role="button" aria-haspopup="false" aria-expanded="false">
+                        <span class="d-none d-sm-inline-block ml-1">Cafer Cindoruk</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+
+                        <!-- item-->
+                        <a href="profile.html" class="dropdown-item notify-item">
+                            <i class="mdi mdi-account-outline"></i>
+                            <span>Profil</span>
+                        </a>
+
+                        <!-- item-->
+                        <a href="signout.html" class="dropdown-item notify-item">
+                            <i class="mdi mdi-settings-outline"></i>
+                            <span>Güvenli Çıkış</span>
+                        </a>
+
+                    </div>
+                </li>
+
+            </ul>
+
+            <!-- LOGO -->
+            <div class="logo-box">
+                <a href="index.html" class="logo text-center">
+                    <span class="logo-lg">
+                        <!--<img src="assets/images/logo-light.png" alt="" height="18">-->
+                        <span class="logo-lg-text-light">DİTİB STRASBOURG</span>
+
+                    </span>
+                    <span class="logo-sm">
+                        <span class="logo-sm-text-dark">DS</span>
+                        <!-- <img src="assets/images/logo-sm.png" alt="" height="24"> -->
+                    </span>
+                </a>
+            </div>
+
+            <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                <li>
+                    <button class="button-menu-mobile waves-effect">
+                        <i class="mdi mdi-menu"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    <!-- end Topbar --> 
+
+        
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu">
+
+            <div class="slimscroll-menu">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+
+                    <ul class="metismenu" id="side-menu">
+
+                        <li>
+                            <a href="index.html" class="waves-effect waves-light">
+                                <i class="mdi mdi-view-dashboard"></i>
+                                <span> Dashboard </span>
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-currency-usd"></i>
+                                <span> Bağış İşlemleri </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                
+                                <li>
+                                    <a href="javascript: void(0);" class="waves-effect waves-light">
+                                        <i class="mdi mdi-layers"></i>
+                                        <span> Kurban Bağışı </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul class="nav-second-level" aria-expanded="false">
+                                        <li><a href="sacrificedonatelist.html">Bağış Listesi</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="javascript: void(0);" class="waves-effect waves-light">
+                                        <i class="mdi mdi-layers"></i>
+                                        <span> Zekat Bağışı </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul class="nav-second-level" aria-expanded="false">
+                                        <li><a href="zakatdonatelist.html">Bağış Listesi</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="javascript: void(0);" class="waves-effect waves-light">
+                                        <i class="mdi mdi-layers"></i>
+                                        <span> Fitre Bağışı </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul class="nav-second-level" aria-expanded="false">
+                                        <li><a href="fitrdonatelist.html">Bağış Listesi</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="javascript: void(0);" class="waves-effect waves-light">
+                                        <i class="mdi mdi-layers"></i>
+                                        <span> Fidye Bağışı </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul class="nav-second-level" aria-expanded="false">
+                                        <li><a href="ransomdonatelist.html">Bağış Listesi</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="javascript: void(0);" class="waves-effect waves-light">
+                                        <i class="mdi mdi-layers"></i>
+                                        <span> Genel Bağış</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul class="nav-second-level" aria-expanded="false">
+                                        <li><a href="generaldonatelist.html">Bağış Listesi</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="javascript: void(0);" class="waves-effect waves-light">
+                                        <i class="mdi mdi-layers"></i>
+                                        <span> Camilere Yardım </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul class="nav-second-level" aria-expanded="false">
+                                        <li><a href="aidmosqueslist.html">Yardım Listesi</a></li>
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="CenazeFonu/index.html" class="waves-effect waves-light">
+                                <i class="mdi mdi-home-currency-usd"></i>
+                                <span> Cenaze Fonu </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-home-flood"></i>
+                                <span> Derneklerimiz </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="associationlist.html">Dernek Listesi</a></li>
+                                <li><a href="addassociation.html"> Dernek Ekle</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-home-flood"></i>
+                                <span> Kardeş Kuruluşlar </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="sisterorganizationlist.html">Kuruluş Listesi</a></li>
+                                <li><a href="addsisterorganization.html"> Kuruluş Ekle</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-home-flood"></i>
+                                <span> Bağlantılı Kuruluşlar</span>
+
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="relatedorganizationlist.html">Kuruluş Listesi</a></li>
+                                <li><a href="addrelatedorganization.html"> Kuruluş Ekle</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-face"></i>
+                                <span>Yönetim Kurulu</span>
+
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="boardofmanagementlist.html">Kişi Listesi</a></li>
+                                <li><a href="addboardofmanagement.html"> Kişi Ekle</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-newspaper"></i>
+                                <span> Haberler </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="newslist.html">Haber Listesi</a></li>
+                                <li><a href="addnews.html"> Haber Ekle</a></li>
+
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="fa fa-user"></i>
+                                <span> Kullanıcılar </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="userlist.html">Kullanıcı Listesi</a></li>
+                                <li><a href="adduser.html"> Kullanıcı Ekle</a></li>
+
+                            </ul>
+                        </li>
+
+
+
+
+                        <li>
+                            <a href="sitesettings.html" class="waves-effect waves-light">
+                                <i class="mdi mdi-setting"></i>
+                                <span> Site Ayarları </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- End Sidebar -->
+
+                <div class="clearfix"></div>
+
+                <div class="help-box">
+                    <h5 class="text-muted mt-0">YARDIM</h5>
+                    <p class=""><span class="text-info">Email:</span>
+                        <br /> info@vakifglobal.com</p>
+                    <p class="mb-0"><span class="text-info">Telefon:</span>
+                        <br /> (+90) 531 734 29 66</p>
+                </div>
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+                   <br/>
+                    <!-- end page title -->
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="content">
+
+                                <br />
+                                <!-- end page title -->
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="card-box">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <form class="form-horizontal">
+                
+                                                        <h3>Üye Detayı</h3>
+                
+                                                        <div class="row">
+                                                     
+                                                            <div class="col col-lg-12">
+                                                                <div class="input-group mt-3">
+                                                                    <span class="input-group-append">
+                                                                        <button type="button"
+                                                                            class="btn waves-effect waves-light btn-primary"
+                                                                            style="width: 150px !important;">Ad Soyad</button>
+                                                                    </span>
+                                                                    <input type="text" id="example-input3-group2"
+                                                                        name="example-input3-group2" class="form-control"
+                                                                        placeholder="Ad Soyad" value="Ad Soyad 1">
+                
+                
+                                                                </div>
+                                                            </div>
+                                                            <div class="col col-lg-12">
+                                                                <div class="input-group mt-3">
+                                                                    <span class="input-group-append">
+                                                                        <button type="button"
+                                                                            class="btn waves-effect waves-light btn-primary"
+                                                                            style="width: 150px !important;">Üye No</button>
+                                                                    </span>
+                                                                    <input type="text" id="example-input3-group2"
+                                                                        name="example-input3-group2" class="form-control"
+                                                                        placeholder="Üye No" value="12345">
+                
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                
+                                                        <div class="row">
+                                                            <div class="col col-lg-12">
+                                                                <div class="input-group mt-3">
+                                                                    <span class="input-group-append">
+                                                                        <button type="button"
+                                                                            class="btn waves-effect waves-light btn-primary"
+                                                                            style="width: 150px !important;">Email</button>
+                                                                    </span>
+                                                                    <input type="text" id="example-input3-group2"
+                                                                        name="example-input3-group2" class="form-control"
+                                                                        placeholder="Email" value="a@a.com">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col col-lg-12">
+                                                                <div class="input-group mt-3">
+                                                                    <span class="input-group-append">
+                                                                        <button type="button"
+                                                                            class="btn waves-effect waves-light btn-primary"
+                                                                            style="width: 150px !important;">Telefon</button>
+                                                                    </span>
+                                                                    <input type="phone" id="example-input3-group2"
+                                                                        name="example-input3-group2" class="form-control" placeholder=""
+                                                                        value="+123 456 789">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col col-lg-12">
+                                                                <div class="input-group mt-3">
+                                                                    <span class="input-group-append">
+                                                                        <button type="button"
+                                                                            class="btn waves-effect waves-light btn-primary"
+                                                                            style="width: 150px !important;">Doğum Tarihi</button>
+                                                                    </span>
+                                                                    <input type="text" class="form-control" placeholder="dd/mm/yyyy"
+                                                                        id="datepicker" value="10/10/1980">
+                                                                    <div class="input-group-append">
+                                                                        <span class="input-group-text bg-primary text-white b-0"><i
+                                                                                class="mdi mdi-calendar"></i></span>
+                
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col col-lg-12">
+                                                                <div class="input-group mt-3">
+                                                                    <span class="input-group-append">
+                                                                        <button type="button"
+                                                                            class="btn waves-effect waves-light btn-primary"
+                                                                            style="width: 150px !important;">Cinsiyet</button>
+                                                                    </span>
+                                                                    <select class="form-control">
+                                                                        <option>Erkek</option>
+                                                                        <option>Kadın</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col col-lg-12">
+                                                                <h4 style="margin-top: 20px;margin-bottom: -10px !important;">Türkiye
+                                                                    Adresi</h4>
+                                                                <div class="input-group mt-3">
+                                                                    <span class="input-group-append">
+                                                                        <button type="button"
+                                                                            class="btn waves-effect waves-light btn-primary"
+                                                                            style="width: 150px !important;">Fransa Adresi</button>
+                                                                    </span>
+                                                                    <textarea class="form-control" rows="3">Adres</textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col col-lg-12">
+                                                                <div class="input-group mt-3">
+                                                                    <span class="input-group-append">
+                                                                        <button type="button"
+                                                                            class="btn waves-effect waves-light btn-primary"
+                                                                            style="width: 150px !important;">Posta Kodu</button>
+                                                                    </span>
+                                                                    <input type="phone" id="example-input3-group2"
+                                                                        name="example-input3-group2" class="form-control" placeholder=""
+                                                                        value="12345">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                
+                                                        <div class="row">
+                
+                                                            <div class="col col-lg-12">
+                                                                <h4 style="margin-top: 20px;margin-bottom: -10px !important;">Fransa
+                                                                    Adresi</h4>
+                                                                <div class="input-group mt-3">
+                                                                    <span class="input-group-append">
+                                                                        <button type="button"
+                                                                            class="btn waves-effect waves-light btn-primary"
+                                                                            style="width: 150px !important;">Türkiye Adresi</button>
+                                                                    </span>
+                                                                    <textarea class="form-control" rows="3">Adres</textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col col-lg-12">
+                                                                <div class="input-group mt-3">
+                                                                    <span class="input-group-append">
+                                                                        <button type="button"
+                                                                            class="btn waves-effect waves-light btn-primary"
+                                                                            style="width: 150px !important;">Posta Kodu</button>
+                                                                    </span>
+                                                                    <input type="phone" id="example-input3-group2"
+                                                                        name="example-input3-group2" class="form-control" placeholder=""
+                                                                        value="12345">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                
+                                                        <div class="row">
+                                                            <div class="col col-lg-12">
+                                                                <br /> <br />
+                                                                <div class="input-group mt-3">
+                                                                    <span class="input-group-append">
+                                                                        <button type="button"
+                                                                            class="btn waves-effect waves-light btn-primary"
+                                                                            style="width: 150px !important;">Başlangıç Tarihi</button>
+                                                                    </span>
+                                                                    <input type="text" class="form-control" placeholder="dd/mm/yyyy"
+                                                                        id="datepicker2" value="12/12/2020">
+                                                                    <div class="input-group-append">
+                                                                        <span class="input-group-text bg-primary text-white b-0"><i
+                                                                                class="mdi mdi-calendar"></i></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col col-lg-12">
+                                                                <div class="input-group mt-3">
+                                                                    <span class="input-group-append">
+                                                                        <button type="button"
+                                                                            class="btn waves-effect waves-light btn-primary"
+                                                                            style="width: 150px !important;">Giriş Ücreti</button>
+                                                                    </span>
+                                                                    <input type="phone" id="example-input3-group2"
+                                                                        name="example-input3-group2" class="form-control" placeholder=""
+                                                                        value="50 €">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col col-lg-12">
+                                                                <br /><br /><br />
+                                                                <button type="button"
+                                                                    class="btn btn-success waves-effect width-md waves-light">Kaydet</button>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                
+                                            </div>
+                
+                
+                                        </div>
+                
+                                    </div>
+                                </div>
+                
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="card-box table-responsive">
+                                <h5>Aile Fertleri</h5>
+                                <table id="datatable-buttons" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Üye No</th>
+                                            <th>Ad Soyad</th>
+                                            <th>Yakınlığı</th>
+                                            <th>Email</th>
+                                            <th>Telefon</th>
+                                            <td>Cinsiyet</td>
+                                            <th  style="width: 100px !important;">İşlemler</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>1345</td>
+                                            <td>Ad Soyad 1</td>
+                                            <td>Eş</td>
+                                            <td>a@a.com</td>
+                                            <td>+123 456 789</td>
+                                            <td>K</td>
+                                            <td>
+                                               <a href="memberdetail.html"><button type="submit" class="btn btn-info waves-effect waves-light"><i class="fas fa-info-circle"></i> İncele</button></a> 
+                                               <a href="memberdetail.html"><button type="submit" class="btn btn-success waves-effect waves-light"><i class="fas fa-user-edit"></i> Düzenle</button></a>
+                                                <button type="submit" class="btn btn-danger waves-effect waves-light sa-params"><i class="fas fa-trash-alt"></i> Sil</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>1345</td>
+                                            <td>Ad Soyad 2</td>
+                                            <td>Çocuk</td>
+                                            <td>a@a.com</td>
+                                            <td>+123 456 789</td>
+                                            <td>K</td>
+                                            <td>
+                                               <a href="memberdetail.html"><button type="submit" class="btn btn-info waves-effect waves-light"><i class="fas fa-info-circle"></i> İncele</button></a> 
+                                               <a href="memberdetail.html"><button type="submit" class="btn btn-success waves-effect waves-light"><i class="fas fa-user-edit"></i> Düzenle</button></a>
+                                                <button type="submit" class="btn btn-danger waves-effect waves-light sa-params"><i class="fas fa-trash-alt"></i> Sil</button>
+                                            </td>
+                                        </tr>
+                                      
+                                        <tr>
+                                            <td>3</td>
+                                            <td>1345</td>
+                                            <td>Ad Soyad 3</td>
+                                            <td>Çocuk</td>
+                                            <td>a@a.com</td>
+                                            <td>+123 456 789</td>
+                                            <td>E</td>
+                                            <td>
+                                               <a href="memberdetail.html"><button type="submit" class="btn btn-info waves-effect waves-light"><i class="fas fa-info-circle"></i> İncele</button></a> 
+                                               <a href="memberdetail.html"><button type="submit" class="btn btn-success waves-effect waves-light"><i class="fas fa-user-edit"></i> Düzenle</button></a>
+                                                <button type="submit" class="btn btn-danger waves-effect waves-light sa-params"><i class="fas fa-trash-alt"></i> Sil</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end container-fluid -->
+
+            </div>
+            <!-- end content -->
+
+            
+
+            <!-- Footer Start -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            Copyright 2020 · Designed & Developed by <a href="http://www.vakifglobal.com">Vakıf Global</a> All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end Footer -->
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+    <!-- END wrapper -->
+
+ 
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+
+    <!-- Datatable plugin js -->
+
+    <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <script src="assets/js/pages/sweetalerts.init.js"></script>
+
+    <script src="assets/libs/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables/buttons.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables/buttons.print.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.keyTable.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.fixedHeader.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.scroller.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.fixedColumns.min.js"></script>
+
+    <script src="assets/libs/morris-js/morris.min.js"></script>
+    <script src="assets/libs/raphael/raphael.min.js"></script>
+
+
+
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/vfs_fonts.js"></script>
+
+
+    <!-- Datatables init -->
+    <script src="assets/js/pages/datatables.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+﻿@using Strasbourg.Domain.Enums
+@model Strasbourg.Domain.ViewModels.SiteSettingsViewModel
+@{
+    ViewBag.Title = "Panel | Diti Strasbourg";
+    Layout = "~/Areas/Login/Views/Shared/panel_layout.cshtml";
+}
+
+
+<br />
+<!-- end page title -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card-box">
+            <div class="row">
+                @using (Html.BeginForm("SiteSettingsSave", "SiteSettings", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data", style = "width:100%" }))
+                {
+
+                <div class="col-lg-12">
+                    <div class="form-group">
+                        @Html.HiddenFor(x => x.Id)
+                    </div>
+                    <div class="form-group">
+                        @Html.HiddenFor(x => x.SiteLanguage)
+                    </div>
+
+
+                    <h3>Genel Ayarlar | @ViewBag.SiteLanguage </h3>
+ 
+                    <div class="input-group mt-3">
+                        <span class="input-group-append">
+                            <button type="button"
+                                    class="btn waves-effect waves-light btn-primary" style="width: 130px !important;">
+                                Logo
+                            </button>
+                            <input type="file" class="dropify" data-default-file="@ViewBag.Logo" name="Logo" />
+                        </span>
+                    </div>
+                    <div class="input-group mt-3">
+                        <span class="input-group-append">
+                            <button type="button"
+                                    class="btn waves-effect waves-light btn-primary" style="width: 130px !important;">
+                                Slider 1
+                            </button>
+                            <input type="file" class="dropify" data-default-file="@ViewBag.Slider1" name="Slider1" />
+                        </span>
+                        <span class="input-group-append">
+                            <button type="button"
+                                    class="btn waves-effect waves-light btn-primary" style="width: 130px !important;">
+                                Slider 2
+                            </button>
+                            <input type="file" class="dropify" data-default-file="@ViewBag.Slider2" name="Slider2" />
+                        </span>
+                        <span class="input-group-append">
+                            <button type="button"
+                                    class="btn waves-effect waves-light btn-primary" style="width: 130px !important;">
+                                Slider 3
+                            </button>
+                            <input type="file" class="dropify" data-default-file="@ViewBag.Slider3" name="Slider3" />
+                        </span>
+
+                        <span class="input-group-append">
+                            <button type="button"
+                                    class="btn waves-effect waves-light btn-primary" style="width: 130px !important;">
+                                Slider 4
+                            </button>
+                            <input type="file" class="dropify" data-default-file="@ViewBag.Slider4" name="Slider4" />
+                        </span>
+
+                    </div>
+                    <div class="input-group mt-3">
+                        <span class="input-group-append">
+                            <button type="button"
+                                    class="btn waves-effect waves-light btn-primary" style="width: 100px !important;">
+                                <i class="fa fa-map-marker-alt"></i> Adres
+                            </button>
+                        </span>
+                        @Html.TextBoxFor(x => x.Adress, new { @class = "form-control", id = "Adress", @required = "required" })
+
+
+                    </div>
+
+                    <hr>
+
+                    <div class="input-group mt-3">
+                        <span class="input-group-append">
+                            <button type="button"
+                                    class="btn waves-effect waves-light btn-primary" style="width: 100px !important;">
+                                <i class="fa fa-envelope"></i> Email
+                            </button>
+                        </span>
+                        @Html.TextBoxFor(x => x.Email, new { @class = "form-control", id = "Email", @required = "required" })
+
+
+                    </div>
+
+                    <hr>
+
+                    <div class="input-group mt-3">
+                        <span class="input-group-append">
+                            <button type="button"
+                                    class="btn waves-effect waves-light btn-primary" style="width: 105px !important;">
+                                <i class="fa fa-phone"></i> Telefon
+                            </button>
+                        </span>
+                        @Html.TextBoxFor(x => x.Phone, new { @class = "form-control", id = "Phone", @required = "required" })
+                    </div>
+
+                    <hr>
+
+                    <div class="input-group mt-3">
+                        <span class="input-group-append">
+                            <button type="button"
+                                    class="btn waves-effect waves-light btn-primary" style="width: 105px !important;">
+                                <i class="fa fa-fax"></i> Fax
+                            </button>
+                        </span>
+                        @Html.TextBoxFor(x => x.Fax, new { @class = "form-control", id = "Fax", @required = "required" })
+                    </div>
+
+                    <hr>
+
+                    <div class="input-group mt-3">
+                        <span class="input-group-append">
+                            <button type="button"
+                                    class="btn waves-effect waves-light btn-primary" style="width: 105px !important;">
+                                <i class="fas fa-map"></i> Harita
+                            </button>
+                        </span>
+                        @Html.TextBoxFor(x => x.Map, new { @class = "form-control", id = "Map", @required = "required" })
+                    </div>
+
+                    <hr>
+                    <div class="input-group mt-3">
+                        <span class="input-group-append">
+                            <button type="button"
+                                    class="btn waves-effect waves-light btn-primary" style="width: 105px !important;">
+                                Hakkımızda
+                            </button>
+                        </span>
+
+                        @Html.TextAreaFor(x => x.AboutUs, new { @class = "form-control", id = "AboutUs", @required = "required", rows = "15" })
+                    </div>
+
+                    <hr>
+                    <div class="input-group mt-3">
+                        <span class="input-group-append">
+                            <button type="button"
+                                    class="btn waves-effect waves-light btn-primary" style="width: 105px !important;">
+                                Hedeflerimiz
+                            </button>
+                        </span>
+
+                        @Html.TextAreaFor(x => x.OurGoals, new { @class = "form-control", id = "OurGoals", @required = "required", rows = "15" })
+                    </div>
+                    <hr>
+                    <div class="input-group mt-3">
+                        <span class="input-group-append">
+                            <button type="button"
+                                    class="btn waves-effect waves-light btn-primary" style="width: 105px !important;">
+                                İlkelerimiz
+                            </button>
+                        </span>
+
+                        @Html.TextAreaFor(x => x.Principle, new { @class = "form-control", id = "Principle", @required = "required", rows = "15" })
+                    </div>
+
+
+                </div>
+
+                    <div class="col-lg-12">
+                        <br /><br />
+
+
+                        <h3>Sosyal Medya</h3>
+
+                        <div class="input-group mt-3">
+                            <span class="input-group-append">
+                                <button type="button"
+                                        class="btn waves-effect waves-light btn-primary" style="width: 50px !important;background-color: #4267B2;border-color: #4267B2;">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+                            </span>
+                            @Html.TextBoxFor(x => x.Facebook, new { @class = "form-control", id = "Facebook", @required = "required" })
+
+                        </div>
+
+                        <hr>
+                        <div class="input-group mt-3">
+                            <span class="input-group-append">
+                                <button type="button"
+                                        class="btn waves-effect waves-light btn-primary" style="width: 50px !important;background-color: #1DA1F2;border-color: #1DA1F2;">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+                            </span>
+                            @Html.TextBoxFor(x => x.Twitter, new { @class = "form-control", id = "Twitter", @required = "required" })
+
+                        </div>
+
+                        <hr>
+
+                        <div class="input-group mt-3">
+                            <span class="input-group-append">
+                                <button type="button"
+                                        class="btn waves-effect waves-light btn-primary" style="width: 50px !important;background-color: #FF0000;border-color: #FF0000;">
+                                    <i class="fab fa-youtube"></i>
+                                </button>
+                            </span>
+                            @Html.TextBoxFor(x => x.Youtube, new { @class = "form-control", id = "Youtube", @required = "required" })
+
+                        </div>
+
+                        <hr>
+                        <div class="input-group mt-3">
+                            <span class="input-group-append">
+                                <button type="button"
+                                        class="btn waves-effect waves-light btn-primary" style="width: 50px !important;background-color: #E1306C;border-color: #E1306C;">
+                                    <i class="fab fa-instagram"></i>
+                                </button>
+                            </span>
+                            @Html.TextBoxFor(x => x.Instagram, new { @class = "form-control", id = "Instagram", @required = "required" })
+
+                        </div>
+
+                        <hr>
+
+                        <div class="input-group mt-3">
+                            <button type="submit" class="btn btn-success waves-effect width-md waves-light">Kaydet</button>
+                        </div>
+
+                    </div>
+                }
+            </div>
+
+        </div>
+    </div>
+
+</div>

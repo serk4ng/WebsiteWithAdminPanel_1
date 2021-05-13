@@ -1,0 +1,500 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Ditib Strasbourg" name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+
+    <link rel="shortcut icon" href="~/Areas/Login/Assets/images/favicon.ico">
+    <!-- App css -->
+
+
+
+    <link href="~/Areas/Login/Assets/libs/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Areas/Login/Assets/libs/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Areas/Login/Assets/libs/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Areas/Login/Assets/libs/datatables/fixedHeader.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Areas/Login/Assets/libs/datatables/scroller.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Areas/Login/Assets/libs/datatables/dataTables.colVis.css" rel="stylesheet" type="text/css" />
+    <link href="~/Areas/Login/Assets/libs/datatables/fixedColumns.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+
+    <link href="~/Areas/Login/Assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
+
+    <link href="~/Areas/Login/Assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
+    <link href="~/Areas/Login/Assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Areas/Login/Assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet" />
+
+    <link href="~/Areas/Login/Assets/libs/jquery-vectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+
+    <link href="~/Areas/Login/Assets/libs/dropify/dropify.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+
+        <!-- Topbar Start -->
+        <div class="navbar-custom">
+            <ul class="list-unstyled topnav-menu float-right mb-0">
+
+
+                <li class="dropdown notification-list">
+                    <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#"
+                       role="button" aria-haspopup="false" aria-expanded="false">
+                        <span class="d-none d-sm-inline-block ml-1">Cafer Cindoruk</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+
+                        <!-- item-->
+                        <a href="profile.html" class="dropdown-item notify-item">
+                            <i class="mdi mdi-account-outline"></i>
+                            <span>Profil</span>
+                        </a>
+
+                        <!-- item-->
+                        <a href="@Url.Action("Logout","Login")" class="dropdown-item notify-item">
+                            <i class="mdi mdi-settings-outline"></i>
+                            <span>Güvenli Çıkış</span>
+                        </a>
+
+                    </div>
+                </li>
+
+            </ul>
+
+            <!-- LOGO -->
+            <div class="logo-box">
+                <a href="@Url.Action("Index", "Home")" class="logo text-center">
+                    <span class="logo-lg">
+                        <!--<img src="assets/images/logo-light.png" alt="" height="18">-->
+                        <span class="logo-lg-text-light">DİTİB STRASBOURG</span>
+
+                    </span>
+                    <span class="logo-sm">
+                        <span class="logo-sm-text-dark">DS</span>
+                        <!-- <img src="assets/images/logo-sm.png" alt="" height="24"> -->
+                    </span>
+                </a>
+            </div>
+
+            <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                <li>
+                    <button class="button-menu-mobile waves-effect">
+                        <i class="mdi mdi-menu"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- end Topbar -->
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu">
+
+            <div class="slimscroll-menu">
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+
+                    <ul class="metismenu" id="side-menu">
+
+                        <li>
+                            <a href="@Url.Action("Index", "Home")" class="waves-effect waves-light">
+                                <i class="mdi mdi-view-dashboard"></i>
+                                <span> Dashboard </span>
+                            </a>
+
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-currency-usd"></i>
+                                <span> Bağış İşlemleri </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+
+                                <li>
+                                    <a href="javascript: void(0);" class="waves-effect waves-light">
+                                        <i class="mdi mdi-layers"></i>
+                                        <span> Kurban Bağışı </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul class="nav-second-level" aria-expanded="false">
+                                        <li><a href="@Url.Action("SacrificeDonateList", "Donation")">Bağış Listesi</a></li>
+                                        <li><a href="@Url.Action("SacrificeDonatePrice", "Donation")">Kurban Fiyatı</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="javascript: void(0);" class="waves-effect waves-light">
+                                        <i class="mdi mdi-layers"></i>
+                                        <span> Zekat Bağışı </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul class="nav-second-level" aria-expanded="false">
+                                        <li><a href="@Url.Action("AlmsDonationList", "Donation")">Bağış Listesi</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="javascript: void(0);" class="waves-effect waves-light">
+                                        <i class="mdi mdi-layers"></i>
+                                        <span> Fitre Bağışı </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul class="nav-second-level" aria-expanded="false">
+                                        <li><a href="@Url.Action("FitreDonationList", "Donation")">Bağış Listesi</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="javascript: void(0);" class="waves-effect waves-light">
+                                        <i class="mdi mdi-layers"></i>
+                                        <span> Fidye Bağışı </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul class="nav-second-level" aria-expanded="false">
+                                        <li><a href="@Url.Action("RansomDonationList", "Donation")">Bağış Listesi</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="javascript: void(0);" class="waves-effect waves-light">
+                                        <i class="mdi mdi-layers"></i>
+                                        <span> Genel Bağış</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul class="nav-second-level" aria-expanded="false">
+                                        <li><a href="@Url.Action("GeneralDonationList", "Donation")">Bağış Listesi</a></li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="javascript: void(0);" class="waves-effect waves-light">
+                                        <i class="mdi mdi-layers"></i>
+                                        <span> Camilere Yardım </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul class="nav-second-level" aria-expanded="false">
+                                        <li><a href="@Url.Action("AidToMosquesList", "Donation")">Yardım Listesi</a></li>
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="CenazeFonu/index.html" class="waves-effect waves-light">
+                                <i class="mdi mdi-home-currency-usd"></i>
+                                <span> Cenaze Fonu </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-home-flood"></i>
+                                <span> Derneklerimiz </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="@Url.Action("AssociationList", "Association")">Dernek Listesi</a></li>
+                                <li><a href="@Url.Action("AssociationAdd", "Association")">Dernek Ekle</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-home-flood"></i>
+                                <span> Kardeş Kuruluşlar </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="@Url.Action("SisterOrganizationList", "Organization")">Kuruluş Listesi</a></li>
+                                <li><a href="@Url.Action("SisterOrganizationDetail", "Organization")"> Kuruluş Ekle</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-home-flood"></i>
+                                <span> Bağlantılı Kuruluşlar</span>
+
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="@Url.Action("RelatedOrganizationList", "Organization")">Kuruluş Listesi</a></li>
+                                <li><a href="@Url.Action("RelatedOrganizationDetail", "Organization")"> Kuruluş Ekle</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-face"></i>
+                                <span>Yönetim Kurulu</span>
+
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="@Url.Action("BoardOfDirectorList", "Board")">Kişi Listesi</a></li>
+                                <li><a href="@Url.Action("BoardOfDirectorAdd", "Board")"> Kişi Ekle</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-face"></i>
+                                <span>Denetleme Kurulu</span>
+
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="@Url.Action("BoardOfAuditorList", "Board")">Kişi Listesi</a></li>
+                                <li><a href="@Url.Action("BoardOfAuditorAdd", "Board")"> Kişi Ekle</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-newspaper"></i>
+                                <span> Haberler </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="@Url.Action("NewsList", "News")">Haber Listesi</a></li>
+                                <li><a href="@Url.Action("NewsAdd", "News")"> Haber Ekle</a></li>
+                                <li><a href="@Url.Action("NewsCategoryList", "News")"> Kategori Listesi</a></li>
+                                <li><a href="@Url.Action("NewsCategoryAdd", "News")"> Kategori Ekle</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-stairs"></i>
+                                <span> Hutbeler </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="@Url.Action("SermonList", "Sermon")">Hutbe Listesi</a></li>
+                                <li><a href="@Url.Action("SermonAdd", "Sermon")"> Hutbe Ekle</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="mdi mdi-youtube"></i>
+                                <span> Videolar </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="@Url.Action("VideoList", "Video")">Video Listesi</a></li>
+                                <li><a href="@Url.Action("VideoAdd", "Video")"> Video Ekle</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="fa fa-user"></i>
+                                <span> Kullanıcılar </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="@Url.Action("UserList", "User")">Kullanıcı Listesi</a></li>
+                                <li><a href="@Url.Action("UserDetail", "User")"> Kullanıcı Ekle</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="@Url.Action("ContactRequestlist", "ContactRequest")" class="waves-effect waves-light">
+                                <i class=" fas fa-mail-bulk"></i>
+                                <span> İletişim İstekleri </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("SubscriberList", "Subscriber")" class="waves-effect waves-light">
+                                <i class="mdi mdi-email-newsletter"></i>
+                                <span> Aboneler </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="fa fa-book"></i>
+                                <span> Yayınlar </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="@Url.Action("PublicationList", "Publication")">Yayın Listesi</a></li>
+                                <li><a href="@Url.Action("PublicationAdd", "Publication")"> Yayın Ekle</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="fa fa-envelope"></i>
+                                <span>  Email İşlemleri </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="@Url.Action("Index", "Email")">Email Gönder</a></li>
+                                <li><a href="@Url.Action("EmailTemplateList", "Email")">Email Şablonları</a></li>
+                                <li><a href="@Url.Action("EmailHistoryList", "Email")">Email Geçmişi</a></li>
+                                <li><a href="@Url.Action("EmailSettings", "Email")">Email Ayarları</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript: void(0);" class="waves-effect waves-light">
+                                <i class="fas fa-sms"></i>
+                                <span>  SMS İşlemleri </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="nav-second-level" aria-expanded="false">
+                                <li><a href="@Url.Action("Index", "SMS")">SMS Gönder</a></li>
+                                <li><a href="@Url.Action("SMSTemplateList", "SMS")">SMS Şablonları</a></li>
+                                <li><a href="@Url.Action("SMSHistoryList", "SMS")">SMS Geçmişi</a></li>
+                                <li><a href="@Url.Action("SMSSettings", "SMS")">SMS Ayarları</a></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("SiteSettingsList", "SiteSettings")" class="waves-effect waves-light">
+                                <i class="fas fa-cog"></i>
+                                <span> Site Ayarları </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- End Sidebar -->
+
+                <div class="clearfix"></div>
+
+                <div class="help-box">
+                    <h5 class="text-muted mt-0">YARDIM</h5>
+                    <p class="">
+                        <span class="text-info">Email:</span>
+                        <br /> info@vakifglobal.com
+                    </p>
+                    <p class="mb-0">
+                        <span class="text-info">Telefon:</span>
+                        <br /> (+90) 531 734 29 66
+                    </p>
+                </div>
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+
+                @RenderBody()
+
+            </div>
+            <!-- end content -->
+            <!-- Footer Start -->
+            <!-- Footer Start -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            Copyright 2021 · Designed & Developed by <a href="https://www.vakifglobal.com"
+                                                                        style="text-decoration: none !important;" target="_blank">Vakıf Global</a> All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end Footer -->
+
+
+        </div>
+
+    </div>
+    <!-- END wrapper -->
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+
+    <!-- Vendor js -->
+    <script src="~/Areas/Login/Assets/js/vendor.min.js"></script>
+    <script src="~/Areas/Login/Assets/libs/morris-js/morris.min.js"></script>
+    <script src="~/Areas/Login/Assets/libs/raphael/raphael.min.js"></script>
+
+
+
+    <!-- Datatable plugin js -->
+
+    <script src="~/Areas/Login/Assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <script src="~/Areas/Login/Assets/js/pages/sweetalerts.init.js"></script>
+
+    <script src="~/Areas/Login/Assets/libs/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Areas/Login/Assets/libs/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <script src="~/Areas/Login/Assets/libs/datatables/dataTables.responsive.min.js"></script>
+    <script src="~/Areas/Login/Assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+
+    <script src="~/Areas/Login/Assets/libs/datatables/dataTables.buttons.min.js"></script>
+    <script src="~/Areas/Login/Assets/libs/datatables/buttons.bootstrap4.min.js"></script>
+
+    <script src="~/Areas/Login/Assets/libs/datatables/buttons.html5.min.js"></script>
+    <script src="~/Areas/Login/Assets/libs/datatables/buttons.print.min.js"></script>
+
+    <script src="~/Areas/Login/Assets/libs/datatables/dataTables.keyTable.min.js"></script>
+    <script src="~/Areas/Login/Assets/libs/datatables/dataTables.fixedHeader.min.js"></script>
+    <script src="~/Areas/Login/Assets/libs/datatables/dataTables.scroller.min.js"></script>
+    <script src="~/Areas/Login/Assets/libs/datatables/dataTables.fixedColumns.min.js"></script>
+
+
+    <script src="~/Areas/Login/Assets/libs/jszip/jszip.min.js"></script>
+    <script src="~/Areas/Login/Assets/libs/pdfmake/pdfmake.min.js"></script>
+    <script src="~/Areas/Login/Assets/libs/pdfmake/vfs_fonts.js"></script>
+
+
+    <!-- Datatables init -->
+    <script src="~/Areas/Login/Assets/js/pages/datatables.init.js"></script>
+    <script src="~/Areas/Login/Assets/libs/dropify/dropify.min.js"></script>
+    <script src="~/Areas/Login/Assets/libs/bootstrap-filestyle2/bootstrap-filestyle.min.js"></script>
+    <script src="~/Areas/Login/Assets/js/pages/form-masks.init.js"></script>
+    <script src="~/Areas/Login/Assets/libs/jquery-mask-plugin/jquery.mask.min.js"></script>
+    <!-- App js -->
+    <script src="~/Areas/Login/Assets/js/app.min.js"></script>
+    <!-- Plugins js -->
+    <!-- Init js-->
+    <script src="~/Areas/Login/Assets/js/pages/form-fileuploads.init.js"></script>
+    <!-- Chart JS -->
+    <script src="~/Areas/Login/Assets/libs/chart-js/Chart.bundle.min.js"></script>
+
+    <script src="~/Areas/Login/Assets/js/pages/chartjs.init.js"></script>
+    <script src="~/Areas/Login/Assets/libs/jquery-mask-plugin/jquery.mask.min.js"></script>
+    <script src="~/Areas/Login/Assets/libs/autonumeric/autoNumeric-min.js"></script>
+
+
+    <!-- Init js-->
+    <script src="~/Areas/Login/Assets/js/pages/form-masks.init.js"></script>
+
+    @RenderSection("contactrequest", required: false)
+    @RenderSection("indexcharts", required: false)
+    @RenderSection("emailsend", required: false)
+    @RenderSection("smssend", required: false)
+
+</body>
+
+</html>

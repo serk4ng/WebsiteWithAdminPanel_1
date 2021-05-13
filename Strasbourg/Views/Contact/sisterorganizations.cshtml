@@ -1,0 +1,35 @@
+﻿@using Strasbourg.Domain.ViewModels
+@model IQueryable<SisterOrganizationViewModel>
+@{
+    ViewBag.Title = "Ditib Strasbourg";
+    Layout = "~/Views/Shared/strasbourg_layout.cshtml";
+}
+
+<br />
+
+<div class="main-container" id="main-container">
+    <!-- post content -->
+    <div class="blog__content mb-72">
+        <h1 class="page-title" style="text-align: center;">Kardeş Kuruluşlar</h1>
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <br />
+                <div style="text-align: center;">
+
+                    @foreach (var item in Model)
+                    {
+                        <h3>@item.Name</h3>
+                        <p>Kuruluş Yılı: @item.EstablishmentYear</p>
+                        <p>Adres: @item.Adress</p>
+                        <p>Site: <a href="https://@item.Website" target="_blank" rel="noopener noreferrer">@item.Website</a></p>
+                        <hr style="width: 50%;">
+                    }
+
+
+                    <br />
+
+                </div>
+            </div>
+        </div> <!-- end post content -->
+    </div> <!-- end main container -->
+</div>

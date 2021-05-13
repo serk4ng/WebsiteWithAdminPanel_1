@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Ditib Strasbourg</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Responsive bootstrap 4 admin template" name="description" />
+        <meta content="Coderthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+    
+        <!-- Table datatable css -->
+    
+        <link href="assets/libs/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables/fixedHeader.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables/scroller.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables/dataTables.colVis.css" rel="stylesheet" type="text/css" />
+        <link href="assets/libs/datatables/fixedColumns.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    
+    
+        <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+    
+        <!-- App css -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet" />
+        <style>
+ 
+
+
+.card{
+width: 320px;
+height: 190px;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  perspective:600px; 
+}
+.card__part{
+  box-shadow: 1px 1px #aaa3a3;
+    top: 0;
+  position: absolute;
+z-index: 1000;
+  left: 0;
+  display: inline-block;
+    width: 320px;
+    height: 190px;
+    background-image: url('assets/images/cenaze_karti_2015-1.png'), linear-gradient(to right bottom, #fd696b, #fa616e, #f65871, #f15075, #ec4879); /*linear-gradient(to right bottom, #fd8369, #fc7870, #f96e78, #f56581, #ee5d8a)*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+   
+    -webkit-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -ms-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -o-transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+
+.card__front{
+  padding: 18px;
+-webkit-transform: rotateY(0);
+-moz-transform: rotateY(0);
+}
+
+.card__back {
+  padding: 18px 0;
+-webkit-transform: rotateY(-180deg);
+-moz-transform: rotateY(-180deg);
+}
+
+.card__black-line {
+    margin-top: 25px;
+    height: 125px;
+    background-color: #fff;
+}
+
+.card__logo {
+    height: 45px;
+}
+
+.card__front-logo{
+      position: absolute;
+    top: 15px;
+    left: 18px;
+}
+.card__square {
+    border-radius: 5px;
+    height: 30px;
+}
+
+.card_numer {
+    display: block;
+    width: 100%;
+    word-spacing: 4px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #000;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 65px;
+}
+
+.card__space-75 {
+    width: 75%;
+    float: left;
+}
+
+.card__space-25 {
+    width: 25%;
+    float: left;
+}
+
+.card__label {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+    letter-spacing: 1px;
+}
+
+.card__info {
+    margin-bottom: 0;
+    margin-top: 35px;
+    font-size: 16px;
+    line-height: 18px;
+    color: #000;
+    left: 50% !important;
+    right: 50% !important;
+    text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.card__back-content {
+    padding: 15px 15px 0;
+}
+.card__secret--last {
+    color: #303030;
+    text-align: right;
+    margin: 0;
+    font-size: 14px;
+}
+
+.card__secret {
+    padding: 5px 12px;
+    background-color: #fff;
+    position:relative;
+}
+
+.card__secret:before{
+  content:'';
+  position: absolute;
+top: -3px;
+left: -3px;
+height: calc(100% + 6px);
+width: calc(100% - 42px);
+border-radius: 4px;
+  background: repeating-linear-gradient(45deg, #ededed, #ededed 5px, #f9f9f9 5px, #f9f9f9 10px);
+}
+
+.card__back-logo {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.card__back-square {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+
+.card:hover .card__front {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+
+}
+
+.card:hover .card__back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+}
+        </style>
+    </head>
+    
+    <body data-layout="horizontal">
+
+        <!-- Begin page -->
+        <div id="wrapper">
+            <!-- Navigation Bar-->
+            <header id="topnav">
+                    <!-- Topbar Start -->
+                    <div class="navbar-custom">
+                        <div class="container-fluid">
+                            <ul class="list-unstyled topnav-menu float-right mb-0">
+                                <li class="dropdown notification-list">
+                                    <!-- Mobile menu toggle-->
+                                    <a class="navbar-toggle nav-link">
+                                        <div class="lines">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </a>
+                                    <!-- End mobile menu toggle-->
+                                </li>
+ 
+    
+                                <li class="dropdown notification-list">
+                                    <a class="nav-link dropdown-toggle waves-effect waves-light" href="../index.html" role="button" aria-haspopup="false" aria-expanded="false"><i class="ion ion-md-return-left"></i>
+                                          <span>Strasbourg Paneli</span>
+                                    </a>
+                                </li>
+                                    
+    
+                                <li class="dropdown notification-list">
+                                    <a class="nav-link dropdown-toggle waves-effect waves-light" href="../login.html" role="button" aria-haspopup="false" aria-expanded="false"><i class="mdi mdi-logout"></i>
+                                        <span>Güvenli Çıkış</span>
+                                    </a>
+                                </li>
+                              
+    
+                                <li class="dropdown notification-list">
+                                    <!-- Mobile menu toggle-->
+                                    <a class="navbar-toggle nav-link">
+                                        <div class="lines">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </a>
+                                    <!-- End mobile menu toggle-->
+                                </li>
+
+    
+    
+                    
+    
+    
+                                <li class="dropdown notification-list">
+                              
+                                </li>
+    
+                            </ul>
+    
+                            <!-- LOGO -->
+                            <div class="logo-box">
+                                <a href="index.html" class="logo text-center">
+                                    <span class="logo-lg">
+                                        <span class="logo-lg-text-light">CENAZE FONU</span>
+                                        <!-- <span class="logo-lg-text-light">Zircos</span> -->
+                                    </span>
+                                    <span class="logo-sm">
+                                        <!-- <span class="logo-sm-text-dark">Z</span> -->
+                                        <span class="logo-sm-text-dark">CF</span>
+                                    </span>
+                                </a>
+                              
+                            </div>
+                            
+
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <!-- end Topbar -->
+    
+                    <div class="topbar-menu">
+                        <div class="container-fluid">
+                            <div id="navigation">
+                                <!-- Navigation Menu-->
+                                <ul class="navigation-menu in">
+        
+                                    <li class="has-submenu">
+                                        <a href="index.html"> <i class="mdi mdi-view-dashboard"></i>Dashboard</a>
+                                    </li>
+        
+                                    <li class="has-submenu">
+                                        <a href="#">
+                                            <i class="ion ion-md-person"></i>Üye Listeleri
+                                        </a>
+                                        <ul class="submenu megamenu">
+                                            <li>
+                                                <ul>
+                                                    <li><a href="allmemberlist.html">Tüm Üyeler</a></li>
+                                                    <li><a href="activememberlist.html">Aktif Üyeler</a></li>
+                                                    <li><a href="passivememberlist.html">Pasif Üyeler</a></li>
+                                                    <li><a href="deletedmemberlist.html">Silinen Üyeler</a></li>
+                                                    <li><a href="deceasedmemberlist.html">Vefat Eden Üyeler</a></li>
+                                                </ul>
+                                            </li>
+        
+        
+                                        </ul>
+                                    </li>
+        
+        
+                                    <li class="has-submenu">
+                                        <a href="#">
+                                            <i class=" mdi mdi-frequently-asked-questions"></i>Talepler
+                                        </a>
+                                        <ul class="submenu megamenu">
+                                            <li>
+                                                <ul>
+                                                    <li><a href="adresschangerequests.html">Adres Değişikliği Talepleri</a></li>
+                                                    <li><a href="transferrequests.html">Transfer Talepleri</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+        
+                                    <li class="has-submenu">
+                                        <a href="#">
+                                            <i class="fas fa-sms"></i>SMS
+                                        </a>
+                                        <ul class="submenu megamenu">
+                                            <li>
+                                                <ul>
+                                                    <li><a data-toggle="modal" data-target="#sendsms">SMS Gönder</a></li>
+                                                    <li><a href="sendmasssms.html">Toplu SMS Gönder</a></li>
+                                                    <li><a href="smstemplates.html">SMS Şablonları</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+        
+                                    <li class="has-submenu">
+                                        <a href="#">
+                                            <i class="fas fa-envelope"></i>Email
+                                        </a>
+                                        <ul class="submenu megamenu">
+                                            <li>
+                                                <ul>
+                                                    <li><a  data-toggle="modal" data-target="#sendemail">Email Gönder</a></li>
+                                                    <li><a href="sendmassemail.html">Toplu Email Gönder</a></li>
+                                                    <li><a href="emailtemplatelist.html">Email Şablonları</a></li>
+                                                </ul>
+                                            </li>
+        
+        
+                                        </ul>
+                                    </li>
+        
+        
+                                </ul>
+                                <!-- End navigation menu -->
+        
+                                <div class="clearfix"></div>
+                            </div>
+                            <!-- end #navigation -->
+                        </div>
+                        <!-- end container -->
+                    </div>
+                    <!-- end navbar-custom -->
+                </header>
+                <!-- End Navigation Bar-->
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+                  
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+    
+                       <br/>
+                        <!-- end page title -->
+    
+                        <div class="row">
+                         
+                                <div class="col-sm-6">
+                                    <div class="card-box">
+                                        <div class="row">
+                                            <form class="form-horizontal">
+            
+                                                <h3>Üye Detayı</h3>
+            
+                                                <div class="row">
+            
+                                                    <div class="col col-lg-12">
+                                                        <div class="input-group mt-3">
+                                                            <span class="input-group-append">
+                                                                <button type="button"
+                                                                    class="btn waves-effect waves-light btn-primary"
+                                                                    style="width: 150px !important;">Ad Soyad</button>
+                                                            </span>
+                                                            <input type="text" id="example-input3-group2"
+                                                                name="example-input3-group2" class="form-control"
+                                                                placeholder="Ad Soyad" value="Ad Soyad 1">
+            
+            
+                                                        </div>
+                                                    </div>
+                                                    <div class="col col-lg-12">
+                                                        <div class="input-group mt-3">
+                                                            <span class="input-group-append">
+                                                                <button type="button"
+                                                                    class="btn waves-effect waves-light btn-primary"
+                                                                    style="width: 150px !important;">Üye No</button>
+                                                            </span>
+                                                            <input type="text" id="example-input3-group2"
+                                                                name="example-input3-group2" class="form-control"
+                                                                placeholder="Üye No" value="12345">
+            
+                                                        </div>
+                                                    </div>
+            
+                                                </div>
+            
+                         
+                                                <div class="row">
+                                    
+                                                    <div class="col col-lg-6">
+            
+                                                        <div class="input-group mt-3">
+                                                            <span class="input-group-append">
+                                                                <button type="button"
+                                                                    class="btn waves-effect waves-light btn-primary"
+                                                                    style="width: 150px !important;">Başlangıç Tarihi</button>
+                                                            </span>
+                                                            <input type="text" class="form-control" placeholder="dd/mm/yyyy"
+                                                                id="datepicker2" value="12/12/2020" style="font-size:14.2px;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col col-lg-6">
+                                                        <div class="input-group mt-3">
+                                                            <span class="input-group-append">
+                                                                <button type="button"
+                                                                    class="btn waves-effect waves-light btn-primary"
+                                                                    style="width: 150px !important;">Dosya Durumu</button>
+                                                            </span>
+                                                            <select class="form-control">
+                                                                <option>Vefat Eden</option>
+                                                                <option>Silinen</option>
+                                                                <option>Aktif</option>
+                                                                <option>Pasif</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col col-lg-12">
+                                                        <div class="input-group mt-3">
+                                                            <span class="input-group-append">
+                                                                <button type="button"
+                                                                    class="btn waves-effect waves-light btn-primary"
+                                                                    style="width: 150px !important;">Gönderilme Durumu</button>
+                                                            </span>
+                                                            <select class="form-control" style="height: 65px;">
+                                                                <option>Gönderildi</option>
+                                                                <option>Gönderilmedi</option>
+                                                            
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+            
+                                                
+                                                <div class="row">
+                                                  
+            
+                                                    <div class="col-lg-12">
+                                                 
+             
+                                                            <div class="input-group mt-3">
+                                                                <span class="input-group-append">
+                                                                    <button type="button"
+                                                                        class="btn waves-effect waves-light btn-primary"
+                                                                        style="width: 150px !important;">Mektup</button>
+                                                                </span>
+                               
+            
+                                                                <div class="form-check" onchange="lettercheck()" style="margin-left: 20px;">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="lettercheck" style="height:30px; width:30px; vertical-align: middle;" checked>
+                                                                    <label class="form-check-label"  for="lettercheck" id="lettercheckvalue" style="margin-left: 20px;margin-top: 10px;">
+                                                                    <b style="color: darkred;">Geri Döndü</b> | 29.01.2021
+                                                                    </label>
+                                                                  </div>
+                                                            </div>
+            
+                                                       
+                                                          <div class="col-md-12 text-center">
+                                                              <br/>
+                                                            <button type="submit" class="btn btn-success waves-effect width-md waves-light">Kaydet</button>
+                                                          </div>
+                                                      
+                                                        
+                                                    </div>
+                                                    
+                                                </div>
+                                            </form>
+                                        </div>
+            
+                                    </div>
+            
+            
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="row" >
+                                        <div class="col-sm-12" >
+                                            <div class="card" style="left: 35%;top: 50%;" >
+                                                <div class="card__front card__part">
+                                                 
+                                                  <p class="card_numer"> Cafer Cindoruk</p>
+                                                 
+                                              
+                                                    <p class="card__info">22222</p>
+                                                
+                                                </div>
+                                                
+                                                <div class="card__back card__part">
+                                                  <div class="card__black-line" style="text-align: center; font-size: 7px;">
+                                                  <p > Aile reisi için düzenlenen bu kart, dosyada kayıtlı diğer aile fertleri için de geçerlidir. Adres, telefon ve aile durumundaki değişiklikleri en kısa zamanda yazılı olarak bildiriniz.
+                                                    DİTİB Strasbourg</p> 
+                                                    <p>
+                                                    Adres: 3 Rue Thomas Mann 67200 Strasbourg E-mail: cenazefonu@ditibstrasbourg.fr Tel: 03 88 330 430 Çalışma saatleri: 09:30 - 12:30 / 13:30 - 17:30
+                                                    Vefat durumunda 7/24 aşağıdaki numarayı arayınız. (En cas de décès, veuillez appeler le numéro)
+                                                    06 61 72 86 23</p>
+                                                    <p>Cette carte est strictement personnelle.
+                                                    Toute personne trouvant cette carte est priée de bien vouloir la retournée au DITIB svp</p>
+                                                  </div>
+                                                  <div class="card__back-content">
+                                                  
+                                                  </div>
+                                                </div>
+                                                
+                                              </div>
+                                        </div>
+                                    
+                                    </div>
+                                </div>
+                          
+                        </div>
+    
+                    </div>
+                    <!-- end container-fluid -->
+    
+                </div>
+                <!-- end content -->
+    
+                
+    
+                <!-- Footer Start -->
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                Copyright 2020 · Designed & Developed by <a href="http://www.vakifglobal.com">Vakıf Global</a> All rights reserved.
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- end Footer -->
+    
+            </div>
+
+<div class="modal fade bd-example-modal-lg"  id="target" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+  
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card-box table-responsive">
+                    <h1 style="text-align: right; float: right;">Diyanet İşleri  Türk İslam Birliği</h1>
+                    <img src="assets/images/logoditib2.png">
+            
+                    <h3 style="text-align: center;">Üye Adı</h3>
+                        <h4 style="text-align: center;">Cafer Cindoruk</h4>
+                        <h3 style="text-align: center;">Üye No</h3>
+                        <h4 style="text-align: center;">11055</h4>
+                        <p style="height: 40px; background-color: red; text-align: center; font-size: 30px; color: aliceblue;"> CENAZE NAKLİ YARDIMLAŞMA FONU</p>
+                </div>
+            </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+    
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+        </div>
+        <!-- END wrapper -->
+        <div id="sendsms" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>SMS Gönder</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <div class="form-group">
+                                    <label for="field-1" class="control-label">SMS Türü Seçiniz</label>
+                                    <select class="form-control" id="smstype">
+                                        <option>Ödeme Alındı</option>
+                                        <option>Ödeme Uyarısı</option>
+                                        <option>Silinen Üye</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="field-1" class="control-label">Üye Numarası Giriniz</label>
+                                    <input type="text" class="form-control" placeholder="" value=""
+                                        required="required" id="membernumber">
+                                        <label for="field-1" class="control-label" style="color:darkred;display: none" id="errormembernumber">Lütfen Üye Numarası Giriniz</label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger waves-effect"
+                            data-dismiss="modal">İptal</button>
+                        <button type="button" class="btn btn-success waves-effect waves-light sa-success-sms"
+                            id="smssend">Onayla</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+    
+       
+        <div  class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog" >
+                <div class="modal-content" >
+                    <div class="modal-header">
+                        <h5>Email Gönder</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="sendemail">
+
+                        <div class="row" >
+                            <div class="col-md-12" id="content">
+
+                                <div class="form-group">
+                                    <label for="field-1" class="control-label">Email Türü Seçiniz</label>
+                                    <select class="form-control" id="smstype">
+                                        <option>E-Tahsilat</option>
+                                        <option>E-Ödeme Uyarısı</option>
+                                        <option>E-Masraf Payı</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="field-1" class="control-label">Üye Numarası Giriniz</label>
+                                    <input type="text" class="form-control" placeholder="" value=""
+                                        required="required" id="membernumberemail">
+                                        <label for="field-1" class="control-label" style="color:darkred;display: none" id="errormembernumberemail">Lütfen Üye Numarası Giriniz</label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div id="page"></div> 
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger waves-effect"
+                            data-dismiss="modal">İptal</button>
+                        <button type="button" class="btn btn-success waves-effect waves-light sa-success-email"
+                            id="emailsend">Onayla</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- Right Sidebar -->
+        <div class="right-bar">
+            <div class="rightbar-title">
+                <a href="javascript:void(0);" class="right-bar-toggle float-right">
+                    <i class="mdi mdi-close"></i>
+                </a>
+                <h4 class="font-16 m-0 text-white">Theme Customizer</h4>
+            </div>
+            <div class="slimscroll-menu">
+        
+                <div class="p-4">
+                    <div class="alert alert-warning" role="alert">
+                        <strong>Customize </strong> the overall color scheme, layout, etc.
+                    </div>
+                    <div class="mb-2">
+                        <img src="assets/images/layouts/light.png" class="img-fluid img-thumbnail" alt="">
+                    </div>
+                    <div class="custom-control custom-switch mb-3">
+                        <input type="checkbox" class="custom-control-input theme-choice" id="light-mode-switch" checked />
+                        <label class="custom-control-label" for="light-mode-switch">Light Mode</label>
+                    </div>
+            
+                    <div class="mb-2">
+                        <img src="assets/images/layouts/dark.png" class="img-fluid img-thumbnail" alt="">
+                    </div>
+                    <div class="custom-control custom-switch mb-3">
+                        <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css" 
+                            data-appStyle="assets/css/app-dark.min.css" />
+                        <label class="custom-control-label" for="dark-mode-switch">Dark Mode</label>
+                    </div>
+            
+                    <div class="mb-2">
+                        <img src="assets/images/layouts/rtl.png" class="img-fluid img-thumbnail" alt="">
+                    </div>
+                    <div class="custom-control custom-switch mb-3">
+                        <input type="checkbox" class="custom-control-input theme-choice" id="rtl-mode-switch" data-appStyle="assets/css/app-rtl.min.css" />
+                        <label class="custom-control-label" for="rtl-mode-switch">RTL Mode</label>
+                    </div>
+
+                    <div class="mb-2">
+                        <img src="assets/images/layouts/dark-rtl.png" class="img-fluid img-thumbnail" alt="">
+                    </div>
+                    <div class="custom-control custom-switch mb-5">
+                        <input type="checkbox" class="custom-control-input theme-choice" id="dark-rtl-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css" 
+                            data-appStyle="assets/css/app-dark-rtl.min.css" />
+                        <label class="custom-control-label" for="dark-rtl-mode-switch">Dark RTL Mode</label>
+                    </div>
+
+                    <a href="https://1.envato.market/eKY0g" class="btn btn-danger btn-block mt-3" target="_blank"><i class="mdi mdi-download mr-1"></i> Download Now</a>
+                </div>
+            </div> <!-- end slimscroll-menu-->
+        </div>
+        <!-- /Right-bar -->
+
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
+
+
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+
+        <script src="assets/libs/morris-js/morris.min.js"></script>
+        <script src="assets/libs/raphael/raphael.min.js"></script>
+
+        <!-- Jvector map -->
+        <script src="assets/libs/jquery-vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="assets/libs/jquery-vectormap/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="assets/libs/jquery-vectormap/jquery-jvectormap-us-merc-en.js"></script>
+
+        <!-- Init js -->
+        <script src="assets/js/pages/blog-dashboard.init.js"></script>
+
+            <!-- Datatable plugin js -->
+
+    <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <script src="assets/js/pages/sweetalerts.init.js"></script>
+
+    <script src="assets/libs/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables/buttons.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables/buttons.print.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.keyTable.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.fixedHeader.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.scroller.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.fixedColumns.min.js"></script>
+
+    <script src="assets/libs/morris-js/morris.min.js"></script>
+    <script src="assets/libs/raphael/raphael.min.js"></script>
+
+
+
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/vfs_fonts.js"></script>
+
+
+    <!-- Datatables init -->
+    <script src="assets/js/pages/datatables.init.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.min.js"></script>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.1.135/jspdf.min.js"></script>
+<script>
+
+
+function printDiv(divName) {
+            var printContents = document.getElementById(divName).innerHTML;
+            var originalContents = document.body.innerHTML;
+            document.body.innerHTML = printContents;
+            window.print();
+            document.body.innerHTML = originalContents;
+        }
+ var doc = new jsPDF(); 
+var specialElementHandlers = { 
+    '#editor': function (element, renderer) { 
+        return true; 
+    } 
+};
+$('#submit').click(function () { 
+    doc.fromHTML($('#content').html(), 15, 15, { 
+        'width': 190, 
+            'elementHandlers': specialElementHandlers 
+    }); 
+    doc.save('sample-page.pdf'); 
+});
+</script>
+
+
+
+    </body>
+
+</html>

@@ -1,0 +1,40 @@
+﻿@using Strasbourg.Domain.Enums
+@{
+    ViewBag.Title = "Ditib Strasbourg";
+    Layout = "~/Views/Shared/strasbourg_layout.cshtml";
+    ViewBag.Active = ViewContext.RouteData.Values["action"];
+}
+
+<br />
+
+<div class="main-container container" id="main-container">
+    <!-- post content -->
+    <div class="blog__content mb-72">
+        @if (ViewBag.siteSettings.SiteLanguage == (SiteLanguages)1)
+        {
+            <h1 class="page-title" style="text-align: center;">Hedeflerimiz</h1>
+        }
+        else
+        {
+            <h1 class="page-title" style="text-align: center;">Nos Buts</h1>
+        }
+
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <br />
+
+                <div class="display-field">
+                    <pre style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;font-size:17px !important;">@ViewBag.siteSettings.OurGoals</pre>
+                </div>
+
+                <br />
+
+            </div>
+
+        </div>
+
+
+    </div> <!-- end post content -->
+
+
+</div> <!-- end main container -->

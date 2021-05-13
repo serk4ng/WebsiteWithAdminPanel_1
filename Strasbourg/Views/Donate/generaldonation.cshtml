@@ -1,0 +1,181 @@
+﻿
+@{
+    ViewBag.Title = "Ditib Strasbourg";
+
+    Layout = "~/Views/Shared/strasbourg_layout.cshtml";
+}
+
+
+
+<div class="main-container container" id="main-container" style="background-color: #f6f9fb !important;">
+    <!-- post content -->
+    <div class="blog__content mb-72">
+        <div class="description">
+
+            <img src="~/Assets/strasbourgpanel/strasbourg/img/bannerzekat.svg">
+            <h1>FONDS DE DOTATION DİTİB STRASBOURG</h1>
+            <p face="Calibri, sans-serif"><span style="font-size: 14.6667px;">DİTİB Strasbourg Online Bağış Sistemi</span></p>
+        </div><div><p face="Calibri, sans-serif"><span style="font-size: 14.6667px;">DİTİB Strasbourg paiement en ligne de l’aumône</span></p></div><div><br></div><p>
+    </div>
+    <div class="clearfix"></div>
+    <hr />
+    <div class="additional">
+        <p><div><i>Association de droit local inscrite au TA de Strasbourg sous le volume 90 Folio 69 // sise : 3, Rue Thomas Mann 67200 STRASBOURG.</i></div><div><i>Conditions de vente : Attention les licences vendues sur internet ne pourront faire l’objet d’aucun remboursement ultérieur.&nbsp;</i></div><div><br></div></p>
+    </div>
+    <div class="clearfix"></div>
+    <hr />
+
+    @using (Html.BeginForm("GeneralDonationPost", "Donate", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data", name = "Monetico", target="_top" }))
+    {
+
+        <div class="row">
+            <div class=" form-group col-lg-3">
+
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="inputPassword4">Ad</label>
+                <input type="text" class="form-control" name="Name" id="name" value="">
+            </div>
+            <div class="form-group col-lg-3">
+
+            </div>
+            <div class="form-group col-lg-3">
+
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="inputPassword4">Soyad</label>
+                <input type="text" class="form-control" name="Surname" id="surname">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class=" form-group col-lg-3">
+
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="inputEmail4">E-mail</label>
+                <input type="email" class="form-control" name="Email" required id="email">
+            </div>
+            <div class=" form-group col-lg-3">
+
+            </div>
+            <div class="form-group col-lg-3">
+
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="inputEmail4">Telefon</label>
+                <input type="tel" class="form-control" name="PhoneNumber" required id="phonenumber">
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class=" form-group col-lg-3">
+
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="inputPassword4">Adres</label>
+                <input type="text" class="form-control" name="Adress" required id="adress">
+            </div>
+            <div class=" form-group col-lg-3">
+
+            </div>
+            <div class="form-group col-lg-3">
+
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="inputPassword4">Posta Kodu</label>
+                <input type="text" class="form-control" name="ZipCode" required id="zipcode">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class=" form-group col-lg-3">
+
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="inputPassword4">Şehir</label>
+                <input type="text" class="form-control" name="City" required id="city">
+            </div>
+            <div class=" form-group col-lg-3">
+
+            </div>
+            <div class="form-group col-lg-3">
+
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="inputPassword4">Açıklama</label>
+                <input type="text" class="form-control" name="Description" id="description">
+            </div>
+        </div>
+
+        <br />
+        <div class="row">
+            <div class=" form-group col-lg-3">
+
+            </div>
+            <div class="col col-lg-2">
+                <label for="bagismiktari" style="margin-top: 15px !important;">Bağış Miktarı</label>
+            </div>
+            <div class="col col-lg-4" style="margin-left: -80px !important;">
+                <div class="row">
+                    <div class="col col-lg-6">
+                        <input type="number" id="donationamount" min="10" max="10000000" name="DonationAmount" required>
+                    </div>
+
+                    <div class="col col-lg-2">
+                        <h4 style="margin-top: 5px;">€</h4>
+                    </div>
+                </div>
+
+            </div>
+
+            <br />
+            <div class=" form-group col-lg-5">
+
+            </div>
+            <!--  <div class="form-group col-lg-3">
+         <button type="submit" class="btn btn-danger text-center">Devam Et</button>
+     </div>-->
+
+        </div>
+
+        <input type="hidden" name="version" value="3.0">
+        <input type="hidden" name="TPE" value="1234567">
+        <input type="hidden" name="date" value="05/05/2019:11:55:23">
+        <input type="hidden" name="montant" value="62.73EUR">
+        <input type="hidden" name="reference" value="REF001">
+        <input type="hidden" name="MAC" value="78bc376c5b192f1c48844794cbdb0050f156b9a2">
+        <input type="hidden" name="url_retour_ok" value="http://url.retour.com/ok.cgi?ref=REF001">
+        <input type="hidden" name="url_retour_err" value="http://url.retour.com/ko.cgi?ref=REF001">
+        <input type="hidden" name="lgue" value="FR">
+        <input type="hidden" name="societe" value="monSite1">
+        <input type="hidden" name="contexte_commande" value="ewoJI(…)KCX0KfQ==">
+        <input type="hidden" name="texte_libre" value="ExempleTexteLibre">
+        <input type="hidden" name="mail" value="internaute@sonemail.fr">
+        <input type="submit" name="bouton"  class="btn btn-danger text-center" value="Devam Et">
+
+        }
+        <br /><br />
+
+
+    </div> <!-- end post content -->
+
+@if (Session["generaldonationjson"] != null)
+{
+ 
+
+    @section generaldonation{
+        <script>
+    document.getElementById("name").value =  "@Session["generaldonationname"].ToString()";
+    document.getElementById("surname").value = "@Session["generaldonationsurname"].ToString()";
+    document.getElementById("email").value = "@Session["generaldonationemail"].ToString()";
+    document.getElementById("adress").value = "@Session["generaldonationadress"].ToString()";
+    document.getElementById("city").value = "@Session["generaldonationcity"].ToString()";
+    document.getElementById("phonenumber").value = "@Session["generaldonationphonenumber"].ToString()";
+    document.getElementById("zipcode").value = "@Session["generaldonationzipcode"].ToString()";
+    document.getElementById("description").value = "@Session["generaldonationdescription"].ToString()";
+    document.getElementById("donationamount").value = "@Session["generaldonationdonateamount"].ToString()";
+        </script>
+    }
+}

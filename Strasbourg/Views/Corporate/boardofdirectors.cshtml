@@ -1,0 +1,35 @@
+﻿@using Strasbourg.Domain.ViewModels
+@model IQueryable<BoardViewModel>
+@{
+    ViewBag.Title = "Ditib Strasbourg";
+    Layout = "~/Views/Shared/strasbourg_layout.cshtml";
+    ViewBag.Active = ViewContext.RouteData.Values["action"];
+}
+
+
+<br />
+
+<div class="main-container" id="main-container">
+    <!-- post content -->
+    <div class="blog__content mb-72">
+        <h1 class="page-title" style="text-align: center;">Yönetim Kurulu</h1>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <br />
+                @foreach (var item in Model)
+                {
+                    <p style="text-align: center;"><a href="#"><img loading="lazy" class="alignnone wp-image-13121 size-full" src="@item.Image" alt="" width="170" height="226" /></a></p>
+                    <h2 style="text-align: center;"><a href="#">@item.NameSurname</a></h2>
+                    <hr style="width: 50%;" />
+                }
+               
+
+            </div>
+
+
+        </div> <!-- end post content -->
+
+
+    </div> <!-- end main container -->
+</div>

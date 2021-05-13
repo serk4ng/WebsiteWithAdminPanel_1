@@ -1,0 +1,119 @@
+﻿
+@{
+    ViewBag.Title = "Ditib Strasbourg";
+    Layout = "~/Views/Shared/strasbourg_layout.cshtml";
+}
+
+
+
+
+<div class="main-container container" id="main-container" style="background-color: #f6f9fb !important;">
+    <!-- post content -->
+    <div class="blog__content mb-72">
+        <div class="description">
+
+            <img src="~/Assets/strasbourgpanel/strasbourg/img/bannerzekat.svg">
+            <h1>FONDS DE DOTATION DİTİB STRASBOURG</h1>
+            <p face="Calibri, sans-serif"><span style="font-size: 14.6667px;">DİTİB Strasbourg Online Bağış Sistemi</span></p>
+        </div><div><p face="Calibri, sans-serif"><span style="font-size: 14.6667px;">DİTİB Strasbourg paiement en ligne de l’aumône</span></p></div><div><br></div><p>
+    </div>
+    <div class="clearfix"></div>
+    <hr />
+    <div class="additional">
+        <p><div><i>Association de droit local inscrite au TA de Strasbourg sous le volume 90 Folio 69 // sise : 3, Rue Thomas Mann 67200 STRASBOURG.</i></div><div><i>Conditions de vente : Attention les licences vendues sur internet ne pourront faire l’objet d’aucun remboursement ultérieur.&nbsp;</i></div><div><br></div></p>
+    </div>
+    <div class="clearfix"></div>
+    <hr />
+    @using (Html.BeginForm("AidToMosquesPost", "Donate", FormMethod.Post, new { @class = "form-horizontal", enctype = "multipart/form-data" }))
+    {
+        <div class="form-row">
+            <div class="form-group col-lg-6">
+                <label for="inputPassword4">Ad</label>
+                <input type="text" class="form-control" name="Name" id="name">
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="inputPassword4">Soyad</label>
+                <input type="text" class="form-control" name="Surname" id="surname">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-lg-6">
+                <label for="inputEmail4">E-mail</label>
+                <input type="email" class="form-control" name="Email" required id="email">
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="inputEmail4">Telefon</label>
+                <input type="tel" class="form-control" name="PhoneNumber" required id="phonenumber">
+            </div>
+
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-lg-6">
+                <label for="inputPassword4">Adres</label>
+                <input type="text" class="form-control" name="Adress" required id="adress">
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="inputPassword4">Posta Kodu</label>
+                <input type="text" class="form-control" name="ZipCode" required id="zipcode">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-lg-6">
+                <label for="inputPassword4">Şehir</label>
+                <input type="text" class="form-control" name="City" required id="city">
+            </div>
+            <div class="form-group col-lg-6">
+                <label for="inputPassword4">Açıklama</label>
+                <textarea class="form-control" name="Description" required id="description" rows="3"></textarea>
+            </div>
+        </div>
+
+        <br />
+        <div class="row">
+            <div class="col col-lg-2">
+                <label for="zekatmiktari" style="margin-top: 15px !important;">Yardım Miktarı</label>
+            </div>
+            <div class="col col-lg-4" style="margin-left: -80px !important;">
+                <div class="row">
+                    <div class="col col-lg-6">
+                        <input type="number" id="donationamount" name="DonationAmount" min="10" max="10000000">
+                    </div>
+
+                    <div class="col col-lg-2">
+                        <h4 style="margin-top: 5px;">€</h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <br />
+        <button type="submit" class="btn btn-danger">Devam Et</button>
+    }
+
+    <br /><br />
+</div> <!-- end post content -->
+
+
+
+@if (Session["aidtomosquesjson"] != null)
+{
+
+
+    @section aidtomosquesjson{
+        <script>
+    document.getElementById("name").value =  "@Session["aidtomosquesname"].ToString()";
+    document.getElementById("surname").value = "@Session["aidtomosquessurname"].ToString()";
+    document.getElementById("email").value = "@Session["aidtomosquesemail"].ToString()";
+    document.getElementById("adress").value = "@Session["aidtomosquesadress"].ToString()";
+    document.getElementById("city").value = "@Session["aidtomosquescity"].ToString()";
+    document.getElementById("phonenumber").value = "@Session["aidtomosquesphonenumber"].ToString()";
+    document.getElementById("zipcode").value = "@Session["aidtomosqueszipcode"].ToString()";
+    document.getElementById("donationamount").value = "@Session["aidtomosquesdonationamount"].ToString()";
+    document.getElementById("description").value = "@Session["aidtomosquesdescription"].ToString()";
+        </script>
+    }
+}

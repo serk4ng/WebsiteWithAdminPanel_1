@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Online İşlemler | Cenaze Fonu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Responsive bootstrap 4 admin template" name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet" />
+
+    <style>
+        .payment {
+  animation: color-changepayment 2s infinite;
+}
+
+.paymentlink {
+  animation: color-changepaymentlink 2s infinite;
+}
+@keyframes color-changepayment {
+  0% { background-color: #FDE2E4; }
+  50% { background-color: red; color: white; }
+  100% { background-color: #FDE2E4; }
+}
+
+@keyframes color-changepaymentlink {
+  0% {  color: #000; }
+  50% {  color: white;
+  font-size: 30px; }
+  100% { color:#000; }
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        
+        <!-- Topbar Start -->
+        <div class="navbar-custom">
+            <ul class="list-unstyled topnav-menu float-right mb-0">
+
+
+                <li class="dropdown notification-list">
+                    <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect" data-toggle="dropdown" href="#"
+                        role="button" aria-haspopup="false" aria-expanded="false">
+                        <span class="d-none d-sm-inline-block ml-1">Cafer Cindoruk</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+
+                        <!-- item-->
+                        <a href="profile.html" class="dropdown-item notify-item">
+                            <i class="mdi mdi-account-outline"></i>
+                            <span>Profil</span>
+                        </a>
+
+                        <!-- item-->
+                        <a href="../strasbourg/girisyap.html" class="dropdown-item notify-item">
+                            <i class="mdi mdi-settings-outline"></i>
+                            <span>Güvenli Çıkış</span>
+                        </a>
+
+                    </div>
+                </li>
+
+            </ul>
+
+                   <!-- LOGO -->
+                   <div class="logo-box">
+                    <a href="index.html" class="logo text-center">
+                        <span class="logo-lg">
+                            <!--<img src="assets/images/logo-light.png" alt="" height="18">-->
+                            <span class="logo-lg-text-light">Cenaze Fonu    
+                            </span>
+                            <p style="color: white;margin-top: -40px;">Online İşlemler</p>
+                        </span>
+                        <span class="logo-sm">
+                            <span class="logo-sm-text-dark">CF</span>
+                            <!-- <img src="assets/images/logo-sm.png" alt="" height="24"> -->
+                        </span>
+                    </a>
+                </div>
+                <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                    <li>
+                        <button class="button-menu-mobile waves-effect">
+                            <i class="mdi mdi-menu"></i>
+                        </button>
+                    </li>
+            
+          
+    
+                    <li class="dropdown d-none d-lg-block">
+                        <a class="nav-link dropdown-toggle mr-0 waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/images/flags/tr.png" alt="user-image" class="mr-1" height="12"> <span class="align-middle">Türkçe <i class="mdi mdi-chevron-down"></i> </span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <img src="assets/images/flags/french.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">French</span>
+                            </a>
+    
+            
+                            <!-- item-->
+                            <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                <img src="assets/images/flags/us.jpg" alt="user-image" class="mr-1" height="12"> <span class="align-middle">English</span>
+                            </a>
+    
+                            
+    
+                        </div>
+                    </li>
+    
+    
+                </ul>
+        </div>
+
+        
+        <!-- end Topbar --> 
+        
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu">
+
+                <div class="slimscroll-menu">
+    
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu" style="margin-top: 20px;">
+    
+                        <ul class="metismenu" id="side-menu">
+  
+                            <li>
+                                <a href="index.html" class="waves-effect waves-light">
+                                    <i class="mdi mdi-view-dashboard"></i>
+                                    <span> Anasayfa </span>
+                                </a>
+    
+                            </li>
+                            <li>
+                                <a href="javascript: void(0);" class="waves-effect waves-light">
+                                    <i class="ion ion-md-person"></i>
+                                    <span> Aile Ferdi İşlemleri </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <ul class="nav-second-level" aria-expanded="false">
+    
+                                    <li><a href="addfamilymember.html">Aile Ferdi Ekle</a></li>
+                                    <li><a href="familymemberlist.html">Aile Ferdi Listesi</a></li>
+                                </ul>
+                                </li>
+    
+                                <li>
+                                    <a href="javascript: void(0);" class="waves-effect waves-light">
+                                        <i class="fas fa-exchange-alt"></i>
+                                        <span> Talepler </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul class="nav-second-level" aria-expanded="false">
+                                        
+                                        <li><a href="contactinfochangerequest.html">İletişim Bilgisi Değişikliği Talebi</a></li>
+                                        <li><a href="familymanagerchangerequest.html">Aile Reisi Değişikliği Talebi</a></li>
+                                        <li><a href="transferrequest.html">Transfer Talebi</a></li>
+                                        <li><a href="declarationofdeath.html">Vefat Bildirimi</a></li>
+                                        <li><a href="myrequests.html">Taleplerim</a></li>
+                                    </ul>
+                                </li>
+    
+                             
+
+                                <li>
+                                    <a href="payment.html" class="waves-effect waves-light">
+                                        <i class="mdi mdi-currency-eur"></i>
+                                        <span> Ödeme </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../strasbourg/girisyap.html" class="waves-effect waves-light">
+                                        <i class="mdi mdi-logout"></i>
+                                        <span> Çıkış Yap </span>
+                                    </a>
+                                </li>
+    
+                        </ul>
+                    </div>
+                    <!-- End Sidebar -->
+    
+                    <div class="clearfix"></div>
+    
+                    <div class="help-box">
+                        <h5 class="text-muted mt-0">Yardım</h5>
+                        <p class=""><span class="text-info">Email:</span>
+                            <br/> info@ditibstrasbourg.fr</p>
+                        <p class="mb-0"><span class="text-info">Telefon:</span>
+                            <br/> (+123) 123 456 789</p>
+                    </div>
+    
+                </div>
+                <!-- Sidebar -left -->
+    
+            </div>
+            <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+                    <br/>
+               
+                    <div class="row">
+                        <div class="col-lg-6 col-xl-3">
+                            <div class="card widget-box-three">
+                                <div class="card-body">
+                                    <div class="float-right mt-2">
+                                        <i class="ion ion-md-person display-3 m-0"></i>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="text-uppercase font-weight-medium text-truncate mb-2">ÜYELİK DURUMU</p>
+                                        <h2 class="mb-0"><span class="text-success">Aktif</span></h2><br/>
+                              
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+
+                        <div class="col-lg-6 col-xl-3">
+                            <div class="card widget-box-three">
+                                <div class="card-body">
+                                    <div class="float-right mt-2">
+                                        <i class="mdi mdi-smart-card-outline display-3 m-0"></i>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="text-uppercase font-weight-medium text-truncate mb-2">Üye No</p>
+                                        <h2 class="mb-0">12345</h2>
+                     
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+
+                        <div class="col-lg-6 col-xl-3">
+                            <div class="card widget-box-three">
+                                <div class="card-body">
+                                    <div class="float-right mt-2">
+                                        <i class="mdi mdi-calendar-month display-3 m-0"></i>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="text-uppercase font-weight-medium text-truncate mb-2">BAŞLANGIÇ TARİHİ</p>
+                                        <h2 class="mb-0">10.10.2020</h2>
+                    
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                        <div class="col-lg-6 col-xl-3">
+                            <div class="card widget-box-three">
+                                <div class="card-body">
+                                    <div class="float-right mt-2">
+                                        <i class=" mdi mdi-human-female-boy display-3 m-0"></i>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="text-uppercase font-weight-medium text-truncate mb-2">AİLE FERDİ SAYISI</p>
+                                        <h2 class="mb-0">3</h2>
+                             
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+
+                    </div>
+                    <!-- end row -->
+                    <div class="alert alert-danger mb-0 payment" role="alert" style="font-size: 24px;">
+                        <i class="mdi mdi-alert mr-2"></i>  Ödenmemiş borcunuz bulunmaktadır. Ödemek için  <a href="payment.html" class="alert-link paymentlink">tıklayınız </a>.  
+ 
+                      
+                    </div>
+                    <br/>
+                    <div class="row">
+                           <div class="col-xl-6">
+                            <div class="card-box" style="min-height: 375px;">
+                                <h4 class="header-title mb-4">Aile Fertleri</h4>
+
+                                <div class="table-responsive">
+                                    <table class="table table-hover table-centered m-0">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Ad Soyad</th>
+                                                <th>Yakınlığı</th>
+                                                <th>Email</th>
+                                                <th>Telefon</th>
+                                                <th>Cinsiyet</th>
+                                                <th>Üyelik</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                            1
+                                                </td>
+                                                <td>Cafer Cindoruk</td>
+                                                <td>Oğlu</td>
+                                                <td>a@a.com</td>
+                                                <td>+1111111111</td>
+                                                <td>E</td>
+                                                <td>Aktif</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>
+                                                   2
+                                                </td>
+                                                <td>Caferiye Cindoruk</td>
+                                                <td>Kızı</td>
+                                                <td>a@a.com</td>
+                                                <td>+1111111111</td>
+                                                <td>K</td>
+                                                <td>Aktif</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>
+                                                  3
+                                                </th>
+                                                <td>Muzaffer Cindoruk</td>
+                                                <td>Oğlu</td>
+                                                <td>a@a.com</td>
+                                                <td>+1111111111</td>
+                                                <td>E</td>
+                                                <td>Aktif</td>
+                                            </tr>
+
+                                         
+                                         
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <!-- table-responsive -->
+                            </div>
+                            <!-- end card -->
+                        </div>
+                        <!-- end col -->
+
+                        <div class="col-xl-6">
+                            <div class="card-box">
+                                <div class="demo-box mt-5 mt-lg-0">
+                                    <h4 class="header-title">Geçmiş Ödemeleriniz</h4>
+                                 
+
+                                    <canvas id="bar" height="300"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end col -->
+ 
+                    </div>
+                    <!-- end row -->
+
+     
+
+                </div>
+                <!-- end container-fluid -->
+
+            </div>
+            <!-- end content -->
+            <div class="row" style="display: none;">
+                <div class="col-12">
+                    <div class="card-box">
+
+                        <div class="row">
+                            <div class="col-lg-6">
+
+                                <div class="demo-box">
+                                    <h4 class="header-title">Line Chart</h4>
+                                    <p class="sub-header">
+                                        A line chart is a way of plotting data points on a line. Often, it is used to show trend data, and the comparison of two data sets.
+                                    </p>
+
+                                    <canvas id="lineChart" height="300"></canvas>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="demo-box mt-5 mt-lg-0">
+                                    <h4 class="header-title">Bar Chart</h4>
+                                    <p class="sub-header">
+                                        A bar chart is a way of showing data as bars. It is sometimes used to show trend data, and the comparison of multiple data sets side by side.
+                                    </p>
+
+                                    <canvas id="bar" height="300"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row mt-5">
+                            <div class="col-lg-6 mt-2">
+                                <div class="demo-box">
+                                    <h4 class="header-title">Pie Chart</h4>
+                                    <p class="sub-header">
+                                        Pie and doughnut charts are probably the most commonly used chart there are. They are divided into segments, the arc of each segment shows the proportional value of each piece of data.
+                                    </p>
+
+                                    <canvas id="pie" height="260"></canvas>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mt-2">
+
+                                <div class="demo-box mt-5 mt-lg-0">
+                                    <h4 class="header-title">Donut Chart</h4>
+                                    <p class="sub-header">
+                                        Pie and doughnut charts are probably the most commonly used chart there are. They are divided into segments, the arc of each segment shows the proportional value of each piece of data.
+                                    </p>
+
+                                    <canvas id="doughnut" height="260"></canvas>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row mt-5">
+
+                            <div class="col-lg-6 mt-2">
+
+                                <div class="demo-box">
+                                    <h4 class="header-title">Polar area Chart</h4>
+                                    <p class="sub-header">
+                                        Polar area charts are similar to pie charts, but each segment has the same angle - the radius of the segment differs depending on the value.
+                                    </p>
+
+                                    <canvas id="polarArea" height="300"> </canvas>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 mt-2">
+                                <div class="demo-box mt-5 mt-lg-0">
+                                    <h4 class="header-title">Radar Chart</h4>
+                                    <p class="sub-header">
+                                        A radar chart is a way of showing multiple data points and the variation between them. They are often useful for comparing the points of two or more different data sets.
+                                    </p>
+
+                                    <canvas id="radar" height="300"></canvas>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- end row -->
+
+                    </div>
+                    <!-- card-box -->
+                </div>
+                <!-- end col-->
+
+            </div>
+            
+
+            <!-- Footer Start -->
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            Copyright 2021 · Designed & Developed by <a href="https://www.vakifglobal.com">Vakıf
+                                Global</a> All rights reserved.
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- end Footer -->
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+    </div>
+    <!-- END wrapper -->
+
+    <!-- Right Sidebar -->
+    <div class="right-bar">
+        <div class="rightbar-title">
+            <a href="javascript:void(0);" class="right-bar-toggle float-right">
+                <i class="mdi mdi-close"></i>
+            </a>
+            <h4 class="font-16 m-0 text-white">Theme Customizer</h4>
+        </div>
+        <div class="slimscroll-menu">
+        
+            <div class="p-4">
+                <div class="alert alert-warning" role="alert">
+                    <strong>Customize </strong> the overall color scheme, layout, etc.
+                </div>
+                <div class="mb-2">
+                    <img src="assets/images/layouts/light.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-3">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="light-mode-switch" checked />
+                    <label class="custom-control-label" for="light-mode-switch">Light Mode</label>
+                </div>
+            
+                <div class="mb-2">
+                    <img src="assets/images/layouts/dark.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-3">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css" 
+                        data-appStyle="assets/css/app-dark.min.css" />
+                    <label class="custom-control-label" for="dark-mode-switch">Dark Mode</label>
+                </div>
+            
+                <div class="mb-2">
+                    <img src="assets/images/layouts/rtl.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-3">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="rtl-mode-switch" data-appStyle="assets/css/app-rtl.min.css" />
+                    <label class="custom-control-label" for="rtl-mode-switch">RTL Mode</label>
+                </div>
+
+                <div class="mb-2">
+                    <img src="assets/images/layouts/dark-rtl.png" class="img-fluid img-thumbnail" alt="">
+                </div>
+                <div class="custom-control custom-switch mb-5">
+                    <input type="checkbox" class="custom-control-input theme-choice" id="dark-rtl-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css" 
+                        data-appStyle="assets/css/app-dark-rtl.min.css" />
+                    <label class="custom-control-label" for="dark-rtl-mode-switch">Dark RTL Mode</label>
+                </div>
+
+                <a href="https://1.envato.market/eKY0g" class="btn btn-danger btn-block mt-3" target="_blank"><i class="mdi mdi-download mr-1"></i> Download Now</a>
+            </div>
+        </div> <!-- end slimscroll-menu-->
+    </div>
+    <!-- /Right-bar -->
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+ 
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+
+    <script src="assets/libs/morris-js/morris.min.js"></script>
+    <script src="assets/libs/raphael/raphael.min.js"></script>
+
+    <script src="assets/js/pages/dashboard.init.js"></script>
+   <!-- Chart JS -->
+   <script src="assets/libs/chart-js/Chart.bundle.min.js"></script>
+
+   <script src="assets/js/pages/chartjs.init.js"></script>
+   
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Ditib Strasbourg</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Responsive bootstrap 4 admin template" name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Table datatable css -->
+
+    <link href="assets/libs/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/fixedHeader.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/scroller.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/dataTables.colVis.css" rel="stylesheet" type="text/css" />
+    <link href="assets/libs/datatables/fixedColumns.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+
+    <link href="assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="assets/libs/custombox/custombox.min.css" rel="stylesheet" type="text/css">
+    <!-- App css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap-stylesheet" />
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-stylesheet" />
+
+</head>
+
+<body data-layout="horizontal">
+
+    <!-- Begin page -->
+    <div id="wrapper">
+        <!-- Navigation Bar-->
+        <header id="topnav">
+            <!-- Topbar Start -->
+            <div class="navbar-custom">
+                <div class="container-fluid">
+                    <ul class="list-unstyled topnav-menu float-right mb-0">
+                        <li class="dropdown notification-list">
+                            <!-- Mobile menu toggle-->
+                            <a class="navbar-toggle nav-link">
+                                <div class="lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </a>
+                            <!-- End mobile menu toggle-->
+                        </li>
+
+
+                        <li class="dropdown notification-list">
+                            <a class="nav-link dropdown-toggle waves-effect waves-light" href="../index.html"
+                                role="button" aria-haspopup="false" aria-expanded="false"><i
+                                    class="ion ion-md-return-left"></i>
+                                <span>Strasbourg Paneli</span>
+                            </a>
+                        </li>
+
+
+                        <li class="dropdown notification-list">
+                            <a class="nav-link dropdown-toggle waves-effect waves-light" href="../login.html"
+                                role="button" aria-haspopup="false" aria-expanded="false"><i class="mdi mdi-logout"></i>
+                                <span>Güvenli Çıkış</span>
+                            </a>
+                        </li>
+
+
+                        <li class="dropdown notification-list">
+                            <!-- Mobile menu toggle-->
+                            <a class="navbar-toggle nav-link">
+                                <div class="lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </a>
+                            <!-- End mobile menu toggle-->
+                        </li>
+
+
+
+
+
+
+                        <li class="dropdown notification-list">
+
+                        </li>
+
+                    </ul>
+
+                    <!-- LOGO -->
+                    <div class="logo-box">
+                        <a href="index.html" class="logo text-center">
+                            <span class="logo-lg">
+                                <span class="logo-lg-text-light">CENAZE FONU</span>
+                                <!-- <span class="logo-lg-text-light">Zircos</span> -->
+                            </span>
+                            <span class="logo-sm">
+                                <!-- <span class="logo-sm-text-dark">Z</span> -->
+                                <span class="logo-sm-text-dark">CF</span>
+                            </span>
+                        </a>
+
+                    </div>
+
+
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <!-- end Topbar -->
+
+            <div class="topbar-menu">
+                <div class="container-fluid">
+                    <div id="navigation">
+                        <!-- Navigation Menu-->
+                        <ul class="navigation-menu">
+
+                            <li class="has-submenu">
+                                <a href="index.html"> <i class="mdi mdi-view-dashboard"></i>Dashboard</a>
+                            </li>
+
+                            <li class="has-submenu">
+                                <a href="#">
+                                    <i class="ion ion-md-person"></i>Üye Listeleri
+                                </a>
+                                <ul class="submenu megamenu">
+                                    <li>
+                                        <ul>
+                                            <li><a href="allmemberlist.html">Tüm Üyeler</a></li>
+                                            <li><a href="activememberlist.html">Aktif Üyeler</a></li>
+                                            <li><a href="passivememberlist.html">Pasif Üyeler</a></li>
+                                            <li><a href="deletedmemberlist.html">Silinen Üyeler</a></li>
+                                            <li><a href="deceasedmemberlist.html">Vefat Eden Üyeler</a></li>
+                                        </ul>
+                                    </li>
+
+
+                                </ul>
+                            </li>
+
+
+                            <li class="has-submenu">
+                                <a href="#">
+                                    <i class=" mdi mdi-frequently-asked-questions"></i>Talepler
+                                </a>
+                                <ul class="submenu megamenu">
+                                    <li>
+                                        <ul>
+                                            <li><a href="adresschangerequests.html">Adres Değişikliği Talepleri</a></li>
+                                            <li><a href="transferrequests.html">Transfer Talepleri</a></li>
+
+                                        </ul>
+                                    </li>
+
+
+                                </ul>
+                            </li>
+
+
+                            <!--  
+                                    <li class="has-submenu">
+                                        <a href="#">
+                                            <i class="mdi mdi-google-pages"></i>Pages
+                                        </a>
+                                        <ul class="submenu megamenu">
+                                            <li>
+                                                <ul>
+                                                    <li><a href="page-starter.html">Starter Page</a></li>
+                                                    <li><a href="page-login.html">Login</a></li>
+                                                    <li><a href="page-register.html">Register</a></li>
+                                                    <li><a href="page-logout.html">Logout</a></li>
+                                                    <li><a href="page-recoverpw.html">Recover Password</a></li>
+                                                </ul>
+                                            </li>
+    
+                                          
+                                        </ul>
+                                    </li>
+    
+    -->
+
+                        </ul>
+                        <!-- End navigation menu -->
+
+                        <div class="clearfix"></div>
+                    </div>
+                    <!-- end #navigation -->
+                </div>
+                <!-- end container -->
+            </div>
+            <!-- end navbar-custom -->
+        </header>
+        <!-- End Navigation Bar-->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+
+                <br />
+                <!-- end page title -->
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="card-box">
+                            <div class="row">
+                                <form class="form-horizontal">
+
+                                    <h3>Üye Detayı</h3>
+
+                                    <div class="row">
+
+                                        <div class="col col-lg-12">
+                                            <div class="input-group mt-3">
+                                                <span class="input-group-append">
+                                                    <button type="button"
+                                                        class="btn waves-effect waves-light btn-primary"
+                                                        style="width: 150px !important;">Ad Soyad</button>
+                                                </span>
+                                                <input type="text" id="example-input3-group2"
+                                                    name="example-input3-group2" class="form-control"
+                                                    placeholder="Ad Soyad" value="Ad Soyad 1" readonly>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="col col-lg-12">
+                                            <div class="input-group mt-3">
+                                                <span class="input-group-append">
+                                                    <button type="button"
+                                                        class="btn waves-effect waves-light btn-primary"
+                                                        style="width: 150px !important;">Üye No</button>
+                                                </span>
+                                                <input type="text" id="example-input3-group2"
+                                                    name="example-input3-group2" class="form-control"
+                                                    placeholder="Üye No" value="12345" readonly>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="col col-lg-12">
+                                            <div class="input-group mt-3">
+                                                <span class="input-group-append">
+                                                    <button type="button"
+                                                        class="btn waves-effect waves-light btn-primary"
+                                                        style="width: 150px !important;">Doğum Tarihi</button>
+                                                </span>
+                                                <input type="text" class="form-control" placeholder="dd/mm/yyyy"
+                                                    id="datepicker" value="10/10/1980" readonly>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col col-lg-12">
+                                            <div class="input-group mt-3">
+                                                <span class="input-group-append">
+                                                    <button type="button"
+                                                        class="btn waves-effect waves-light btn-primary"
+                                                        style="width: 150px !important;">Cinsiyet</button>
+                                                </span>
+                                                <input type="text" id="example-input3-group2"
+                                                    name="example-input3-group2" class="form-control"
+                                                    placeholder="Cinsiyet" value="Erkek" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col col-lg-6">
+
+                                            <div class="input-group mt-3">
+                                                <span class="input-group-append">
+                                                    <button type="button"
+                                                        class="btn waves-effect waves-light btn-primary"
+                                                        style="width: 150px !important;">Başlangıç Tarihi</button>
+                                                </span>
+                                                <input type="text" class="form-control" placeholder="dd/mm/yyyy"
+                                                    id="datepicker2" value="12/12/2020" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col col-lg-6">
+
+                                            <div class="input-group mt-3">
+                                                <span class="input-group-append">
+                                                    <button type="button"
+                                                        class="btn waves-effect waves-light btn-primary"
+                                                        style="width: 150px !important;">A.T</button>
+                                                </span>
+                                                <input type="text" class="form-control" placeholder="dd/mm/yyyy"
+                                                    id="datepicker2" value="12/12/2020" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col col-lg-12">
+                                            <div class="input-group mt-3">
+                                                <span class="input-group-append">
+                                                    <button type="button"
+                                                        class="btn waves-effect waves-light btn-primary"
+                                                        style="width: 150px !important;">Yakınlığı</button>
+                                                </span>
+                                                <input type="text" id="example-input3-group2"
+                                                    name="example-input3-group2" class="form-control" placeholder=""
+                                                    value="Çocuk" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col col-lg-12">
+                                            <h4 style="margin-top: 20px;margin-bottom: -10px !important;">Vefat
+                                                Bilgileri</h4>
+                                            <div class="input-group mt-3">
+                                                <span class="input-group-append">
+                                                    <button type="button"
+                                                        class="btn waves-effect waves-light btn-primary"
+                                                        style="width: 150px !important;">Vefat Tarihi</button>
+                                                </span>
+                                                <input type="text" class="form-control" placeholder="dd/mm/yyyy"
+                                                    id="datepicker" value="24/12/2020" readonly>
+
+                                            </div>
+                                        </div>
+                                        <div class="col col-lg-12">
+                                            <div class="input-group mt-3">
+                                                <span class="input-group-append">
+                                                    <button type="button"
+                                                        class="btn waves-effect waves-light btn-primary"
+                                                        style="width: 150px !important;">Firma</button>
+                                                </span>
+                                                <input type="text" id="example-input3-group2"
+                                                    name="example-input3-group2" class="form-control" placeholder=""
+                                                    value="Firma Adı" readonly>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="col col-lg-12">
+                                            <h4 style="margin-top: 20px;margin-bottom: -10px !important;">Aile Reisi
+                                                Bilgileri</h4>
+                                            <div class="input-group mt-3">
+                                                <span class="input-group-append">
+                                                    <button type="button"
+                                                        class="btn waves-effect waves-light btn-primary"
+                                                        style="width: 150px !important;">Ad Soyad</button>
+                                                </span>
+                                                <input type="text" id="example-input3-group2"
+                                                    name="example-input3-group2" class="form-control"
+                                                    placeholder="Ad Soyad" value="Ad Soyad 2" readonly>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="col col-lg-6">
+                                            <div class="input-group mt-3">
+                                                <span class="input-group-append">
+                                                    <button type="button"
+                                                        class="btn waves-effect waves-light btn-primary"
+                                                        style="width: 150px !important;">Doğum Tarihi</button>
+                                                </span>
+                                                <input type="text" class="form-control" placeholder="dd/mm/yyyy"
+                                                    id="datepicker" value="10/10/1980" readonly>
+
+                                            </div>
+                                        </div>
+                                        <div class="col col-lg-6">
+                                            <div class="input-group mt-3">
+                                                <span class="input-group-append">
+                                                    <button type="button"
+                                                        class="btn waves-effect waves-light btn-primary"
+                                                        style="width: 150px !important;">G.Ü</button>
+                                                </span>
+                                                <input type="text" id="example-input3-group2"
+                                                    name="example-input3-group2" class="form-control" placeholder="g.u"
+                                                    value="50 €" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col col-lg-6">
+                                            <div class="input-group mt-3">
+                                                <span class="input-group-append">
+                                                    <button type="button"
+                                                        class="btn waves-effect waves-light btn-primary"
+                                                        style="width: 150px !important;">Cinsiyet</button>
+                                                </span>
+                                                <input type="text" id="example-input3-group2"
+                                                    name="example-input3-group2" class="form-control"
+                                                    placeholder="Cinsiyet" value="Erkek" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col col-lg-6">
+                                            <div class="input-group mt-3">
+                                                <span class="input-group-append">
+                                                    <button type="button"
+                                                        class="btn waves-effect waves-light btn-primary"
+                                                        style="width: 150px !important;">Nakil</button>
+                                                </span>
+                                                <input type="text" id="example-input3-group2"
+                                                    name="example-input3-group2" class="form-control" placeholder=""
+                                                    value="" readonly>
+                                            </div>
+                                        </div>
+
+                                        <div class="col col-lg-6">
+
+                                            <div class="input-group mt-3">
+                                                <span class="input-group-append">
+                                                    <button type="button"
+                                                        class="btn waves-effect waves-light btn-primary"
+                                                        style="width: 150px !important;">Başlangıç Tarihi</button>
+                                                </span>
+                                                <input type="text" class="form-control" placeholder="dd/mm/yyyy"
+                                                    id="datepicker2" value="12/12/2020" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col col-lg-6">
+
+                                            <div class="input-group mt-3">
+                                                <span class="input-group-append">
+                                                    <button type="button"
+                                                        class="btn waves-effect waves-light btn-primary"
+                                                        style="width: 150px !important;">A.T</button>
+                                                </span>
+                                                <input type="text" class="form-control" placeholder="dd/mm/yyyy"
+                                                    id="datepicker2" value="12/12/2020" readonly>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col col-lg-12">
+                                            <br /> <br />
+                                            <div class="input-group mt-3">
+                                                <span class="input-group-append">
+                                                    <button type="button"
+                                                        class="btn waves-effect waves-light btn-primary"
+                                                        style="width: 150px !important;">Başlangıç Tarihi</button>
+                                                </span>
+                                                <input type="text" class="form-control" placeholder="dd/mm/yyyy"
+                                                    id="datepicker2" value="12/12/2020" readonly>
+                                            </div>
+                                        </div>
+                                        <div class="col col-lg-12">
+                                            <div class="input-group mt-3">
+                                                <span class="input-group-append">
+                                                    <button type="button"
+                                                        class="btn waves-effect waves-light btn-primary"
+                                                        style="width: 150px !important;">Giriş Ücreti</button>
+                                                </span>
+                                                <input type="text" placeholder="" data-a-sign="€ " class="form-control autonumber" value="50" readonly>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12">
+                                            <div class="card-box">
+
+                                                <ul class="nav nav-tabs nav-justified" role="tablist">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active" id="home1-tab" data-toggle="tab"
+                                                            href="#home1" role="tab" aria-controls="home1"
+                                                            aria-selected="true">
+                                                            <span class="d-block d-sm-none"><i
+                                                                    class="fas fa-home"></i></span>
+                                                            <span class="d-none d-sm-block">Fransa Adresi</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" id="profile1-tab" data-toggle="tab"
+                                                            href="#profile1" role="tab" aria-controls="profile1"
+                                                            aria-selected="false">
+                                                            <span class="d-block d-sm-none"><i
+                                                                    class="fas fa-user"></i></span>
+                                                            <span class="d-none d-sm-block">Türkiye Adresi </span>
+                                                        </a>
+                                                    </li>
+
+                                                </ul>
+                                                <div class="tab-content">
+                                                    <div class="tab-pane active show" id="home1" role="tabpanel"
+                                                        aria-labelledby="home1-tab">
+
+                                                        <div class="input-group mt-3">
+                                                            <span class="input-group-append">
+                                                                <button type="button"
+                                                                    class="btn waves-effect waves-light btn-primary"
+                                                                    style="width: 150px !important;">Fransa
+                                                                    Adresi</button>
+                                                            </span>
+                                                            <textarea class="form-control" rows="3"
+                                                                readonly="">Adres</textarea>
+                                                        </div>
+
+                                                        <div class="input-group mt-3">
+                                                            <span class="input-group-append">
+                                                                <button type="button"
+                                                                    class="btn waves-effect waves-light btn-primary"
+                                                                    style="width: 150px !important;">Posta Kodu</button>
+                                                            </span>
+                                                            <input type="phone" id="example-input3-group2"
+                                                                name="example-input3-group2" class="form-control"
+                                                                placeholder="" value="12345" readonly="">
+                                                        </div>
+                                                        <div class="input-group mt-3">
+                                                            <span class="input-group-append">
+                                                                <button type="button"
+                                                                    class="btn waves-effect waves-light btn-primary"
+                                                                    style="width: 150px !important;">Şehir</button>
+                                                            </span>
+                                                            <input type="phone" id="example-input3-group2"
+                                                                name="example-input3-group2" class="form-control"
+                                                                placeholder="Şehir" value="Strasbourg" readonly="">
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="tab-pane " id="profile1" role="tabpanel"
+                                                        aria-labelledby="profile1-tab">
+                                                        <div class="input-group mt-3">
+                                                            <span class="input-group-append">
+                                                                <button type="button"
+                                                                    class="btn waves-effect waves-light btn-primary"
+                                                                    style="width: 150px !important;">Türkiye
+                                                                    Adresi</button>
+                                                            </span>
+                                                            <textarea class="form-control" rows="3"
+                                                                readonly="">Adres</textarea>
+                                                        </div>
+
+                                                        <div class="input-group mt-3">
+                                                            <span class="input-group-append">
+                                                                <button type="button"
+                                                                    class="btn waves-effect waves-light btn-primary"
+                                                                    style="width: 150px !important;">Posta Kodu</button>
+                                                            </span>
+                                                            <input type="phone" id="example-input3-group2"
+                                                                name="example-input3-group2" class="form-control"
+                                                                placeholder="" value="12345" readonly="">
+                                                        </div>
+                                                        <div class="input-group mt-3">
+                                                            <span class="input-group-append">
+                                                                <button type="button"
+                                                                    class="btn waves-effect waves-light btn-primary"
+                                                                    style="width: 150px !important;">Şehir</button>
+                                                            </span>
+                                                            <input type="phone" id="example-input3-group2"
+                                                                name="example-input3-group2" class="form-control"
+                                                                placeholder="Şehir" value="Bolu" readonly="">
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="col-sm-8">
+                       
+                        <div class="card-box">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <h3>Harcama Durumu</h3>
+                                </div>
+                                <div class="col-lg-3">
+
+                                    Toplam Kişi Sayısı:
+
+                                    <div class="col-lg-4">
+                                        <input type="number" id="example-input3-group2" name="example-input3-group2"
+                                            class="form-control" placeholder="Şehir" value="5" readonly="">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    MP Kişi Sayısı:
+
+                                    <div class="col-lg-4">
+                                        <input type="number" id="example-input3-group2" name="example-input3-group2"
+                                            class="form-control" placeholder="Şehir" value="5" readonly="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    Borç Durumu:
+
+                                    <div class="col-lg-5">
+                                        <input type="text" id="example-input3-group2" name="example-input3-group2"
+                                            class="form-control bg-danger text-white" placeholder="" value="75.00 €"
+                                            readonly="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br/>
+
+                            <table id="datatable-buttons"
+                                class="table table-striped table-bordered dt-responsive nowrap"
+                                style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Ödeme Tarihi</th>
+                                        <th>Ödeme Bilgisi</th>
+                                        <th>Miktar</th>
+                                        <th>Ödeme Yöntemi</th>
+                                        <th>İşlem Tarihi</th>
+                                        <th>Avoir</th>
+                                        <th style="width: 100px !important;">İşlemler</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>24/12/2020</td>
+                                        <td>Cafer Cindoruk'un Babası</td>
+                                        <td>1900 €</td>
+                                        <td>Online</td>
+                                        <td>24/12/2020</td>
+                                        <td></td>
+                                        <td>
+                                            <a href="deceasedmemberspendingstatuslistdetail.html"><button type="submit"
+                                                    class="btn btn-info waves-effect waves-light"><i
+                                                        class="fas fa-info-circle"></i> İncele</button></a>
+                                            <a href="deceasedmemberspendingstatuslistdetail.html"><button type="submit"
+                                                    class="btn btn-success waves-effect waves-light"><i
+                                                        class="fas fa-user-edit"></i> Düzenle</button></a>
+
+                                            <button type="submit"
+                                                class="btn btn-danger waves-effect waves-light sa-params"><i
+                                                    class="fas fa-trash-alt"></i> Sil</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>24/12/2020</td>
+                                        <td>Cafer Cindoruk'un Babası</td>
+                                        <td>1900 €</td>
+                                        <td>Online</td>
+                                        <td>24/12/2020</td>
+                                        <td></td>
+                                        <td>
+                                            <a href="deceasedmemberspendingstatuslistdetail.html"><button type="submit"
+                                                    class="btn btn-info waves-effect waves-light"><i
+                                                        class="fas fa-info-circle"></i> İncele</button></a>
+                                            <a href="deceasedmemberspendingstatuslistdetail.html"><button type="submit"
+                                                    class="btn btn-success waves-effect waves-light"><i
+                                                        class="fas fa-user-edit"></i> Düzenle</button></a>
+
+                                            <button type="submit"
+                                                class="btn btn-danger waves-effect waves-light sa-params"><i
+                                                    class="fas fa-trash-alt"></i> Sil</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>3</td>
+                                        <td>24/12/2020</td>
+                                        <td>Cafer Cindoruk'un Babası</td>
+                                        <td>1900 €</td>
+                                        <td>Online</td>
+                                        <td>24/12/2020</td>
+                                        <td></td>
+                                        <td>
+                                            <a href="deceasedmemberspendingstatuslistdetail.html"><button type="submit"
+                                                    class="btn btn-info waves-effect waves-light"><i
+                                                        class="fas fa-info-circle"></i> İncele</button></a>
+                                            <a href="deceasedmemberspendingstatuslistdetail.html"><button type="submit"
+                                                    class="btn btn-success waves-effect waves-light"><i
+                                                        class="fas fa-user-edit"></i> Düzenle</button></a>
+                                            <button type="submit"
+                                                class="btn btn-danger waves-effect waves-light sa-params"><i
+                                                    class="fas fa-trash-alt"></i> Sil</button>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                            </form>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <button type="button" class="btn btn-secondary waves-effect waves-light "
+                                        data-toggle="modal" data-target="#full-width-modal"><i class="fas fa-plus"></i>
+                                        Yeni Ödeme
+                                        Ekle</button>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h4>Toplam Masraf: 5000 € </h4> <br />
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="card-box">
+
+                            <h4>Tahsilat Notları</h4>
+                            <table id="datatable-buttons2"
+                                class="table table-striped table-bordered dt-responsive"
+                                style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Not</th>
+
+                                        <th style="width: 100px !important;">İşlemler</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a eros et metus suscipit elementum eu a dolor. Cras posuere tristique magna id facilisis.</td>
+
+                                        <td>
+                                            <button type="submit"
+                                                class="btn btn-danger waves-effect waves-light sa-params" style="left: 21%;"><i
+                                                    class="fas fa-trash-alt" ></i> Sil</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a eros et metus suscipit elementum eu a dolor. Cras posuere tristique magna id facilisis.</td>
+
+                                        <td>
+                                            <button type="submit"
+                                                class="btn btn-danger waves-effect waves-light sa-params"  style="left: 21%;"><i
+                                                    class="fas fa-trash-alt"></i> Sil</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a eros et metus suscipit elementum eu a dolor. Cras posuere tristique magna id facilisis.</td>
+
+                                        <td>
+                                            <button type="submit"
+                                                class="btn btn-danger waves-effect waves-light sa-params"  style="left: 21%;"><i
+                                                    class="fas fa-trash-alt"></i> Sil</button>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                            </form>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <button type="button" class="btn btn-secondary waves-effect waves-light "
+                                        data-toggle="modal" data-target="#newnote"><i class="fas fa-plus"></i>
+                                        Yeni Not
+                                        Ekle</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ============================================================== -->
+    <!-- End Page content -->
+    <!-- ============================================================== -->
+
+    </div>
+
+    <div id="full-width-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-full">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title mt-0">Yeni Ödeme Ekle</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="field-1" class="control-label">Ad Soyad</label>
+                                <input type="text" class="form-control" id="field-1" placeholder="Ad Soyad" required>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="field-3" class="control-label">Email</label>
+                                <input type="email" class="form-control" id="field-3" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="field-6" class="control-label">Telefon</label>
+                                <input type="tel" class="form-control" id="field-6" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="field-4" class="control-label">Doğum Tarihi</label>
+                                <input type="text" class="form-control" placeholder="dd/mm/yyyy" id="datepicker2"
+                                    value="">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="form-group">
+                                <label for="field-2" class="control-label">Cinsiyet</label>
+                                <select class="form-control">
+                                    <option>Seçiniz</option>
+                                    <option>Erkek</option>
+                                    <option>Kadın</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group no-margin">
+                                <label for="field-7" class="control-label">Fransa Adresi</label>
+                                <textarea class="form-control autogrow" id="field-7" placeholder="Fransa Adresi"
+                                    style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group no-margin">
+                                <label for="field-7" class="control-label">Türkiye Adresi</label>
+                                <textarea class="form-control autogrow" id="field-7" placeholder="Türkiye Adresi"
+                                    style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="field-3" class="control-label">Fransa Posta Kodu</label>
+                                <input type="number" class="form-control" id="field-3" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="field-3" class="control-label">Türkiye Posta Kodu</label>
+                                <input type="number" class="form-control" id="field-3" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="field-6" class="control-label">Fransa Bölge</label>
+                                <select class="form-control" class="form-control" id="field-3" placeholder="">
+                                    <option>Auvergne-Rhône-Alpes</option>
+                                    <option>Bourgogne-Franche-Comté</option>
+                                    <option>Bretagne</option>
+                                    <option>Centre-Val de Loire</option>
+                                    <option>Corse</option>
+                                    <option selected>Grand Est</option>
+                                    <option>Hauts-de-France</option>
+                                    <option>Île-de-France</option>
+                                    <option>Normandie</option>
+                                    <option>Nouvelle-Aquitaine</option>
+                                    <option>Occitanie</option>
+                                    <option>Pays de la Loire</option>
+                                    <option>Provence-Alpes-Côte d'Azur</option>
+                                    <option>Guadeloupe</option>
+                                    <option>Martinik</option>
+                                    <option>Guyane</option>
+                                    <option>La Réunion</option>
+                                    <option>Mayotte</option>
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">Kapat</button>
+                    <button type="submit" class="btn btn-success waves-effect waves-light">Kaydet</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <div id="newnote" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-full">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title mt-0">Yeni Not Ekle</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                  
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group no-margin">
+                                <label for="field-7" class="control-label">Not</label>
+                                <textarea class="form-control autogrow" id="field-7" placeholder="Not"
+                                    style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 504px;"></textarea>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">Kapat</button>
+                    <button type="submit" class="btn btn-success waves-effect waves-light">Kaydet</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <!-- Right bar overlay-->
+    <div class="rightbar-overlay"></div>
+
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+
+    <script src="assets/libs/morris-js/morris.min.js"></script>
+    <script src="assets/libs/raphael/raphael.min.js"></script>
+
+    <!-- Jvector map -->
+    <script src="assets/libs/jquery-vectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="assets/libs/jquery-vectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="assets/libs/jquery-vectormap/jquery-jvectormap-us-merc-en.js"></script>
+
+    <!-- Init js -->
+    <script src="assets/js/pages/blog-dashboard.init.js"></script>
+
+    <!-- Datatable plugin js -->
+
+    <script src="assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <script src="assets/js/pages/sweetalerts.init.js"></script>
+
+    <script src="assets/libs/datatables/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables/responsive.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables/buttons.bootstrap4.min.js"></script>
+
+    <script src="assets/libs/datatables/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables/buttons.print.min.js"></script>
+
+    <script src="assets/libs/datatables/dataTables.keyTable.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.fixedHeader.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.scroller.min.js"></script>
+    <script src="assets/libs/datatables/dataTables.fixedColumns.min.js"></script>
+
+    <script src="assets/libs/morris-js/morris.min.js"></script>
+    <script src="assets/libs/raphael/raphael.min.js"></script>
+    <script src="assets/libs/custombox/custombox.min.js"></script>
+
+
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/vfs_fonts.js"></script>
+
+
+    <!-- Datatables init -->
+    <script src="assets/js/pages/datatables.init.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
+
+        <!-- Plugins js -->
+        <script src="assets/libs/jquery-mask-plugin/jquery.mask.min.js"></script>
+        <script src="assets/libs/autonumeric/autoNumeric-min.js"></script>
+
+        <!-- Init js-->
+        <script src="assets/js/pages/form-masks.init.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>
